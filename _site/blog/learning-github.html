@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width">
+  <title>Learning Github</title> 
+  <meta name="description" content="When I first started learning Github I kept running into frustrating roadblocks. It seemed like every tutorial I took, or article I read, assumed I was a developer and used terms and terminology that I just wasn't familiar with. Perhaps worse than that, because certain things were assumed it would often halt my learning process because I wouldn't understand how to fill in the blanks between steps.">
+  <meta name="author" content="James Williamson">
+  <meta name="robots" content="index,follow">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@jameswillweb">
+  <meta name="twitter:image" property="og:image" content="/simple-primate/images/sp630.png">
+  <meta name="twitter:url" property="og:url" content="/simple-primate/blog/learning-github">
+  <meta name="twitter:title" property="og:title" content="Learning Github">
+  <meta name="twitter:description" property="og:description" content="When I first started learning Github I kept running into frustrating roadblocks. It seemed like every tutorial I took, or article I read, assumed I was a developer and used terms and terminology that I just wasn't familiar with. Perhaps worse than that, because certain things were assumed it would often halt my learning process because I wouldn't understand how to fill in the blanks between steps.">
+  <script>
+        (function() {
+            document.documentElement.className = "js";
+        }());
+  </script>
+  <link rel="canonical" href="/simple-primate/blog/learning-github">
+  <link rel="stylesheet" href="/simple-primate/css/main.css">
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header role="banner" class="page-header">
+ <h1><a href="/simple-primate/index.html" title="articles" class="siteTitle">Simple<span class="primate">Primate</span></a></h1>
+ <p>Monkeying around with code</p>
+</header>
+<nav role="navigation">
+<button id="toggle" aria-expanded="false" aria-controls="menu">Menu</button>
+<ul class="menu">
+  <li><a href="/simple-primate/index.html" title="articles">Blog</a></li>
+  <li><a href="/simple-primate/about.html" title="learn more about me">About</a></li>
+  <li><a href="/simple-primate/speaking.html" title="speaking engagements">Speaking</a></li>
+  <li><a href="/simple-primate/contact.html" title="contact me">Contact</a></li>
+  <li><a href="/simple-primate/tags" title="all posts">Archives</a></li>
+  </ul>
+</nav>
+	<main role="main" class="cf">
+<article class="posts">
+ <article role="article" itemscope itemtype="http://schema.org/BlogPosting">
+        <header>
+            <h2>Learning Github</h2>
+            <time itemprop="dateCreated" datetime="2014-03-26 00:00:00 -0400">
+                March 26, 2014</time>
+        </header>
+       
+        <p>When I first started learning Github I kept running into frustrating roadblocks. It seemed like every tutorial I took, or article I read, assumed I was a developer and used terms and terminology that I just wasn’t familiar with. Perhaps worse than that, because certain things were assumed it would often halt my learning process because I wouldn’t understand how to fill in the blanks between steps. I decided to jump in headfirst, make lots of mistakes, and research things that as a designer I wasn’t really that interested in. I channeled all of those lessons into my Github for Web Designers course, and I decided to pull this blog post from the companion reference site to highlight some of the things I found useful when learning Github. If you want to learn more about the course check it out on <a href="https://www.lynda.com/GitHub-tutorials/GitHub-Web-Designers/162276-2.html" title="Github for web designers">lynda.com</a> or check out the companion repository on <a href="https://github.com/jameswillweb/github-for-web-designers" title="Github for web designers repo">Github</a>.</p>
+
+<h3>Stuff I learned</h3>
+
+<p>Whenever I learn something new I have those “aha” moments where I break through the murk into moments of clarity. In addition to the reference and glossary that you’ll find here I wanted to list some of the concepts that I found really important when learning Github.</p>
+
+<h4>Take some time to learn Git</h4>
+
+<p>I’ll admit it; when I first started learning Github my hope was that it would provide me an interface to do all the things I needed to do without actually having to learn Git. While most of the basic day to day tasks can be performed without ever going into the command line or even understanding the terminology involved, eventually you’ll have a situation that you can’t fix. Save yourself the trouble and go ahead and learn at least the basics of Git first. I consider this so important that I changed the structure of my course to reflect this; spending a chapter at the beginning of the course teaching those basics. Although you can certainly muddle along it’s almost impossible to use Github to its fullest potential without also knowing Git. The desktop apps are great and very intuitive but they have limited feature sets and don’t really try to teach you what’s going on behind the scenes.</p>
+
+<h4>Understand what is meant by “distributed”</h4>
+
+<p>Git is a distributed version control system, meaning that all copies of the repositories are local. Here are some highligts that you should take away.</p>
+
+<dl>
+  <dt>No central repository</dt>
+  <dd>
+    <p>All copies of it are local and can update other copies</p>
+  </dd>
+  <dt>Doesn’t create multiple copies of files</dt>
+  <dd>
+    <p>Git maintains a single directory structure. “Snapshots” are taken of projects as they progress to save history states.</p>
+  </dd>
+  <dt>You can branch snapshots to create infinite project variations.</dt>
+  <dd>
+    <p>Branching is incredibly powerful and allows you to create several different versions of your project without disturbing the history of the main project.</p>
+  </dd>
+</dl>
+
+<h4>The concept of staged files</h4>
+
+<p>This one was tricky for me at first. I assumed that most version control systems automatically tracked and versioned files. That’s not how Git works, in Git you have to first stage a file in order to include it in the next snapshot, referred to as a commit.</p>
+
+<dl>
+  <dt>Files aren’t added to commits automatically</dt>
+  <dd>
+    <p>You have to add files manually in order for them to be committed in the next snapshot. This adds a little bit more manual labor to the process, but also gives you much more control over how and when things are recorded.</p>
+  </dd>
+  <dt>Staged files are ‘frozen’ once staged</dt>
+  <dd>
+    <p>If you update a file once it’s been staged, the staged version of it doesn’t record this. In order to make sure that the most recent changes are committed you’ll need to restage the file.</p>
+  </dd>
+  <dt>You can un-stage files</dt>
+  <dd>
+    <p>If you decide that you’ve made a mistake, it’s very easy to un-stage a file so that it’s not included in the next commit.</p>
+  </dd>
+</dl>
+
+<h4>How important Branching is</h4>
+
+<p>As a designer the ability to branch off from your main project, experiment or refine, and then return back to your main project and merge in those changes is fantastic. No more will I create 15 versions of the same file, or multiple directories of the same project nested inside each other. With branching I can simply create a new branch do what I need to do and then decide whether or not I want to keep or get rid of the changes I’ve made. It’s an incredibly liberating way to work and I would encourage you to learn as much as you can about how branching and merging work.</p>
+
+<dl>
+  <dt>Branches give you flexibility</dt>
+  <dd>
+    <p>Branches allow for simultaneous development, experimentation, and error fixing without disturbing the stable version.</p>
+  </dd>
+  <dt>You can keep them private</dt>
+  <dd>
+    <p>Branches are private, meaning they’re not uploaded to Github unless you want them to be.</p>
+  </dd>
+  <dt>Understanding merging is key</dt>
+  <dd>
+    <p>You need to spend time learning how merging works, I mean <strong>really</strong> understanding it so that you know what to expect when merging branches.</p>
+  </dd>
+  <dt>Develop a workflow pattern for branching</dt>
+  <dd>
+    <p>If you don’t things can get messy fast. This is even more important in a team environment where you’re working with multiple collaborators.</p>
+  </dd>
+</dl>
+
+<h4>Github is a publishing platform</h4>
+
+<p>I kind of already knew this when I started learning Github since this was one of the reasons I really wanted to learn it. However, it’s important to point out how evolved Github has become as a publishing platform.</p>
+
+<dl>
+  <dt>Sharing projects publicly</dt>
+  <dd>
+    <p>Projects can be shared and distributed with the public without having to buy hosting or register a domain.</p>
+  </dd>
+  <dt>Collaborators from around the world can/may offer assistance</dt>
+  <dd>
+    <p>This is one of the coolest aspects. If you have a really great idea but lack skills in a certain area you can put the project up on Github and ask for assistance. The open source nature of the Github community means that you may get dozens or even hundreds of collaborators helping you with your project. Just keep in mind that open source means just that. You’ll need to carefully research the licensing options and understand that you are releasing your project to the world.</p>
+  </dd>
+  <dt>Github Pages add polish</dt>
+  <dd>
+    <p>Github Pages allow you to host a basic site for your project. You can create your own or use their Jekyll template to generate pages. This blog, for example is hosted on Github Pages.</p>
+  </dd>
+</dl>
+
+<h4>Clarity is important</h4>
+
+<p>There are many places in the Github workflow where you have to compose messages or descriptions for actions. I’ve learned the hard way that it’s really important to be as descriptive as possible. Whether it’s writing the project’s readme file or making commit messages it’s critical that you write clearly and concisely. Not only for others but so that future-you understands it as well.</p>
+
+
+        <footer>
+        <p>Posted in <a href="/simple-primate/tags/index.html#git" title="Pages tagged git" rel="tag">git</a>, <a href="/simple-primate/tags/index.html#web+design" title="Pages tagged web design" rel="tag">web design</a>, <a href="/simple-primate/tags/index.html#github" title="Pages tagged github" rel="tag">github</a></p>
+        </footer>
+    </article>
+    <section class="post-links">
+    <p>Read more:</p>
+  
+  
+    <p class="nextLink"><a class="next" href="/simple-primate/blog/welcome-to-jekyll">Welcome to Jekyll!</a></p>
+  
+	</section>
+    </article>
+        
+<!--Create a sorted array of tags-->
+
+
+  <aside>
+    <h3>Archives</h3>
+ <ul class="archives">
+ 				<li><a href="/simple-primate/tags/">All posts</a></li>
+                
+                    <li><a href="/simple-primate/tags/#blogging">blogging (2)</a></li>
+                
+                    <li><a href="/simple-primate/tags/#css">css (1)</a></li>
+                
+                    <li><a href="/simple-primate/tags/#deployment">deployment (1)</a></li>
+                
+                    <li><a href="/simple-primate/tags/#git">git (2)</a></li>
+                
+                    <li><a href="/simple-primate/tags/#github">github (1)</a></li>
+                
+                    <li><a href="/simple-primate/tags/#github+pages">github pages (2)</a></li>
+                
+                    <li><a href="/simple-primate/tags/#html">html (1)</a></li>
+                
+                    <li><a href="/simple-primate/tags/#jekyll">jekyll (10)</a></li>
+                
+                    <li><a href="/simple-primate/tags/#jekyll+for+web+designers">jekyll for web designers (10)</a></li>
+                
+                    <li><a href="/simple-primate/tags/#liquid">liquid (2)</a></li>
+                
+                    <li><a href="/simple-primate/tags/#markdown">markdown (2)</a></li>
+                
+                    <li><a href="/simple-primate/tags/#sass">sass (1)</a></li>
+                
+                    <li><a href="/simple-primate/tags/#templates">templates (1)</a></li>
+                
+                    <li><a href="/simple-primate/tags/#terminal">terminal (3)</a></li>
+                
+                    <li><a href="/simple-primate/tags/#web+design">web design (6)</a></li>
+                
+                    <li><a href="/simple-primate/tags/#yaml">yaml (3)</a></li>
+                
+            </ul>
+    <h3>RSS</h3>
+    <p><a href="/simple-primate/feed.xml" title="Subscribe to my RSS feed" class="rss">RSS feed</a></p>
+    <h3>Connect with me</h3>
+    <ul class="social">
+    <li><a href="https://github.com/jameswillweb" title="Github" class="github">Github</a></li>
+    <li><a href="https://www.linkedin.com/in/jameswillweb/" title="linked in" class="linked">LinkedIn</a></li>
+    <li><a href="https://twitter.com/jameswillweb" title="twitter" class="twitter">Twitter</a></li>
+    </ul>
+    </aside>
+
+</main>
+
+    
+	  <footer role="contentinfo" class="post-footer">
+<p class="top-link"><a href="#top">return to top</a></p>
+         <p>&copy; 2017 James Williamson | all content offered under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="Creative Commons License">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</a>. Feel free to reproduce anything on the site with proper attribution. I've disabled comments on the blog, so feel free to get in touch if you want to discuss anything!</p>
+             <ul class="social">
+    <li><a href="https://github.com/jameswillweb" title="Github" class="github">Github</a></li>
+    <li><a href="https://www.linkedin.com/in/jameswillweb/" title="linked in" class="linked">LinkedIn</a></li>
+    <li><a href="https://twitter.com/jameswillweb" title="twitter" class="twitter">Twitter</a></li>
+    </ul>
+</footer>
+
+    
+</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script>
+    //font loading
+  WebFont.load({
+    google: {
+      families: ['Lato:300,400,700', 'Noto+Serif:400,400i,700,700i']
+    }
+  });
+    //menu toggle for small screens
+    var toggle = document.querySelector('#toggle');
+    var menu = document.querySelector('.menu');
+
+    toggle.addEventListener('click', function(){
+      if (menu.classList.contains('is-active')) {
+        this.setAttribute('aria-expanded', 'false');
+        menu.classList.remove('is-active');
+      } else {
+        menu.classList.add('is-active'); 
+        this.setAttribute('aria-expanded', 'true');
+      }
+    });
+</script>
+</html>

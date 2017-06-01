@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width">
+  <title>Jekyll and CSS</title> 
+  <meta name="description" content="One of my favorite things about Jekyll is how it gets out of the way and lets you, the designer, actually design. Jekyll imposes no type of structure or framework, no default classes, layout, or coding conventions. As such how you plan and author your styles is entirely up to you. There are, however, a few things you want to keep in mind when writing CSS for a Jekyll site.">
+  <meta name="author" content="James Williamson">
+  <meta name="robots" content="index,follow">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@jameswillweb">
+  <meta name="twitter:image" property="og:image" content="/simple-primate/images/sp630.png">
+  <meta name="twitter:url" property="og:url" content="/simple-primate/blog/css">
+  <meta name="twitter:title" property="og:title" content="Jekyll and CSS">
+  <meta name="twitter:description" property="og:description" content="One of my favorite things about Jekyll is how it gets out of the way and lets you, the designer, actually design. Jekyll imposes no type of structure or framework, no default classes, layout, or coding conventions. As such how you plan and author your styles is entirely up to you. There are, however, a few things you want to keep in mind when writing CSS for a Jekyll site.">
+  <script>
+        (function() {
+            document.documentElement.className = "js";
+        }());
+  </script>
+  <link rel="canonical" href="/simple-primate/blog/css">
+  <link rel="stylesheet" href="/simple-primate/css/main.css">
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header role="banner" class="page-header">
+ <h1><a href="/simple-primate/index.html" title="articles" class="siteTitle">Simple<span class="primate">Primate</span></a></h1>
+ <p>Monkeying around with code</p>
+</header>
+<nav role="navigation">
+<button id="toggle" aria-expanded="false" aria-controls="menu">Menu</button>
+<ul class="menu">
+  <li><a href="/simple-primate/index.html" title="articles">Blog</a></li>
+  <li><a href="/simple-primate/about.html" title="learn more about me">About</a></li>
+  <li><a href="/simple-primate/speaking.html" title="speaking engagements">Speaking</a></li>
+  <li><a href="/simple-primate/contact.html" title="contact me">Contact</a></li>
+  <li><a href="/simple-primate/tags" title="all posts">Archives</a></li>
+  </ul>
+</nav>
+	<main role="main" class="cf">
+<article class="posts">
+ <article role="article" itemscope itemtype="http://schema.org/BlogPosting">
+        <header>
+            <h2>Jekyll and CSS</h2>
+            <time itemprop="dateCreated" datetime="2015-07-13 00:00:00 -0400">
+                July 13, 2015</time>
+        </header>
+       
+    <p class="intro">This article is part of a series of posts about Jekyll from my lynda.com course Jekyll for Web Designers. For a complete list of articles in this series check out the <a href="../tags/index.html#jekyll+for+web+designers" title="articles">archives</a>.</p>
+  
+        <p>One of my favorite things about Jekyll is how it gets out of the way and lets you, the designer, actually design. Jekyll imposes no type of structure or framework, no default classes, layout, or coding conventions. You’re free to structure and style your content as you see fit. As such how you plan and author your styles is entirely up to you. There are, however, a few things you want to keep in mind when writing CSS for a Jekyll site.</p>
+
+<h3>Location</h3>
+
+<p>Normally I like to keep styles in a directory titled <strong>_css</strong>. This naming convention doesn’t work for Jekyll, as an underscore at the beginning of a directory signals Jekyll to process the contents of the directory and not to include it in the final directory structure. As such to ensure your CSS is copied to the finished site be sure to name it <strong>css</strong> or a similar name that doesn’t start with an underscore.</p>
+
+<h3>Linking</h3>
+
+<p>There are essentially two ways to link to external resources like CSS within Jekyll pages and templates. One would be to use the site baseURL to prefix your CSS files:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span></span><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{{ site.baseurl }}/css/main.css&quot;</span><span class="p">&gt;</span></code></pre></figure>
+
+<p>If your site will always be served from the root folder, you can eliminate the <code>site.baseurl</code> object and just use a <strong>site-root relative</strong> link:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span></span><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/css/main.css&quot;</span><span class="p">&gt;</span></code></pre></figure>
+
+<p>It’s important to note here that relative links for assets like CSS can be difficult when hosting sites on <a href="https://pages.github.com/" title="Github Pages">Github Pages</a>. Essentially there are two ways to host pages on Github Pages, as either user/organization pages or project pages.</p>
+
+<p>User and organization pages live in a GitHub repository dedicated to only the GitHub Pages files and are stored in the <strong>master branch</strong>. This repository must be named after the account name, which will be <strong>username.github.io</strong>.</p>
+
+<p>Project Pages are stored in the same repository as the project they are for, except that the website content is stored in a specially named <strong>gh-pages</strong> branch. The <strong>master</strong> branch can hold the project itself, or even be empty.</p>
+
+<p>This matters because if the site is served through a project page, its baseURL changes as the site is served through a subpath of your user domain at <strong>username.github.io/project</strong>. This means that in these cases, you’ll need to set your baseURL to <code>/project-name</code>. Note the leading slash and no trailing slash. This can also lead to problems when testing the files locally, so be sure to read Jekyll’s documentation on <a href="http://jekyllrb.com/docs/github-pages/" title="Github Pages documentation">hosting with Github Pages</a> for a full account.</p>
+
+<h3>Jekyll and SASS</h3>
+
+<p>Jekyll comes with built-in support for SASS, so there’s no need to install or modify your configuration in order to make it work. There are, however, one or two things you need to keep in mind as you work with SASS in Jekyll.</p>
+
+<p>First, in order to ensure Jekyll processes SASS files, you need to put an empty front matter string at the top of the page. You can include a comment if you’d like, but it doesn’t really matter. So include this at the top of each SASS file:</p>
+
+<pre><code>---
+# Front matter added to ensure Jekyll processes file.
+---
+
+// write styles after front matter
+
+</code></pre>
+
+<p>If you look at Jekyll’s default directory structure, you no doubt saw the <strong>_sass</strong> directory, which can lead to some confusion about where to place SASS files. Jekyll copies over any processed SASS file in the exact same location it was processed. So, if you have the file <strong>css/styles.scss</strong> it will be processed and placed at <strong>css/styles.css</strong> in the generated site. The <strong>_sass</strong> directory is for SASS import files. If you place the partial <code>.scss</code> files that you are importing and use <code>@import</code> to assemble them into your main stylesheet, Jekyll will process and assemble them at runtime.</p>
+
+<p>So if you do something like this in your main <code>.scss</code> file:</p>
+
+<pre><code>---
+# Front matter added to ensure Jekyll processes file.
+---
+
+// Imports
+@import "type";
+@import "layout";
+@import "components";
+
+//styles
+</code></pre>
+
+<p>Place the files <code>type.scss</code>, <code>layout.scss</code>, and <code>components.scss</code> in the <strong>_sass</strong> directory and Jekyll will do the rest!</p>
+
+
+        <footer>
+        <p>Posted in <a href="/simple-primate/tags/index.html#jekyll" title="Pages tagged jekyll" rel="tag">jekyll</a>, <a href="/simple-primate/tags/index.html#web+design" title="Pages tagged web design" rel="tag">web design</a>, <a href="/simple-primate/tags/index.html#css" title="Pages tagged css" rel="tag">css</a>, <a href="/simple-primate/tags/index.html#github+pages" title="Pages tagged github pages" rel="tag">github pages</a>, <a href="/simple-primate/tags/index.html#sass" title="Pages tagged sass" rel="tag">sass</a>, <a href="/simple-primate/tags/index.html#jekyll+for+web+designers" title="Pages tagged jekyll for web designers" rel="tag">jekyll for web designers</a></p>
+        </footer>
+    </article>
+    <section class="post-links">
+    <p>Read more:</p>
+  
+    <p class="prevLink"><a class="previous" href="/simple-primate/blog/front-matter">YAML front matter in Jekyll</a></p>
+  
+  
+    <p class="nextLink"><a class="next" href="/simple-primate/blog/deployment-options">Jekyll Deployment Options</a></p>
+  
+	</section>
+    </article>
+        
+<!--Create a sorted array of tags-->
+
+
+  <aside>
+    <h3>Archives</h3>
+ <ul class="archives">
+ 				<li><a href="/simple-primate/tags/">All posts</a></li>
+                
+                    <li><a href="/simple-primate/tags/#blogging">blogging (2)</a></li>
+                
+                    <li><a href="/simple-primate/tags/#css">css (1)</a></li>
+                
+                    <li><a href="/simple-primate/tags/#deployment">deployment (1)</a></li>
+                
+                    <li><a href="/simple-primate/tags/#git">git (2)</a></li>
+                
+                    <li><a href="/simple-primate/tags/#github">github (1)</a></li>
+                
+                    <li><a href="/simple-primate/tags/#github+pages">github pages (2)</a></li>
+                
+                    <li><a href="/simple-primate/tags/#html">html (1)</a></li>
+                
+                    <li><a href="/simple-primate/tags/#jekyll">jekyll (10)</a></li>
+                
+                    <li><a href="/simple-primate/tags/#jekyll+for+web+designers">jekyll for web designers (10)</a></li>
+                
+                    <li><a href="/simple-primate/tags/#liquid">liquid (2)</a></li>
+                
+                    <li><a href="/simple-primate/tags/#markdown">markdown (2)</a></li>
+                
+                    <li><a href="/simple-primate/tags/#sass">sass (1)</a></li>
+                
+                    <li><a href="/simple-primate/tags/#templates">templates (1)</a></li>
+                
+                    <li><a href="/simple-primate/tags/#terminal">terminal (3)</a></li>
+                
+                    <li><a href="/simple-primate/tags/#web+design">web design (6)</a></li>
+                
+                    <li><a href="/simple-primate/tags/#yaml">yaml (3)</a></li>
+                
+            </ul>
+    <h3>RSS</h3>
+    <p><a href="/simple-primate/feed.xml" title="Subscribe to my RSS feed" class="rss">RSS feed</a></p>
+    <h3>Connect with me</h3>
+    <ul class="social">
+    <li><a href="https://github.com/jameswillweb" title="Github" class="github">Github</a></li>
+    <li><a href="https://www.linkedin.com/in/jameswillweb/" title="linked in" class="linked">LinkedIn</a></li>
+    <li><a href="https://twitter.com/jameswillweb" title="twitter" class="twitter">Twitter</a></li>
+    </ul>
+    </aside>
+
+</main>
+
+    
+	  <footer role="contentinfo" class="post-footer">
+<p class="top-link"><a href="#top">return to top</a></p>
+         <p>&copy; 2017 James Williamson | all content offered under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="Creative Commons License">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</a>. Feel free to reproduce anything on the site with proper attribution. I've disabled comments on the blog, so feel free to get in touch if you want to discuss anything!</p>
+             <ul class="social">
+    <li><a href="https://github.com/jameswillweb" title="Github" class="github">Github</a></li>
+    <li><a href="https://www.linkedin.com/in/jameswillweb/" title="linked in" class="linked">LinkedIn</a></li>
+    <li><a href="https://twitter.com/jameswillweb" title="twitter" class="twitter">Twitter</a></li>
+    </ul>
+</footer>
+
+    
+</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script>
+    //font loading
+  WebFont.load({
+    google: {
+      families: ['Lato:300,400,700', 'Noto+Serif:400,400i,700,700i']
+    }
+  });
+    //menu toggle for small screens
+    var toggle = document.querySelector('#toggle');
+    var menu = document.querySelector('.menu');
+
+    toggle.addEventListener('click', function(){
+      if (menu.classList.contains('is-active')) {
+        this.setAttribute('aria-expanded', 'false');
+        menu.classList.remove('is-active');
+      } else {
+        menu.classList.add('is-active'); 
+        this.setAttribute('aria-expanded', 'true');
+      }
+    });
+</script>
+</html>
