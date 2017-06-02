@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Simple Primate</title>
-    <description>Simple Primate is the online home of James Williamson, Lynda.com author, speaker and occasional web developer.</description>
-    <link>http://localhost:4000/simple-primate/</link>
-    <atom:link href="http://localhost:4000/simple-primate/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 01 Jun 2017 14:32:40 -0400</pubDate>
-    <lastBuildDate>Thu, 01 Jun 2017 14:32:40 -0400</lastBuildDate>
+    <description>Simple Primate is the online home of James Williamson, lynda.com author, speaker and occasional web developer.</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 02 Jun 2017 12:42:12 -0400</pubDate>
+    <lastBuildDate>Fri, 02 Jun 2017 12:42:12 -0400</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
     
       <item>
@@ -39,8 +39,8 @@
 
 </description>
         <pubDate>Sat, 01 Aug 2015 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/simple-primate/blog/deployment-options</link>
-        <guid isPermaLink="true">http://localhost:4000/simple-primate/blog/deployment-options</guid>
+        <link>http://localhost:4000/blog/deployment-options</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/deployment-options</guid>
         
         <category>jekyll</category>
         
@@ -115,8 +115,8 @@
 
 </description>
         <pubDate>Mon, 13 Jul 2015 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/simple-primate/blog/css</link>
-        <guid isPermaLink="true">http://localhost:4000/simple-primate/blog/css</guid>
+        <link>http://localhost:4000/blog/css</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/css</guid>
         
         <category>jekyll</category>
         
@@ -206,8 +206,8 @@
 
 </description>
         <pubDate>Thu, 09 Jul 2015 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/simple-primate/blog/front-matter</link>
-        <guid isPermaLink="true">http://localhost:4000/simple-primate/blog/front-matter</guid>
+        <link>http://localhost:4000/blog/front-matter</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/front-matter</guid>
         
         <category>jekyll</category>
         
@@ -405,8 +405,8 @@ This is as well.
 
 </description>
         <pubDate>Mon, 29 Jun 2015 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/simple-primate/blog/markdown-basics</link>
-        <guid isPermaLink="true">http://localhost:4000/simple-primate/blog/markdown-basics</guid>
+        <link>http://localhost:4000/blog/markdown-basics</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/markdown-basics</guid>
         
         <category>jekyll</category>
         
@@ -534,8 +534,8 @@ Written by &lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;s
 
 </description>
         <pubDate>Sun, 07 Jun 2015 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/simple-primate/blog/liquid-syntax</link>
-        <guid isPermaLink="true">http://localhost:4000/simple-primate/blog/liquid-syntax</guid>
+        <link>http://localhost:4000/blog/liquid-syntax</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/liquid-syntax</guid>
         
         <category>liquid</category>
         
@@ -658,8 +658,8 @@ markdown: kramdown
 &lt;p&gt;This is a brief look at some of the configuration options available for your &lt;strong&gt;_confing.yml&lt;/strong&gt; file. For more information on configuration, and how to set global default options for pages, check the full &lt;a href=&quot;http://jekyllrb.com/docs/configuration/&quot; title=&quot;configuration&quot;&gt;Jekyll documentation on site configuration&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Thu, 14 May 2015 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/simple-primate/blog/configuration</link>
-        <guid isPermaLink="true">http://localhost:4000/simple-primate/blog/configuration</guid>
+        <link>http://localhost:4000/blog/configuration</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/configuration</guid>
         
         <category>jekyll</category>
         
@@ -730,8 +730,8 @@ $ jekyll serve --no-watch
 &lt;p&gt;The &lt;code&gt;serve&lt;/code&gt; command generates the site and launches a built-in development server that allows you to preview your site. In its default option the server watches the source directory. Any changes made to source files will result in the server automatically regenerating those files and updating the site locally. To preview your site browse to http://localhost:4000/ unless you’ve specified a different base URL, in which case you’ll add that to the end of localhost:4000.&lt;/p&gt;
 </description>
         <pubDate>Thu, 30 Apr 2015 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/simple-primate/blog/basic-commands</link>
-        <guid isPermaLink="true">http://localhost:4000/simple-primate/blog/basic-commands</guid>
+        <link>http://localhost:4000/blog/basic-commands</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/basic-commands</guid>
         
         <category>jekyll</category>
         
@@ -804,8 +804,8 @@ $ ls
 
 </description>
         <pubDate>Thu, 23 Apr 2015 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/simple-primate/blog/exploring-jekyll</link>
-        <guid isPermaLink="true">http://localhost:4000/simple-primate/blog/exploring-jekyll</guid>
+        <link>http://localhost:4000/blog/exploring-jekyll</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/exploring-jekyll</guid>
         
         <category>jekyll</category>
         
@@ -838,7 +838,7 @@ $ ls
 
 &lt;p&gt;By now you’ve probably noticed that you’ll be spending a good bit of time in Terminal or in the command line when installing and using Jekyll. If you’re already comfortable with Terminal that shouldn’t really be a problem for you. Some of you, however, are probably pretty nervous at the thought of having to spend that much time in the command line. I totally understand if you fit into that category, I’m not that comfortable myself. The first time I tried to install Jekyll I had a terrible time getting my dependencies set up. In the end it had more to do with the version of OSX I was using, but it was a longer process than I was prepared for. Here’s my Twitter stream during that time:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/simple-primate/images/jekyll_install.jpg&quot; alt=&quot;My Twitter stream&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/jekyll_install.jpg&quot; alt=&quot;My Twitter stream&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Just be prepared to spend some time getting everything set up, and don’t get discouraged if what you’re doing doesn’t work right away. Spend some time researching any error messages that shows up and you’ll be fine.&lt;/p&gt;
 
@@ -855,8 +855,8 @@ $ gem install jekyll -v &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;.4.0&lt;/c
 &lt;p&gt;Those version numbers are correct as of August of 2015, but be sure to check prior to doing your own install. Once you’ve got Jekyll installed you’re ready to start using it! We’ll take a look at basic Jekyll functionality in our next post!&lt;/p&gt;
 </description>
         <pubDate>Wed, 11 Mar 2015 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/simple-primate/blog/installing-jekyll</link>
-        <guid isPermaLink="true">http://localhost:4000/simple-primate/blog/installing-jekyll</guid>
+        <link>http://localhost:4000/blog/installing-jekyll</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/installing-jekyll</guid>
         
         <category>jekyll</category>
         
@@ -873,7 +873,7 @@ $ gem install jekyll -v &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;.4.0&lt;/c
         <title>Welcome to Jekyll!</title>
         <description>&lt;p&gt;This post is originally from the companion site for the &lt;a href=&quot;http://www.lynda.com&quot; title=&quot;lynda.com&quot;&gt;lynda.com&lt;/a&gt; course &lt;em&gt;Jekyll for Web Designers&lt;/em&gt;. I created the course to present Jekyll to web designers in a clear, concise way. In this post we’ll take a quick look at how Jekyll works, and whether it’s right for you.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://jekyllrb.com/&quot; title=&quot;jekyll&quot;&gt;Jekyll&lt;/a&gt; bills itself as “a simple, blog-aware, static site generator.” It takes source files like templates, stylesheets, includes, and posts and uses them to generate a website that can then be hosted on your server of choice. This means that the entire website is generated at once, and visitors are simply served static files. This can be much faster than blogging platforms like WordPress, which use a CMS to generate pages as they’re requested. &lt;a href=&quot;/simple-primate/index.html&quot; title=&quot;articles&quot;&gt;This blog&lt;/a&gt;, for example, was generated from a series of templates, posts, html snippets, and CSS using Jekyll.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://jekyllrb.com/&quot; title=&quot;jekyll&quot;&gt;Jekyll&lt;/a&gt; bills itself as “a simple, blog-aware, static site generator.” It takes source files like templates, stylesheets, includes, and posts and uses them to generate a website that can then be hosted on your server of choice. This means that the entire website is generated at once, and visitors are simply served static files. This can be much faster than blogging platforms like WordPress, which use a CMS to generate pages as they’re requested. &lt;a href=&quot;/index.html&quot; title=&quot;articles&quot;&gt;This blog&lt;/a&gt;, for example, was generated from a series of templates, posts, html snippets, and CSS using Jekyll.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;When you remove layers, simplicity and speed happen.
@@ -943,8 +943,8 @@ category: jekyll
 
 </description>
         <pubDate>Sun, 15 Feb 2015 00:00:00 -0500</pubDate>
-        <link>http://localhost:4000/simple-primate/blog/welcome-to-jekyll</link>
-        <guid isPermaLink="true">http://localhost:4000/simple-primate/blog/welcome-to-jekyll</guid>
+        <link>http://localhost:4000/blog/welcome-to-jekyll</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/welcome-to-jekyll</guid>
         
         <category>jekyll</category>
         
