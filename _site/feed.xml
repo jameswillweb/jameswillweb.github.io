@@ -5,8 +5,8 @@
     <description>Simple Primate is the online home of James Williamson, lynda.com author, speaker and occasional web developer.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 03 Jun 2017 21:11:48 -0400</pubDate>
-    <lastBuildDate>Sat, 03 Jun 2017 21:11:48 -0400</lastBuildDate>
+    <pubDate>Sun, 04 Jun 2017 19:47:02 -0400</pubDate>
+    <lastBuildDate>Sun, 04 Jun 2017 19:47:02 -0400</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
     
       <item>
@@ -21,13 +21,13 @@
 
 &lt;p&gt;Because of this much of the blame has been placed directly on JavaScript and JavaScript developers themselves. Many times the argument has been made that developers don’t take the time to learn and understand HTML and CSS, and in some cases there is certainly truth to this. Part of me wonders though why we haven’t done a better job of creating tools that enforce web standards and take advantage of the benefits that HTML and CSS offer? I’m not saying that our tools should be restrictive, just that they should make it easier to write solid code, not harder. To me it doesn’t matter whether you write your HTML and CSS by hand or use JavaScript to generate it for you. What matters is the output, how it is structured, and how it is served to the client. When we allow our tools to take precedent over the quality of our output the entire web suffers. Sites are likely to be less accessible, less performant, and suffer from poor semantics.&lt;/p&gt;
 
-&lt;p&gt;Part of me wonders if it’s already too late to change direction. I’m already conditioned for a poor experience when browsing most large media sites. Even over a fast connection most of those sites are slow to load, are so ad and marketing heavy they interrupt the consuming of content, and frequently break. It’s gotten to the point that when I experience a fast, well-constructed site I’m usually shocked. If I feel this way I can only imagine how people not in the industry feel. As they wait for dozens of dependencies to load, or for their browser to render client-side HTML, I wonder how many of them simply shrug and blame their connection?&lt;/p&gt;
+&lt;p&gt;Perhaps it’s already too late to change direction. I’m already conditioned for a poor experience when browsing most large media sites. Even over a fast connection most of those sites are slow to load, are so ad and marketing heavy they interrupt the consuming of content, and frequently break. It’s gotten to the point that when I experience a fast, well-constructed site I’m usually shocked. If I feel this way I can only imagine how people not in the industry feel. As they wait for dozens of dependencies to load, or for their browser to render client-side HTML, I wonder how many of them simply shrug and blame their connection?&lt;/p&gt;
 
 &lt;p&gt;Clearly the need to continue to educate web professionals and to refine and improve our existing toolsets is important. Our responsibility as a community is to encourage best practices, educate people about their importance, and show a demonstrable difference between the approaches so that there is an incentive to change that is based on more than “it’s the right thing to do.” There are major gains to be had by architecting our code the right way, let’s keep focusing on those and not the means by which we get there.&lt;/p&gt;
 </description>
         <pubDate>Sat, 03 Jun 2017 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/blog/matters</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/matters</guid>
+        <link>http://localhost:4000/blog/make</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/make</guid>
         
         <category>html</category>
         
