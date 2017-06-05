@@ -7,7 +7,7 @@ tagline: Monkeying around with code
 
 # Build settings
 gems: [jekyll-paginate]
-highlighter: pygments
+highlighter: rouge
 markdown: kramdown
 kramdown:
     auto_ids: false
