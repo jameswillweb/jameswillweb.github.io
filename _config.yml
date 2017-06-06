@@ -7,7 +7,7 @@ tagline: Monkeying around with code
 author: "James Williamson"
 
 # Build settings
-gems: [jekyll-paginate]
+gems: [jekyll-paginate, github-pages]
 highlighter: rouge
 markdown: kramdown
 kramdown:
