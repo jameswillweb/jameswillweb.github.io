@@ -57,11 +57,11 @@
 
 <p>You’ll also need the latest versions of <a href="https://www.ruby-lang.org" title="ruby">Ruby</a> and <a href="https://rubygems.org/" title="ruby gems">Ruby Gems</a>. One of the easiest ways to ensure you’re using the right version of Ruby is to use <a href="https://rvm.io" title="Ruby version manager">RVM</a>, a Ruby version manager. It can be a bit of a pain to setup, but once installed making sure you have the latest version is as easy as typing the following into Terminal (where ‘2.2.3’ is the latest version number):</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>$ rvm install <span class="m">2</span>.2.3</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>rvm install 2.2.3</code></pre></figure>
 
 <p>If you’re on a Mac you’ll also need <a href="https://developer.apple.com/xcode/" title="xcode">Xcode Command Line Tools</a>. This can be a little tricky depending upon which version of OSX you’re using. If you’re using any version after Mavericks just type the following in Terminal:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>$ gcc</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>gcc</code></pre></figure>
 
 <p>GCC is a compiler command, and requires Command Line Tools to work, so if they’re not installed OSX will prompt you to install it. For Mavericks or earlier you’ll need to manually download Xcode from Apple and select the “Install Command Line Tools” option when installing it.</p>
 
@@ -73,13 +73,13 @@
 
 <p>Once all your dependencies are installed you’re ready to install Jekyll. For the most part it’s very straightforward, all you’ll need to do is type the following at the command line prompt:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>$ gem install jekyll </code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>gem install jekyll </code></pre></figure>
 
 <p>If you run into permission issues, add ‘sudo’ before <strong>gem</strong> and that should do the trick. If you’re planning on using Github Pages to deploy and host your site, you might want to ensure you’re using the same version of Jekyll and Liquid as Github Pages. You can check those version numbers on the <a href="https://github.com/github/pages-gem/blob/master/lib/github-pages/dependencies.rb" title="Github Pages">Github Pages Gem repository</a>. To do version specific installs you’d do the following:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>$ gem update --system
-$ gem install liquid -v <span class="m">2</span>.6.2
-$ gem install jekyll -v <span class="m">2</span>.4.0</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>gem update --system
+<span class="gp">$ </span>gem install liquid -v 2.6.2
+<span class="gp">$ </span>gem install jekyll -v 2.4.0</code></pre></figure>
 
 <p>Those version numbers are correct as of August of 2015, but be sure to check prior to doing your own install. Once you’ve got Jekyll installed you’re ready to start using it! We’ll take a look at basic Jekyll functionality in our next post!</p>
 

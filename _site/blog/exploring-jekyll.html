@@ -57,20 +57,20 @@
 
 <h3>Building a new site</h3>
 
-<p>To build a new site, create a directory named <code>practice</code> and navigate there in Terminal or whichever command line interface you’re using. Once there run the following commands:</p>
+<p>To build a new site, create a directory named <code class="highlighter-rouge">practice</code> and navigate there in Terminal or whichever command line interface you’re using. Once there run the following commands:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>$ jekyll new explore
-<span class="c1"># Creates the directory explore and builds a new boilerplate site inside it</span>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>jekyll new explore
+<span class="c"># Creates the directory explore and builds a new boilerplate site inside it</span>
 
-$ <span class="nb">cd</span> explore
-<span class="c1"># Navigates to explore, making it the current directory</span>
+<span class="gp">$ </span><span class="nb">cd </span>explore
+<span class="c"># Navigates to explore, making it the current directory</span>
 
-$ ls
-<span class="c1"># Lists the files and directories of the current site</span></code></pre></figure>
+<span class="gp">$ </span>ls
+<span class="c"># Lists the files and directories of the current site</span></code></pre></figure>
 
 <p>You should see a list of files and directories that were created inside your new <strong>explore</strong> directory. A closer examination would reveal a structure similar to this:</p>
 
-<pre><code>|---_config.yml
+<div class="highlighter-rouge"><pre class="highlight"><code>|---_config.yml
 |---_includes
     |---footer.html
     |---head.html
@@ -91,6 +91,7 @@ $ ls
 |---feed.xml
 |---index.html
 </code></pre>
+</div>
 
 <p>Some highlights: The <strong>_config.yml</strong> file contains the configuration settings for the blog, the <strong>_includes</strong> folder holds HTML snippets that are used to generate page regions, the <strong>_layouts</strong> directory contains the templates used to assemble individual pages, and the <strong>_posts</strong> folder holds the markdown files for individual posts. The <strong>about.md</strong> and <strong>index.html</strong> are individual pages, found on the root of the site. Note that pages can be created either using HTML or markdown.</p>
 
@@ -100,12 +101,12 @@ $ ls
 
 <p>Now run the following command:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>$ jekyll serve
-<span class="c1"># Builds the site in the _site directory and serves it at http://localhost:4000</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>jekyll serve
+<span class="c"># Builds the site in the _site directory and serves it at http://localhost:4000</span></code></pre></figure>
 
 <p>If you examine your directory structure you’ll now find a <strong>_site</strong> directory that contains the generated site. Open up a browser and navigate to http://localhost:4000. Click through the site, explore the default post and note the default information. Using a text editor, open the markdown post in the <strong>_posts</strong> directory. At the top of the file you’ll see the YAML front matter contained between the dashed lines. Change the title to “Exploring Jekyll.” Save the file and note in the Terminal window that the Jekyll server detects the change and regenerates the file. Refreshing the file in your browser should reflect the change you made to the default post.</p>
 
-<p>Not all changes are automatically regenerated. Open the <strong>_config.yml</strong> file in your text editor. Change the title of the site to “Working with Jekyll” and replace the placeholder contact information with your contact info and then save the file. Notice that the Jekyll server doesn’t automatically detect the change. Stop the server by typing <code>CTRL+C</code> in the Terminal window. Run the <code>jekyll serve</code> command again and refresh the page in your browser. You should now see your updated information.</p>
+<p>Not all changes are automatically regenerated. Open the <strong>_config.yml</strong> file in your text editor. Change the title of the site to “Working with Jekyll” and replace the placeholder contact information with your contact info and then save the file. Notice that the Jekyll server doesn’t automatically detect the change. Stop the server by typing <code class="highlighter-rouge">CTRL+C</code> in the Terminal window. Run the <code class="highlighter-rouge">jekyll serve</code> command again and refresh the page in your browser. You should now see your updated information.</p>
 
 <p>From here begin to experiment with making changes to templates, adding posts, and modifying the overall site configuration. This is a practice site, so it’s totally okay to break it! By exploring and experimenting with the Jekyll boilerplate site you can get a better sense of how Jekyll works and how your own site should be structured.</p>
 

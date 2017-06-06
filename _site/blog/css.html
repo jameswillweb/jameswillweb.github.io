@@ -61,11 +61,11 @@
 
 <p>There are essentially two ways to link to external resources like CSS within Jekyll pages and templates. One would be to use the site baseURL to prefix your CSS files:</p>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span></span><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{{ site.baseurl }}/css/main.css&quot;</span><span class="p">&gt;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"{{ site.baseurl }}/css/main.css"</span><span class="nt">&gt;</span></code></pre></figure>
 
-<p>If your site will always be served from the root folder, you can eliminate the <code>site.baseurl</code> object and just use a <strong>site-root relative</strong> link:</p>
+<p>If your site will always be served from the root folder, you can eliminate the <code class="highlighter-rouge">site.baseurl</code> object and just use a <strong>site-root relative</strong> link:</p>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span></span><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/css/main.css&quot;</span><span class="p">&gt;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"/css/main.css"</span><span class="nt">&gt;</span></code></pre></figure>
 
 <p>It’s important to note here that relative links for assets like CSS can be difficult when hosting sites on <a href="https://pages.github.com/" title="Github Pages">Github Pages</a>. Essentially there are two ways to host pages on Github Pages, as either user/organization pages or project pages.</p>
 
@@ -73,7 +73,7 @@
 
 <p>Project Pages are stored in the same repository as the project they are for, except that the website content is stored in a specially named <strong>gh-pages</strong> branch. The <strong>master</strong> branch can hold the project itself, or even be empty.</p>
 
-<p>This matters because if the site is served through a project page, its baseURL changes as the site is served through a subpath of your user domain at <strong>username.github.io/project</strong>. This means that in these cases, you’ll need to set your baseURL to <code>/project-name</code>. Note the leading slash and no trailing slash. This can also lead to problems when testing the files locally, so be sure to read Jekyll’s documentation on <a href="http://jekyllrb.com/docs/github-pages/" title="Github Pages documentation">hosting with Github Pages</a> for a full account.</p>
+<p>This matters because if the site is served through a project page, its baseURL changes as the site is served through a subpath of your user domain at <strong>username.github.io/project</strong>. This means that in these cases, you’ll need to set your baseURL to <code class="highlighter-rouge">/project-name</code>. Note the leading slash and no trailing slash. This can also lead to problems when testing the files locally, so be sure to read Jekyll’s documentation on <a href="http://jekyllrb.com/docs/github-pages/" title="Github Pages documentation">hosting with Github Pages</a> for a full account.</p>
 
 <h3>Jekyll and SASS</h3>
 
@@ -81,19 +81,20 @@
 
 <p>First, in order to ensure Jekyll processes SASS files, you need to put an empty front matter string at the top of the page. You can include a comment if you’d like, but it doesn’t really matter. So include this at the top of each SASS file:</p>
 
-<pre><code>---
+<div class="highlighter-rouge"><pre class="highlight"><code>---
 # Front matter added to ensure Jekyll processes file.
 ---
 
 // write styles after front matter
 
 </code></pre>
+</div>
 
-<p>If you look at Jekyll’s default directory structure, you no doubt saw the <strong>_sass</strong> directory, which can lead to some confusion about where to place SASS files. Jekyll copies over any processed SASS file in the exact same location it was processed. So, if you have the file <strong>css/styles.scss</strong> it will be processed and placed at <strong>css/styles.css</strong> in the generated site. The <strong>_sass</strong> directory is for SASS import files. If you place the partial <code>.scss</code> files that you are importing and use <code>@import</code> to assemble them into your main stylesheet, Jekyll will process and assemble them at runtime.</p>
+<p>If you look at Jekyll’s default directory structure, you no doubt saw the <strong>_sass</strong> directory, which can lead to some confusion about where to place SASS files. Jekyll copies over any processed SASS file in the exact same location it was processed. So, if you have the file <strong>css/styles.scss</strong> it will be processed and placed at <strong>css/styles.css</strong> in the generated site. The <strong>_sass</strong> directory is for SASS import files. If you place the partial <code class="highlighter-rouge">.scss</code> files that you are importing and use <code class="highlighter-rouge">@import</code> to assemble them into your main stylesheet, Jekyll will process and assemble them at runtime.</p>
 
-<p>So if you do something like this in your main <code>.scss</code> file:</p>
+<p>So if you do something like this in your main <code class="highlighter-rouge">.scss</code> file:</p>
 
-<pre><code>---
+<div class="highlighter-rouge"><pre class="highlight"><code>---
 # Front matter added to ensure Jekyll processes file.
 ---
 
@@ -104,8 +105,9 @@
 
 //styles
 </code></pre>
+</div>
 
-<p>Place the files <code>type.scss</code>, <code>layout.scss</code>, and <code>components.scss</code> in the <strong>_sass</strong> directory and Jekyll will do the rest!</p>
+<p>Place the files <code class="highlighter-rouge">type.scss</code>, <code class="highlighter-rouge">layout.scss</code>, and <code class="highlighter-rouge">components.scss</code> in the <strong>_sass</strong> directory and Jekyll will do the rest!</p>
 
 
         <footer>

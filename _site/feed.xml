@@ -5,8 +5,8 @@
     <description>Simple Primate is the online home of James Williamson, lynda.com author, speaker and occasional web developer.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 04 Jun 2017 19:47:02 -0400</pubDate>
-    <lastBuildDate>Sun, 04 Jun 2017 19:47:02 -0400</lastBuildDate>
+    <pubDate>Tue, 06 Jun 2017 13:42:47 -0400</pubDate>
+    <lastBuildDate>Tue, 06 Jun 2017 13:42:47 -0400</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
     
       <item>
@@ -83,9 +83,9 @@
 
 &lt;h3&gt;Github&lt;/h3&gt;
 
-&lt;p&gt;Github uses Jekyll to power it’s Github Pages feature, so it’s only natural that deploying Jekyll sites through Github is quick and easy. You can even host your personal or project site for free on Github. You have two options for serving your site: user/organization or as a project page. Each Github user gets one free user/organization Github Pages site, and unlimited project pages. Organization pages are served as the “home” site for the user, so it’s served at &lt;code&gt;username.github.io.&lt;/code&gt; Project pages are served as subdomains, so they would be served at &lt;code&gt;username.github.io/project-name.&lt;/code&gt; The only real difference between the two methods is how you format relative links, as project pages have the project name directory as part of their base URL. You can even redirect a custom domain to your Github Pages site, which makes it a very attractive choice for hosting personal blogs and smaller sites.&lt;/p&gt;
+&lt;p&gt;Github uses Jekyll to power it’s Github Pages feature, so it’s only natural that deploying Jekyll sites through Github is quick and easy. You can even host your personal or project site for free on Github. You have two options for serving your site: user/organization or as a project page. Each Github user gets one free user/organization Github Pages site, and unlimited project pages. Organization pages are served as the “home” site for the user, so it’s served at &lt;code class=&quot;highlighter-rouge&quot;&gt;username.github.io.&lt;/code&gt; Project pages are served as subdomains, so they would be served at &lt;code class=&quot;highlighter-rouge&quot;&gt;username.github.io/project-name.&lt;/code&gt; The only real difference between the two methods is how you format relative links, as project pages have the project name directory as part of their base URL. You can even redirect a custom domain to your Github Pages site, which makes it a very attractive choice for hosting personal blogs and smaller sites.&lt;/p&gt;
 
-&lt;p&gt;The workflow for deploying to Github Pages is simple. Login to your Github account, create a new repo, and then point your local repo to use the new Github repo as its remote. Create a new branch called &lt;code&gt;gh-pages&lt;/code&gt; and push everything except the &lt;strong&gt;_site&lt;/strong&gt; directory to your new Github repo. Github will detect the Jekyll site, build it, and serve the site at the appropriate URL. From there, updating the site is as simple as writing a new Markdown file and making a push.&lt;/p&gt;
+&lt;p&gt;The workflow for deploying to Github Pages is simple. Login to your Github account, create a new repo, and then point your local repo to use the new Github repo as its remote. Create a new branch called &lt;code class=&quot;highlighter-rouge&quot;&gt;gh-pages&lt;/code&gt; and push everything except the &lt;strong&gt;_site&lt;/strong&gt; directory to your new Github repo. Github will detect the Jekyll site, build it, and serve the site at the appropriate URL. From there, updating the site is as simple as writing a new Markdown file and making a push.&lt;/p&gt;
 
 &lt;h3&gt;More information&lt;/h3&gt;
 
@@ -121,11 +121,11 @@
 
 &lt;p&gt;There are essentially two ways to link to external resources like CSS within Jekyll pages and templates. One would be to use the site baseURL to prefix your CSS files:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;stylesheet&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;{{ site.baseurl }}/css/main.css&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ site.baseurl }}/css/main.css&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;If your site will always be served from the root folder, you can eliminate the &lt;code&gt;site.baseurl&lt;/code&gt; object and just use a &lt;strong&gt;site-root relative&lt;/strong&gt; link:&lt;/p&gt;
+&lt;p&gt;If your site will always be served from the root folder, you can eliminate the &lt;code class=&quot;highlighter-rouge&quot;&gt;site.baseurl&lt;/code&gt; object and just use a &lt;strong&gt;site-root relative&lt;/strong&gt; link:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;stylesheet&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;/css/main.css&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/css/main.css&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;It’s important to note here that relative links for assets like CSS can be difficult when hosting sites on &lt;a href=&quot;https://pages.github.com/&quot; title=&quot;Github Pages&quot;&gt;Github Pages&lt;/a&gt;. Essentially there are two ways to host pages on Github Pages, as either user/organization pages or project pages.&lt;/p&gt;
 
@@ -133,7 +133,7 @@
 
 &lt;p&gt;Project Pages are stored in the same repository as the project they are for, except that the website content is stored in a specially named &lt;strong&gt;gh-pages&lt;/strong&gt; branch. The &lt;strong&gt;master&lt;/strong&gt; branch can hold the project itself, or even be empty.&lt;/p&gt;
 
-&lt;p&gt;This matters because if the site is served through a project page, its baseURL changes as the site is served through a subpath of your user domain at &lt;strong&gt;username.github.io/project&lt;/strong&gt;. This means that in these cases, you’ll need to set your baseURL to &lt;code&gt;/project-name&lt;/code&gt;. Note the leading slash and no trailing slash. This can also lead to problems when testing the files locally, so be sure to read Jekyll’s documentation on &lt;a href=&quot;http://jekyllrb.com/docs/github-pages/&quot; title=&quot;Github Pages documentation&quot;&gt;hosting with Github Pages&lt;/a&gt; for a full account.&lt;/p&gt;
+&lt;p&gt;This matters because if the site is served through a project page, its baseURL changes as the site is served through a subpath of your user domain at &lt;strong&gt;username.github.io/project&lt;/strong&gt;. This means that in these cases, you’ll need to set your baseURL to &lt;code class=&quot;highlighter-rouge&quot;&gt;/project-name&lt;/code&gt;. Note the leading slash and no trailing slash. This can also lead to problems when testing the files locally, so be sure to read Jekyll’s documentation on &lt;a href=&quot;http://jekyllrb.com/docs/github-pages/&quot; title=&quot;Github Pages documentation&quot;&gt;hosting with Github Pages&lt;/a&gt; for a full account.&lt;/p&gt;
 
 &lt;h3&gt;Jekyll and SASS&lt;/h3&gt;
 
@@ -141,19 +141,20 @@
 
 &lt;p&gt;First, in order to ensure Jekyll processes SASS files, you need to put an empty front matter string at the top of the page. You can include a comment if you’d like, but it doesn’t really matter. So include this at the top of each SASS file:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;---
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
 # Front matter added to ensure Jekyll processes file.
 ---
 
 // write styles after front matter
 
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;p&gt;If you look at Jekyll’s default directory structure, you no doubt saw the &lt;strong&gt;_sass&lt;/strong&gt; directory, which can lead to some confusion about where to place SASS files. Jekyll copies over any processed SASS file in the exact same location it was processed. So, if you have the file &lt;strong&gt;css/styles.scss&lt;/strong&gt; it will be processed and placed at &lt;strong&gt;css/styles.css&lt;/strong&gt; in the generated site. The &lt;strong&gt;_sass&lt;/strong&gt; directory is for SASS import files. If you place the partial &lt;code&gt;.scss&lt;/code&gt; files that you are importing and use &lt;code&gt;@import&lt;/code&gt; to assemble them into your main stylesheet, Jekyll will process and assemble them at runtime.&lt;/p&gt;
+&lt;p&gt;If you look at Jekyll’s default directory structure, you no doubt saw the &lt;strong&gt;_sass&lt;/strong&gt; directory, which can lead to some confusion about where to place SASS files. Jekyll copies over any processed SASS file in the exact same location it was processed. So, if you have the file &lt;strong&gt;css/styles.scss&lt;/strong&gt; it will be processed and placed at &lt;strong&gt;css/styles.css&lt;/strong&gt; in the generated site. The &lt;strong&gt;_sass&lt;/strong&gt; directory is for SASS import files. If you place the partial &lt;code class=&quot;highlighter-rouge&quot;&gt;.scss&lt;/code&gt; files that you are importing and use &lt;code class=&quot;highlighter-rouge&quot;&gt;@import&lt;/code&gt; to assemble them into your main stylesheet, Jekyll will process and assemble them at runtime.&lt;/p&gt;
 
-&lt;p&gt;So if you do something like this in your main &lt;code&gt;.scss&lt;/code&gt; file:&lt;/p&gt;
+&lt;p&gt;So if you do something like this in your main &lt;code class=&quot;highlighter-rouge&quot;&gt;.scss&lt;/code&gt; file:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;---
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
 # Front matter added to ensure Jekyll processes file.
 ---
 
@@ -164,8 +165,9 @@
 
 //styles
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;p&gt;Place the files &lt;code&gt;type.scss&lt;/code&gt;, &lt;code&gt;layout.scss&lt;/code&gt;, and &lt;code&gt;components.scss&lt;/code&gt; in the &lt;strong&gt;_sass&lt;/strong&gt; directory and Jekyll will do the rest!&lt;/p&gt;
+&lt;p&gt;Place the files &lt;code class=&quot;highlighter-rouge&quot;&gt;type.scss&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;layout.scss&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;components.scss&lt;/code&gt; in the &lt;strong&gt;_sass&lt;/strong&gt; directory and Jekyll will do the rest!&lt;/p&gt;
 
 </description>
         <pubDate>Mon, 13 Jul 2015 00:00:00 -0400</pubDate>
@@ -193,22 +195,22 @@
 
 &lt;p&gt;The front matter must be the first item in a file and must take the form of valid YAML set between triple-dashed lines. Here is a basic example:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
-&lt;span class=&quot;l l-Scalar l-Scalar-Plain&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;p p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l l-Scalar l-Scalar-Plain&quot;&gt;default&lt;/span&gt;
-&lt;span class=&quot;l l-Scalar l-Scalar-Plain&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l l-Scalar l-Scalar-Plain&quot;&gt;Welcome to Jekyll&lt;/span&gt;
-&lt;span class=&quot;l l-Scalar l-Scalar-Plain&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;p p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l l-Scalar l-Scalar-Plain&quot;&gt;2015-08-15 12:34&lt;/span&gt;
-&lt;span class=&quot;l l-Scalar l-Scalar-Plain&quot;&gt;author&lt;/span&gt;&lt;span class=&quot;p p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l l-Scalar l-Scalar-Plain&quot;&gt;James Williamson&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;default&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Welcome to Jekyll&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;2015-08-15 12:34&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;author&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;James Williamson&lt;/span&gt;
 &lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;In this example Jekyll is instructed to use the &lt;strong&gt;default.html&lt;/strong&gt; template for the content, and page variables for both the &lt;strong&gt;title&lt;/strong&gt; of the page and the &lt;strong&gt;author&lt;/strong&gt; are created. These can be written to the page using the &lt;code&gt;page.title&lt;/code&gt; and &lt;code&gt;page.author&lt;/code&gt; objects. A &lt;strong&gt;date&lt;/strong&gt; for the page is given as well, and when used for a Post this will override the date used in the name of the post.&lt;/p&gt;
+&lt;p&gt;In this example Jekyll is instructed to use the &lt;strong&gt;default.html&lt;/strong&gt; template for the content, and page variables for both the &lt;strong&gt;title&lt;/strong&gt; of the page and the &lt;strong&gt;author&lt;/strong&gt; are created. These can be written to the page using the &lt;code class=&quot;highlighter-rouge&quot;&gt;page.title&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;page.author&lt;/code&gt; objects. A &lt;strong&gt;date&lt;/strong&gt; for the page is given as well, and when used for a Post this will override the date used in the name of the post.&lt;/p&gt;
 
 &lt;p&gt;There are many predefined Global variables that you can set in the front matter of a page or post. These are:&lt;/p&gt;
 
 &lt;dl&gt;
   &lt;dt&gt;layout&lt;/dt&gt;
-  &lt;dd&gt;Specifies which template to use for the content. As such it must point to a file in the &lt;strong&gt;_layouts&lt;/strong&gt; directory. Do not add the file extension to the template name. To reference the &lt;strong&gt;post.html&lt;/strong&gt; template you would add &lt;code&gt;layout: post&lt;/code&gt;.&lt;/dd&gt;
+  &lt;dd&gt;Specifies which template to use for the content. As such it must point to a file in the &lt;strong&gt;_layouts&lt;/strong&gt; directory. Do not add the file extension to the template name. To reference the &lt;strong&gt;post.html&lt;/strong&gt; template you would add &lt;code class=&quot;highlighter-rouge&quot;&gt;layout: post&lt;/code&gt;.&lt;/dd&gt;
   &lt;dt&gt;permalink&lt;/dt&gt;
-  &lt;dd&gt;Sets the permalink for the targeted file and is used to overwrite the default permalink style for a post. For example, the setting &lt;code&gt;permalink: /blog/:title&lt;/code&gt; would overwrite the site permalink settings and locate the post at &lt;strong&gt;/blog/post-title/index.html&lt;/strong&gt;.&lt;/dd&gt;
+  &lt;dd&gt;Sets the permalink for the targeted file and is used to overwrite the default permalink style for a post. For example, the setting &lt;code class=&quot;highlighter-rouge&quot;&gt;permalink: /blog/:title&lt;/code&gt; would overwrite the site permalink settings and locate the post at &lt;strong&gt;/blog/post-title/index.html&lt;/strong&gt;.&lt;/dd&gt;
   &lt;dt&gt;published&lt;/dt&gt;
   &lt;dd&gt;A boolean value that you can set to &lt;strong&gt;false&lt;/strong&gt; if you don’t want the post published as the site is generated.&lt;/dd&gt;
   &lt;dt&gt;category&lt;/dt&gt;
@@ -224,26 +226,27 @@
 
 &lt;p&gt;The most common form of custom variable is to store information like page titles, author names, and descriptions that can be added to the page or in &lt;strong&gt;meta&lt;/strong&gt; tags to enhance page metadata. You can take this even further and control things like page layout as well. Let’s say that most pages in your site uses a simple sidebar, but occasionally you need to use a longer sidebar. In your template you could have the following markup:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-liquid&quot; data-lang=&quot;liquid&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;sidebar&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;long&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;sidebar-long.html&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;sidebar.html&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-liquid&quot; data-lang=&quot;liquid&quot;&gt;&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;sidebar&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;long&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sidebar-long&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;%}
+    {% else %}
+    {% include sidebar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;endif&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Now in any page or post that uses this template all you would need to add is the following variable to the front matter:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;sidebar-long: true
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sidebar-long: true
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Combining includes, templates, and front matter variables gives you an incredible amount of control over how pages are built, and limits the amount of variations you need in the form of templates.&lt;/p&gt;
 
 &lt;p&gt;You can even get to the point where you are generating entire pages with nothing but front matter. Let’s say you want to generate a single page for every tag that lists all posts tagged with that specific tag. You could create a template that generates everything dynamically based on the tag name. To create a new tag page, you simply name the file &lt;strong&gt;tag-name.md&lt;/strong&gt; and add the following to the front matter:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
-&lt;span class=&quot;l l-Scalar l-Scalar-Plain&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;p p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l l-Scalar l-Scalar-Plain&quot;&gt;tag-page&lt;/span&gt;
-&lt;span class=&quot;l l-Scalar l-Scalar-Plain&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l l-Scalar l-Scalar-Plain&quot;&gt;Tagged with Jekyll&lt;/span&gt;
-&lt;span class=&quot;l l-Scalar l-Scalar-Plain&quot;&gt;tag&lt;/span&gt;&lt;span class=&quot;p p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l l-Scalar l-Scalar-Plain&quot;&gt;Jekyll&lt;/span&gt;
-&lt;span class=&quot;l l-Scalar l-Scalar-Plain&quot;&gt;permalink&lt;/span&gt;&lt;span class=&quot;p p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l l-Scalar l-Scalar-Plain&quot;&gt;/tags/:title&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;tag-page&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Tagged with Jekyll&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;tag&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Jekyll&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;permalink&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/tags/:title&lt;/span&gt;
 &lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;The rest of the file could be empty and Jekyll would dynamically generate the page based on the tag name.&lt;/p&gt;
@@ -252,9 +255,10 @@
 
 &lt;p&gt;Jekyll provides built-in support for Sass and CoffeeScript, but won’t process those files automatically. To enable those files for processing, add an empty front matter region to the top of the page:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;---
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
 ---
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;The files will then be processed, and the resulting file will be located in the same directory in the generated site. The file &lt;strong&gt;css/layout.scss&lt;/strong&gt; would generate &lt;strong&gt;css/layout.css&lt;/strong&gt; in the finished site.&lt;/p&gt;
 
@@ -284,14 +288,15 @@
 
 &lt;p&gt;To specify a rendering engine, simply add this line to your &lt;strong&gt;_config,yml&lt;/strong&gt; file:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;markdown: kramdown
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;markdown: kramdown
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;For the most part, the rendering engines are the same, although they do have subtle differences in syntax and element support. Currently Kramdown is the default Markdown renderer for Jekyll. Let’s take a look at some basic Kramdown syntax.&lt;/p&gt;
 
 &lt;p&gt;The following passage:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;# My main heading
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# My main heading
 {: .intro }
 
 This is my initial paragraph. In it I’d like to provide a link to the [Jekyll homepage](http://jekyllrb.com/ &quot;Jekyll&quot;). I want to add **bold** and *italic* formatting to text as well using the `strong` and `emphasis` tags.
@@ -303,17 +308,18 @@ This is another paragraph. I’d like to follow it with an unordered list.
 * item 3
 
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Would be rendered in HTML as:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;h1&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;intro&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;My main heading&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;h1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;This is my initial paragraph. In it I’d like to provide a link to the &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://jekyllrb.com/&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Jekyll&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;Jekyll homepage&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;. I want to add &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;strong&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;bold&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;strong&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; and &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;em&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;italic&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;em&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; formatting to text as well using the &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;strong&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; and &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;emphasis&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; tags.&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;This is another paragraph. I’d like to follow it with an unordered list.&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;ul&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;item 1&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;item 2&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;item 3&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;ul&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;intro&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;My main heading&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This is my initial paragraph. In it I’d like to provide a link to the &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://jekyllrb.com/&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;title=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Jekyll&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Jekyll homepage&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;. I want to add &lt;span class=&quot;nt&quot;&gt;&amp;lt;strong&amp;gt;&lt;/span&gt;bold&lt;span class=&quot;nt&quot;&gt;&amp;lt;/strong&amp;gt;&lt;/span&gt; and &lt;span class=&quot;nt&quot;&gt;&amp;lt;em&amp;gt;&lt;/span&gt;italic&lt;span class=&quot;nt&quot;&gt;&amp;lt;/em&amp;gt;&lt;/span&gt; formatting to text as well using the &lt;span class=&quot;nt&quot;&gt;&amp;lt;code&amp;gt;&lt;/span&gt;strong&lt;span class=&quot;nt&quot;&gt;&amp;lt;/code&amp;gt;&lt;/span&gt; and &lt;span class=&quot;nt&quot;&gt;&amp;lt;code&amp;gt;&lt;/span&gt;emphasis&lt;span class=&quot;nt&quot;&gt;&amp;lt;/code&amp;gt;&lt;/span&gt; tags.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This is another paragraph. I’d like to follow it with an unordered list.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;ul&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;item 1&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;item 2&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;item 3&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/ul&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;As you can see, Markdown frees you from many of the structural restraints that would make it difficult to author something like a blog post using HTML. To write two paragraphs, for example, you simply write two paragraphs, no &amp;lt;p&amp;gt; tags or special formatting required. Let’s take a quick look at how to format some of the basic HTML elements in Kramdown.&lt;/p&gt;
 
@@ -321,137 +327,147 @@ This is another paragraph. I’d like to follow it with an unordered list.
 
 &lt;p&gt;Consecutive lines of text are formatted as a single paragraph. As a block level element, you must to add a blank line after it to separate it from other block-level elements.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;This is a paragraph.
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;This is a paragraph.
 
 This is as well.
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Renders as:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;This is a paragraph.&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;This is as well.&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This is a paragraph.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This is as well.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3&gt;Headings&lt;/h3&gt;
 
-&lt;p&gt;There are multiple ways to format headings in Kramdown. The easiest is to preceed the heading with hash characters (&lt;strong&gt;#&lt;/strong&gt;) equal to the heading level. An &lt;code&gt;h1&lt;/code&gt; for example, would be written as &lt;code&gt;#heading 1&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;There are multiple ways to format headings in Kramdown. The easiest is to preceed the heading with hash characters (&lt;strong&gt;#&lt;/strong&gt;) equal to the heading level. An &lt;code class=&quot;highlighter-rouge&quot;&gt;h1&lt;/code&gt; for example, would be written as &lt;code class=&quot;highlighter-rouge&quot;&gt;#heading 1&lt;/code&gt;.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;# This is a heading 1
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# This is a heading 1
 
 ## This is a heading 2
 
 ### This is a heading 3
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Renders as:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;h1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;This is a heading 1&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;h1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;h2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;This is a heading 2&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;h2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;h3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;This is a heading 3&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;h3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;This is a heading 1&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;h2&amp;gt;&lt;/span&gt;This is a heading 2&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h2&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;h3&amp;gt;&lt;/span&gt;This is a heading 3&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h3&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3&gt;Blockquotes&lt;/h3&gt;
 
 &lt;p&gt;Blockquotes are formatted using the “greater than” character (&lt;strong&gt;&amp;gt;&lt;/strong&gt;) at the start of the blockquote. Text inside a blockquote is wrapped with a paragraph.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;&amp;gt; This is a blockquote.
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; This is a blockquote.
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Renders as:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;blockquote&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;This is a blockquote.&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;blockquote&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;blockquote&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This is a blockquote.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/blockquote&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3&gt;Ordered Lists&lt;/h3&gt;
 
 &lt;p&gt;To create an ordered list, simply type a list started by a number followed by a period. Each list item should be on a separate line. Nested lists are created by indenting a list underneath an existing list item.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;1. This is the first item
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. This is the first item
 2. This is the second item
 3. This is the third item
     1. This is a nested list
     2. More nested list
 4. This is the fourth item.
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Renders as:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;ol&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;This is the first item&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;This is the second item&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;This is the third item
-        &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;ol&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;This is a nested list&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;More nested list&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
-          &lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;ol&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;This is the fourth item.&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;ol&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;ol&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;This is the first item&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;This is the second item&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;This is the third item
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;ol&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;This is a nested list&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;More nested list&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+          &lt;span class=&quot;nt&quot;&gt;&amp;lt;/ol&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;This is the fourth item.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/ol&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3&gt;Block-level attributes&lt;/h3&gt;
 
 &lt;p&gt;Often you may wish to assign attributes to block-level elements. To do this, follow the element with a &lt;em&gt;block inline attribute list&lt;/em&gt; (block IAL). A block IAL consists of a left curly brace, followed by a colon, the attribute definitions and a right curly brace.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;# Apply the class “main” to this heading
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Apply the class “main” to this heading
 {: .main}
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Renders as:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;h1&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;main&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;Apply the class “main” to this heading&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;h1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;main&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Apply the class “main” to this heading&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Classes are applied with the syntax &lt;code&gt;.className&lt;/code&gt; and IDs with &lt;code&gt;#ID-name&lt;/code&gt;. For any other attribute you simply write the desired syntax:&lt;/p&gt;
+&lt;p&gt;Classes are applied with the syntax &lt;code class=&quot;highlighter-rouge&quot;&gt;.className&lt;/code&gt; and IDs with &lt;code class=&quot;highlighter-rouge&quot;&gt;#ID-name&lt;/code&gt;. For any other attribute you simply write the desired syntax:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;# Another heading with the ‘role’ attribute applied
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Another heading with the ‘role’ attribute applied
 {: role=&quot;banner&quot;}
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Renders as:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;h1&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;role&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;banner&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;Another heading with the ‘role’ attribute applied
-&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;h1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;role=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;banner&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Another heading with the ‘role’ attribute applied
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;For multiple attributes, create a space-separated list inside the blockIAL.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;# This heading has two classes and one ID applied
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# This heading has two classes and one ID applied
 {: .class1 .class2 #ID-1}
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Renders as:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;h1&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;class1 class2&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;ID-1&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;This heading has two classes and one ID applied&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;h1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;class1 class2&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ID-1&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;This heading has two classes and one ID applied&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3&gt;Inline formatting&lt;/h3&gt;
 
-&lt;p&gt;Emphasis can be added to text by surrounding the text with either asterisks or underscores. This will result in wrapping the content in either the &lt;code&gt;strong&lt;/code&gt; or &lt;code&gt;emphasis&lt;/code&gt; tag depending upon how many are used:&lt;/p&gt;
+&lt;p&gt;Emphasis can be added to text by surrounding the text with either asterisks or underscores. This will result in wrapping the content in either the &lt;code class=&quot;highlighter-rouge&quot;&gt;strong&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;emphasis&lt;/code&gt; tag depending upon how many are used:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;I want to wrap **this text** in a strong tag and *this text* in an emphasis tag.
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;I want to wrap **this text** in a strong tag and *this text* in an emphasis tag.
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Renders as:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;I want to wrap &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;strong&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;this text&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;strong&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; in a strong tag and &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;em&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;this text&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;em&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; in an emphasis tag.&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;I want to wrap &lt;span class=&quot;nt&quot;&gt;&amp;lt;strong&amp;gt;&lt;/span&gt;this text&lt;span class=&quot;nt&quot;&gt;&amp;lt;/strong&amp;gt;&lt;/span&gt; in a strong tag and &lt;span class=&quot;nt&quot;&gt;&amp;lt;em&amp;gt;&lt;/span&gt;this text&lt;span class=&quot;nt&quot;&gt;&amp;lt;/em&amp;gt;&lt;/span&gt; in an emphasis tag.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3&gt;Links&lt;/h3&gt;
 
 &lt;p&gt;You can create a link by surrounding the text with square brackets and then directly following it with the link URL in parentheses. To add a title attribute, add the desired title in straight quotes (“ “) after the link URL.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;I usually search using [Google](https://www.google.com &quot;Google&quot;).
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;I usually search using [Google](https://www.google.com &quot;Google&quot;).
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Renders as:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;I usually search using &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;https://www.google.com&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Google&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;Google&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;.&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;I usually search using &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://www.google.com&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;title=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Google&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Google&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3&gt;Images&lt;/h3&gt;
 
 &lt;p&gt;Images are similar to links, but use an exclamation mark before the square brackets. The link text will become the alternative text of the image and the link URL specifies the image source.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;![My dog](/images/Baxter.jpg)
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;![My dog](/images/Baxter.jpg)
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Renders as:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;/images/Baxter.jpg&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;alt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;My dog&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/images/Baxter.jpg&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;alt=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;My dog&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;As you can see, Markdown is simple to write, and once you’ve learned the basic formatting options, generating semantic HTML is fairly simple. One of the most powerful Markdown features is the ability to nest HTML directly inside a Markdown document. That way if you’re unable to use Markdown to get exactly the HTML you need, you can simply inject HTML into the document and then continue using Markdown.&lt;/p&gt;
 
@@ -487,18 +503,18 @@ This is as well.
 
 &lt;p&gt;Output writes content to the page. Output tags start with two curly braces, contain the content to be written to the page, and then end with two curly braces. Here’s an example:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-liquid&quot; data-lang=&quot;liquid&quot;&gt;&lt;span&gt;&lt;/span&gt;Written by &lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;author&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-liquid&quot; data-lang=&quot;liquid&quot;&gt;Written by &lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;author&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;
 Written by &lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;author&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;
-Written by &lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;james&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+Written by &lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'james'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;In this instance the value of &lt;code&gt;author&lt;/code&gt; would be evaluated and written to the page, the &lt;code&gt;page&lt;/code&gt; object would be parsed to find the value of the &lt;code&gt;author&lt;/code&gt; property and that would be written to the page, and then the literal string “james” would be written to the page.&lt;/p&gt;
+&lt;p&gt;In this instance the value of &lt;code class=&quot;highlighter-rouge&quot;&gt;author&lt;/code&gt; would be evaluated and written to the page, the &lt;code class=&quot;highlighter-rouge&quot;&gt;page&lt;/code&gt; object would be parsed to find the value of the &lt;code class=&quot;highlighter-rouge&quot;&gt;author&lt;/code&gt; property and that would be written to the page, and then the literal string “james” would be written to the page.&lt;/p&gt;
 
-&lt;p&gt;Output markup can be further modified through the use of filters. Filters are methods that can be used to transform the results of the output tags. Filters appear to the right of the output parameter, and are separated using the ‘pipe’ character &lt;code&gt;( | )&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Output markup can be further modified through the use of filters. Filters are methods that can be used to transform the results of the output tags. Filters appear to the right of the output parameter, and are separated using the ‘pipe’ character &lt;code class=&quot;highlighter-rouge&quot;&gt;( | )&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Here’s a filter in action:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-liquid&quot; data-lang=&quot;liquid&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;date_to_string}}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;&lt;/span&gt;
-&amp;lt;!--&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;would&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;output&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;‘&lt;span class=&quot;mi&quot;&gt;22&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;Aug&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2015&lt;/span&gt;’&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;--&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-liquid&quot; data-lang=&quot;liquid&quot;&gt;&lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;date_to_string}}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&amp;lt;!--&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;would&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;output&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;‘&lt;span class=&quot;mi&quot;&gt;22&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;Aug&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2015&lt;/span&gt;’&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;--&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;It’s also possible to use more than one filter at a time. Here are a few of the standard filters available in Liquid:&lt;/p&gt;
 
@@ -531,7 +547,7 @@ Written by &lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;s
 
 &lt;p&gt;Liquid tags are functional, when applied they perform some type of action. They provide the basic programming logic for templates and allow you to build intelligent templates that can respond to a number of different factors. Tags are written with a curly brace followed by a percentage sign (&lt;em&gt;%&lt;/em&gt;), contain the desired instructions, and end with a percentage sign and a curly brace. Tags usually come in twos, with an opening tag and a closing tag that wraps the targeted content. Here’s an example:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-liquid&quot; data-lang=&quot;liquid&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;About&amp;#39;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-liquid&quot; data-lang=&quot;liquid&quot;&gt;&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'About'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
     About this blog
 &lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;endif&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
@@ -543,9 +559,9 @@ Written by &lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;s
 
 &lt;h3&gt;for loops&lt;/h3&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-liquid&quot; data-lang=&quot;liquid&quot;&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;post&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;in&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;site.posts&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-liquid&quot; data-lang=&quot;liquid&quot;&gt;    &lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;post&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;in&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;site.posts&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
       &amp;lt;li&amp;gt;
-	  &amp;lt;a href=&amp;quot;&lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;&amp;quot;&amp;gt;&lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;&amp;lt;/a&amp;gt;
+	  &amp;lt;a href=&quot;&lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;&quot;&amp;gt;&lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;&amp;lt;/a&amp;gt;
       &amp;lt;/li&amp;gt;
 &lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;endfor&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
@@ -553,30 +569,30 @@ Written by &lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;s
 
 &lt;h3&gt;if/else statements&lt;/h3&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-liquid&quot; data-lang=&quot;liquid&quot;&gt;&lt;span&gt;&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;paginator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;previous_page&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
-     &amp;lt;a href=&amp;quot;&lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;paginator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;previous_page_path&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;&amp;quot;&amp;gt;Previous&amp;lt;/a&amp;gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-liquid&quot; data-lang=&quot;liquid&quot;&gt;  &lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;paginator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;previous_page&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+     &amp;lt;a href=&quot;&lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;paginator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;previous_page_path&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;&quot;&amp;gt;Previous&amp;lt;/a&amp;gt;
   &lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
     &amp;lt;span&amp;gt;No previous posts&amp;lt;/span&amp;gt;
   &lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;endif&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Allows the application of conditional logic within templates. In this example Jekyll would check to see if there are any posts older than the current one using the &lt;strong&gt;paginator&lt;/strong&gt; object. If so, a link would be created to the previous posts. If not a message is created stating that there are no previous posts. There are many variations on the if/else statements syntax including &lt;code&gt;elseif&lt;/code&gt;, &lt;code&gt;unless&lt;/code&gt;, and &lt;code&gt;case&lt;/code&gt; statements.&lt;/p&gt;
+&lt;p&gt;Allows the application of conditional logic within templates. In this example Jekyll would check to see if there are any posts older than the current one using the &lt;strong&gt;paginator&lt;/strong&gt; object. If so, a link would be created to the previous posts. If not a message is created stating that there are no previous posts. There are many variations on the if/else statements syntax including &lt;code class=&quot;highlighter-rouge&quot;&gt;elseif&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;unless&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;case&lt;/code&gt; statements.&lt;/p&gt;
 
 &lt;h3&gt;includes&lt;/h3&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-liquid&quot; data-lang=&quot;liquid&quot;&gt;&lt;span&gt;&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;footer.html&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-liquid&quot; data-lang=&quot;liquid&quot;&gt;  &lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;footer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
  &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Inserts the included content at the desired location. In this example the contents of the file “footer.html” would be inserted at the location of the tag. Allows for the dynamic insertion of content.&lt;/p&gt;
 
 &lt;h3&gt;variables&lt;/h3&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-liquid&quot; data-lang=&quot;liquid&quot;&gt;&lt;span&gt;&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;assign&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;author&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;james&amp;#39;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-liquid&quot; data-lang=&quot;liquid&quot;&gt;  &lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;assign&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;author&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'james'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;author&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;
  &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;There are two main ways to assign variables using Liquid. The &lt;strong&gt;assign&lt;/strong&gt; method shown above assigns a literal string which is then stored for later use.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-liquid&quot; data-lang=&quot;liquid&quot;&gt;&lt;span&gt;&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;capture&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;site_tags&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-liquid&quot; data-lang=&quot;liquid&quot;&gt;  &lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;capture&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;site_tags&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
       &lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;tag&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;in&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;site.tags&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}{{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;tag&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;first&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;
            &lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;unless&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;forloop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;last&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;,&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;endunless&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
       &lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;endfor&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
@@ -608,7 +624,7 @@ Written by &lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;s
 
 &lt;p&gt;The &lt;strong&gt;_config.yml&lt;/strong&gt; sits in the root of your source directory and, as the name suggests, controls the configuration options for your site. Let’s break down the options in the sample &lt;strong&gt;_config.yml&lt;/strong&gt; that’s created when you generate a new Jekyll site before moving on to covering the Global config options.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;# Site settings
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Site settings
 
 title: Your awesome site
 email: your-email@domain.com
@@ -626,12 +642,13 @@ github_username:  jekyll
 
 markdown: kramdown
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;p&gt;The important thing to note here is that they’ve split the configuration options into two sections, site settings and build settings. All of the site settings other than &lt;strong&gt;baseurl&lt;/strong&gt; and &lt;strong&gt;url&lt;/strong&gt; are basically site variables that can be reused throughout the site. As such, they are all optional. Storing the &lt;strong&gt;title&lt;/strong&gt; of the site in a variable, for instance, makes it easy to set the title element for pages, or to use it in a heading element on a page. By setting these variables in the &lt;strong&gt;_config.yml&lt;/strong&gt; file they are available to any page throughout the site. You could access the title, for example, by using the Liquid tag &lt;code&gt;{{site.title}}&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The important thing to note here is that they’ve split the configuration options into two sections, site settings and build settings. All of the site settings other than &lt;strong&gt;baseurl&lt;/strong&gt; and &lt;strong&gt;url&lt;/strong&gt; are basically site variables that can be reused throughout the site. As such, they are all optional. Storing the &lt;strong&gt;title&lt;/strong&gt; of the site in a variable, for instance, makes it easy to set the title element for pages, or to use it in a heading element on a page. By setting these variables in the &lt;strong&gt;_config.yml&lt;/strong&gt; file they are available to any page throughout the site. You could access the title, for example, by using the Liquid tag &lt;code class=&quot;highlighter-rouge&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{site.title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;There is a difference between the &lt;code&gt;site.url&lt;/code&gt; and &lt;code&gt;site.baseurl&lt;/code&gt; objects and when you need them. By default, the &lt;code&gt;site.url&lt;/code&gt; variable is used in the page head for things like canonical links and links to the RSS feed that are accessed by external systems, although it can be used to create absolute links within your site.&lt;/p&gt;
+&lt;p&gt;There is a difference between the &lt;code class=&quot;highlighter-rouge&quot;&gt;site.url&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;site.baseurl&lt;/code&gt; objects and when you need them. By default, the &lt;code class=&quot;highlighter-rouge&quot;&gt;site.url&lt;/code&gt; variable is used in the page head for things like canonical links and links to the RSS feed that are accessed by external systems, although it can be used to create absolute links within your site.&lt;/p&gt;
 
-&lt;p&gt;The &lt;code&gt;site.baseurl&lt;/code&gt; variable indicates the root folder of your site. By default it is set to &lt;code&gt;&quot; &quot;&lt;/code&gt; (empty string), which indicates your site is hosted at the root of http://yourdomain.com. However, if your site is located in http://yourdomain.com/blog, you have to set &lt;code&gt;site.baseurl&lt;/code&gt; to &lt;strong&gt;/blog&lt;/strong&gt; (note the slash). This will allow you to create relative links to assets that load correctly.&lt;/p&gt;
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;site.baseurl&lt;/code&gt; variable indicates the root folder of your site. By default it is set to &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot; &quot;&lt;/code&gt; (empty string), which indicates your site is hosted at the root of http://yourdomain.com. However, if your site is located in http://yourdomain.com/blog, you have to set &lt;code class=&quot;highlighter-rouge&quot;&gt;site.baseurl&lt;/code&gt; to &lt;strong&gt;/blog&lt;/strong&gt; (note the slash). This will allow you to create relative links to assets that load correctly.&lt;/p&gt;
 
 &lt;p&gt;When creating your own site, you should give careful consideration to what type of information to store in your &lt;strong&gt;_config.yml&lt;/strong&gt; file. Being able to access this data at any time throughout your site is a powerful option.&lt;/p&gt;
 
@@ -639,73 +656,83 @@ markdown: kramdown
 
 &lt;h3&gt;local port&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;port: PORT
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;port: PORT
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Listen to the given port. 4000 is the default.&lt;/p&gt;
 
 &lt;h3&gt;base URL&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;baseurl: URL
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;baseurl: URL
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Serves the website from the given base URL, for example &lt;strong&gt;/blog&lt;/strong&gt; would serve the home page from the blog subdirectory. Can be used to construct URLs throughout the site as well.&lt;/p&gt;
 
 &lt;h3&gt;source&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;source: &amp;lt;directory&amp;gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;source: &amp;lt;directory&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;p&gt;Sets the directory Jekyll uses as the root directory for building files. By default it’s the current directory that the &lt;code&gt;build&lt;/code&gt; command is run in.&lt;/p&gt;
+&lt;p&gt;Sets the directory Jekyll uses as the root directory for building files. By default it’s the current directory that the &lt;code class=&quot;highlighter-rouge&quot;&gt;build&lt;/code&gt; command is run in.&lt;/p&gt;
 
 &lt;h3&gt;destination&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;destination: &amp;lt;directory&amp;gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;destination: &amp;lt;directory&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;p&gt;Sets the directory where Jekyll writes the built site. By default Jekyll creates a &lt;code&gt;_site&lt;/code&gt; directory in the &lt;code&gt;source&lt;/code&gt; directory.&lt;/p&gt;
+&lt;p&gt;Sets the directory where Jekyll writes the built site. By default Jekyll creates a &lt;code class=&quot;highlighter-rouge&quot;&gt;_site&lt;/code&gt; directory in the &lt;code class=&quot;highlighter-rouge&quot;&gt;source&lt;/code&gt; directory.&lt;/p&gt;
 
 &lt;h3&gt;exclude&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;exclude: [DIR, FILE, ...]
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;exclude: [DIR, FILE, ...]
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Lists files and directories to exclude from the build process. Useful for source asset files like .psd files and other files that are not part of the build process or final site.&lt;/p&gt;
 
 &lt;h3&gt;include&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;include: [DIR, FILE, ...]
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;include: [DIR, FILE, ...]
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;p&gt;Lists files and directories that are copied over to the finished site regardless of their filetype or extension. Dotfiles, for example, are excluded from the build, so you could force the inclusion of a .gitignore or .htaccess file. The default value for &lt;code&gt;include&lt;/code&gt; contains .htacess.&lt;/p&gt;
+&lt;p&gt;Lists files and directories that are copied over to the finished site regardless of their filetype or extension. Dotfiles, for example, are excluded from the build, so you could force the inclusion of a .gitignore or .htaccess file. The default value for &lt;code class=&quot;highlighter-rouge&quot;&gt;include&lt;/code&gt; contains .htacess.&lt;/p&gt;
 
 &lt;h3&gt;keep&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;keep_files: [DIR, FILE, ...]
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;keep_files: [DIR, FILE, ...]
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;During the build process the destination folder is wiped clean before the site is regenerated. If you have files or directories in the destination folder that are not part of the build process this setting can preserve those files. Useful for favicon files or other site assets that are unlikely to change and not controlled by Jekyll.&lt;/p&gt;
 
 &lt;h3&gt;encoding&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;encoding: ENCODING
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;encoding: ENCODING
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Sets the encoding used for files. The default is utf-8.&lt;/p&gt;
 
 &lt;h3&gt;permalink&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;permalink: [options]
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;permalink: [options]
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;p&gt;Specifies the permalink style used for posts and controls the directory structure for generated posts. The default, &lt;code&gt;date&lt;/code&gt;, results in the permalink /YEAR/MO/DATE/name.html. Therefore a post titled &lt;strong&gt;2015-01-29-first-post.md&lt;/strong&gt; would have the permalink of /2015/01/29/first-post.html, and would be generated using that directory structure. For a full list of permalink options, see the &lt;a href=&quot;http://jekyllrb.com/docs/permalinks/&quot; title=&quot;permalinks&quot;&gt;Jekyll documentation on permalinks&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Specifies the permalink style used for posts and controls the directory structure for generated posts. The default, &lt;code class=&quot;highlighter-rouge&quot;&gt;date&lt;/code&gt;, results in the permalink /YEAR/MO/DATE/name.html. Therefore a post titled &lt;strong&gt;2015-01-29-first-post.md&lt;/strong&gt; would have the permalink of /2015/01/29/first-post.html, and would be generated using that directory structure. For a full list of permalink options, see the &lt;a href=&quot;http://jekyllrb.com/docs/permalinks/&quot; title=&quot;permalinks&quot;&gt;Jekyll documentation on permalinks&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h3&gt;pagination&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;paginate: [num]
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;paginate: [num]
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;p&gt;Allows you to set the number of blog posts to display on the &lt;strong&gt;index.html&lt;/strong&gt; page. This allows you to break your posts up and display them over a number of pages. For an overview of how pagination works, and how to also set the &lt;code&gt;paginate_path&lt;/code&gt; option, see the &lt;a href=&quot;http://jekyllrb.com/docs/pagination/&quot; title=&quot;pagination&quot;&gt;Jekyll documentation on pagination&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Allows you to set the number of blog posts to display on the &lt;strong&gt;index.html&lt;/strong&gt; page. This allows you to break your posts up and display them over a number of pages. For an overview of how pagination works, and how to also set the &lt;code class=&quot;highlighter-rouge&quot;&gt;paginate_path&lt;/code&gt; option, see the &lt;a href=&quot;http://jekyllrb.com/docs/pagination/&quot; title=&quot;pagination&quot;&gt;Jekyll documentation on pagination&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h3&gt;More information&lt;/h3&gt;
 
@@ -728,60 +755,60 @@ markdown: kramdown
     
       <item>
         <title>Basic Jekyll Commands</title>
-        <description>&lt;p&gt;To control Jekyll you’ll run a series of commands within your command-line interface. The Jekyll gem gives you the &lt;code&gt;jekyll&lt;/code&gt; executable, which has several commands and options you can use to build and serve your site. Let’s explore these commands and their options:&lt;/p&gt;
+        <description>&lt;p&gt;To control Jekyll you’ll run a series of commands within your command-line interface. The Jekyll gem gives you the &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll&lt;/code&gt; executable, which has several commands and options you can use to build and serve your site. Let’s explore these commands and their options:&lt;/p&gt;
 
 &lt;h3&gt;build&lt;/h3&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&lt;/span&gt;$ jekyll build
-&lt;span class=&quot;c1&quot;&gt;#  The current directory will be generated into ./_site&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;jekyll build
+&lt;span class=&quot;c&quot;&gt;#  The current directory will be generated into ./_site&lt;/span&gt;
 
-$ jekyll build --destination &amp;lt;destination&amp;gt;
-&lt;span class=&quot;c1&quot;&gt;#  The current folder will be generated into &amp;lt;destination&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;jekyll build --destination &amp;lt;destination&amp;gt;
+&lt;span class=&quot;c&quot;&gt;#  The current folder will be generated into &amp;lt;destination&amp;gt;&lt;/span&gt;
 
-$ jekyll build --source &amp;lt;source&amp;gt; --destination &amp;lt;destination&amp;gt;
-&lt;span class=&quot;c1&quot;&gt;# The &amp;lt;source&amp;gt; folder will be generated into &amp;lt;destination&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;jekyll build --source &amp;lt;&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt;&amp;gt; --destination &amp;lt;destination&amp;gt;
+&lt;span class=&quot;c&quot;&gt;# The &amp;lt;source&amp;gt; folder will be generated into &amp;lt;destination&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Build does just that; it takes the contents of the current directory and generates it into the destination directory. If that directory is not specified, it defaults to the &lt;code&gt;_site&lt;/code&gt; directory inside the current directory. Both the source and destination directories can be passed as options, just provide the path to the directory after the option.&lt;/p&gt;
+&lt;p&gt;Build does just that; it takes the contents of the current directory and generates it into the destination directory. If that directory is not specified, it defaults to the &lt;code class=&quot;highlighter-rouge&quot;&gt;_site&lt;/code&gt; directory inside the current directory. Both the source and destination directories can be passed as options, just provide the path to the directory after the option.&lt;/p&gt;
 
 &lt;h3&gt;doctor&lt;/h3&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&lt;/span&gt;$ jekyll doctor
-&lt;span class=&quot;c1&quot;&gt;#  Checks for URL conflicts&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;jekyll doctor
+&lt;span class=&quot;c&quot;&gt;#  Checks for URL conflicts&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;The &lt;code&gt;doctor&lt;/code&gt; command checks your site for URL conflicts, errors with your permalinks, and deprecation warnings. This can be especially useful if you’ve moved pages around or reorganized your site.&lt;/p&gt;
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;doctor&lt;/code&gt; command checks your site for URL conflicts, errors with your permalinks, and deprecation warnings. This can be especially useful if you’ve moved pages around or reorganized your site.&lt;/p&gt;
 
 &lt;h3&gt;help&lt;/h3&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&lt;/span&gt;$ jekyll &lt;span class=&quot;nb&quot;&gt;help&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# Generates help documentation&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;jekyll &lt;span class=&quot;nb&quot;&gt;help&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Generates help documentation&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;The &lt;code&gt;help&lt;/code&gt; command generates a small help document that lists the current version of Jekyll, and reviews available commands and their options.&lt;/p&gt;
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;help&lt;/code&gt; command generates a small help document that lists the current version of Jekyll, and reviews available commands and their options.&lt;/p&gt;
 
 &lt;h3&gt;new&lt;/h3&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&lt;/span&gt;$ jekyll new &amp;lt;path&amp;gt;
-&lt;span class=&quot;c1&quot;&gt;#  Generates new site scaffold in targeted directory&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;jekyll new &amp;lt;path&amp;gt;
+&lt;span class=&quot;c&quot;&gt;#  Generates new site scaffold in targeted directory&lt;/span&gt;
 
-$ jekyll new .
-&lt;span class=&quot;c1&quot;&gt;#  Generates new site scaffold in current directory&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;jekyll new .
+&lt;span class=&quot;c&quot;&gt;#  Generates new site scaffold in current directory&lt;/span&gt;
 
-$ jekyll new --blank &amp;lt;path&amp;gt;
-&lt;span class=&quot;c1&quot;&gt;#  Generates basic site scaffold with empty directories and files&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;jekyll new --blank &amp;lt;path&amp;gt;
+&lt;span class=&quot;c&quot;&gt;#  Generates basic site scaffold with empty directories and files&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;The &lt;code&gt;new&lt;/code&gt; command generates a default Jekyll site in the specified directory. This is an extremely useful way to understand how Jekyll works, as you can explore and modify the default site. It’s also a great way to jump-start development, since many of the files and directories you need to create a Jekyll site will be created for you. The &lt;code&gt;blank&lt;/code&gt; option creates a minimal directory structure with no files and an empty index file.&lt;/p&gt;
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;new&lt;/code&gt; command generates a default Jekyll site in the specified directory. This is an extremely useful way to understand how Jekyll works, as you can explore and modify the default site. It’s also a great way to jump-start development, since many of the files and directories you need to create a Jekyll site will be created for you. The &lt;code class=&quot;highlighter-rouge&quot;&gt;blank&lt;/code&gt; option creates a minimal directory structure with no files and an empty index file.&lt;/p&gt;
 
 &lt;h3&gt;serve&lt;/h3&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&lt;/span&gt;$ jekyll serve
-&lt;span class=&quot;c1&quot;&gt;# Builds site and serves it at http://localhost:4000/&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;jekyll serve
+&lt;span class=&quot;c&quot;&gt;# Builds site and serves it at http://localhost:4000/&lt;/span&gt;
 
-$ jekyll serve --detach
-&lt;span class=&quot;c1&quot;&gt;# Same as `jekyll serve` but will detach from the current terminal.&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;jekyll serve --detach
+&lt;span class=&quot;c&quot;&gt;# Same as `jekyll serve` but will detach from the current terminal.&lt;/span&gt;
 
-$ jekyll serve --no-watch
-&lt;span class=&quot;c1&quot;&gt;# Same as `jekyll serve` but will not watch for changes or autoregenerate site.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;jekyll serve --no-watch
+&lt;span class=&quot;c&quot;&gt;# Same as `jekyll serve` but will not watch for changes or autoregenerate site.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;The &lt;code&gt;serve&lt;/code&gt; command generates the site and launches a built-in development server that allows you to preview your site. In its default option the server watches the source directory. Any changes made to source files will result in the server automatically regenerating those files and updating the site locally. To preview your site browse to http://localhost:4000/ unless you’ve specified a different base URL, in which case you’ll add that to the end of localhost:4000.&lt;/p&gt;
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;serve&lt;/code&gt; command generates the site and launches a built-in development server that allows you to preview your site. In its default option the server watches the source directory. Any changes made to source files will result in the server automatically regenerating those files and updating the site locally. To preview your site browse to http://localhost:4000/ unless you’ve specified a different base URL, in which case you’ll add that to the end of localhost:4000.&lt;/p&gt;
 </description>
         <pubDate>Thu, 30 Apr 2015 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/blog/basic-commands</link>
@@ -804,20 +831,20 @@ $ jekyll serve --no-watch
 
 &lt;h3&gt;Building a new site&lt;/h3&gt;
 
-&lt;p&gt;To build a new site, create a directory named &lt;code&gt;practice&lt;/code&gt; and navigate there in Terminal or whichever command line interface you’re using. Once there run the following commands:&lt;/p&gt;
+&lt;p&gt;To build a new site, create a directory named &lt;code class=&quot;highlighter-rouge&quot;&gt;practice&lt;/code&gt; and navigate there in Terminal or whichever command line interface you’re using. Once there run the following commands:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&lt;/span&gt;$ jekyll new explore
-&lt;span class=&quot;c1&quot;&gt;# Creates the directory explore and builds a new boilerplate site inside it&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;jekyll new explore
+&lt;span class=&quot;c&quot;&gt;# Creates the directory explore and builds a new boilerplate site inside it&lt;/span&gt;
 
-$ &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; explore
-&lt;span class=&quot;c1&quot;&gt;# Navigates to explore, making it the current directory&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;explore
+&lt;span class=&quot;c&quot;&gt;# Navigates to explore, making it the current directory&lt;/span&gt;
 
-$ ls
-&lt;span class=&quot;c1&quot;&gt;# Lists the files and directories of the current site&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;ls
+&lt;span class=&quot;c&quot;&gt;# Lists the files and directories of the current site&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;You should see a list of files and directories that were created inside your new &lt;strong&gt;explore&lt;/strong&gt; directory. A closer examination would reveal a structure similar to this:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;|---_config.yml
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;|---_config.yml
 |---_includes
     |---footer.html
     |---head.html
@@ -838,6 +865,7 @@ $ ls
 |---feed.xml
 |---index.html
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Some highlights: The &lt;strong&gt;_config.yml&lt;/strong&gt; file contains the configuration settings for the blog, the &lt;strong&gt;_includes&lt;/strong&gt; folder holds HTML snippets that are used to generate page regions, the &lt;strong&gt;_layouts&lt;/strong&gt; directory contains the templates used to assemble individual pages, and the &lt;strong&gt;_posts&lt;/strong&gt; folder holds the markdown files for individual posts. The &lt;strong&gt;about.md&lt;/strong&gt; and &lt;strong&gt;index.html&lt;/strong&gt; are individual pages, found on the root of the site. Note that pages can be created either using HTML or markdown.&lt;/p&gt;
 
@@ -847,12 +875,12 @@ $ ls
 
 &lt;p&gt;Now run the following command:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&lt;/span&gt;$ jekyll serve
-&lt;span class=&quot;c1&quot;&gt;# Builds the site in the _site directory and serves it at http://localhost:4000&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;jekyll serve
+&lt;span class=&quot;c&quot;&gt;# Builds the site in the _site directory and serves it at http://localhost:4000&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;If you examine your directory structure you’ll now find a &lt;strong&gt;_site&lt;/strong&gt; directory that contains the generated site. Open up a browser and navigate to http://localhost:4000. Click through the site, explore the default post and note the default information. Using a text editor, open the markdown post in the &lt;strong&gt;_posts&lt;/strong&gt; directory. At the top of the file you’ll see the YAML front matter contained between the dashed lines. Change the title to “Exploring Jekyll.” Save the file and note in the Terminal window that the Jekyll server detects the change and regenerates the file. Refreshing the file in your browser should reflect the change you made to the default post.&lt;/p&gt;
 
-&lt;p&gt;Not all changes are automatically regenerated. Open the &lt;strong&gt;_config.yml&lt;/strong&gt; file in your text editor. Change the title of the site to “Working with Jekyll” and replace the placeholder contact information with your contact info and then save the file. Notice that the Jekyll server doesn’t automatically detect the change. Stop the server by typing &lt;code&gt;CTRL+C&lt;/code&gt; in the Terminal window. Run the &lt;code&gt;jekyll serve&lt;/code&gt; command again and refresh the page in your browser. You should now see your updated information.&lt;/p&gt;
+&lt;p&gt;Not all changes are automatically regenerated. Open the &lt;strong&gt;_config.yml&lt;/strong&gt; file in your text editor. Change the title of the site to “Working with Jekyll” and replace the placeholder contact information with your contact info and then save the file. Notice that the Jekyll server doesn’t automatically detect the change. Stop the server by typing &lt;code class=&quot;highlighter-rouge&quot;&gt;CTRL+C&lt;/code&gt; in the Terminal window. Run the &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt; command again and refresh the page in your browser. You should now see your updated information.&lt;/p&gt;
 
 &lt;p&gt;From here begin to experiment with making changes to templates, adding posts, and modifying the overall site configuration. This is a practice site, so it’s totally okay to break it! By exploring and experimenting with the Jekyll boilerplate site you can get a better sense of how Jekyll works and how your own site should be structured.&lt;/p&gt;
 

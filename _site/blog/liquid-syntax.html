@@ -63,18 +63,18 @@
 
 <p>Output writes content to the page. Output tags start with two curly braces, contain the content to be written to the page, and then end with two curly braces. Here’s an example:</p>
 
-<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span></span>Written by <span class="p">{{</span><span class="nv">author</span><span class="p">}}</span>
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid">Written by <span class="p">{{</span><span class="nv">author</span><span class="p">}}</span>
 Written by <span class="p">{{</span><span class="nv">page</span><span class="p">.</span><span class="nv">author</span><span class="p">}}</span>
-Written by <span class="p">{{</span><span class="s1">&#39;james&#39;</span><span class="p">}}</span></code></pre></figure>
+Written by <span class="p">{{</span><span class="s1">'james'</span><span class="p">}}</span></code></pre></figure>
 
-<p>In this instance the value of <code>author</code> would be evaluated and written to the page, the <code>page</code> object would be parsed to find the value of the <code>author</code> property and that would be written to the page, and then the literal string “james” would be written to the page.</p>
+<p>In this instance the value of <code class="highlighter-rouge">author</code> would be evaluated and written to the page, the <code class="highlighter-rouge">page</code> object would be parsed to find the value of the <code class="highlighter-rouge">author</code> property and that would be written to the page, and then the literal string “james” would be written to the page.</p>
 
-<p>Output markup can be further modified through the use of filters. Filters are methods that can be used to transform the results of the output tags. Filters appear to the right of the output parameter, and are separated using the ‘pipe’ character <code>( | )</code>.</p>
+<p>Output markup can be further modified through the use of filters. Filters are methods that can be used to transform the results of the output tags. Filters appear to the right of the output parameter, and are separated using the ‘pipe’ character <code class="highlighter-rouge">( | )</code>.</p>
 
 <p>Here’s a filter in action:</p>
 
-<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span></span><span class="p">{{</span><span class="w"> </span><span class="nv">site</span><span class="p">.</span><span class="nv">time</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">date_to_string}}</span><span class="w"></span>
-&lt;!--<span class="w"> </span>would<span class="w"> </span>output<span class="w"> </span>‘<span class="mi">22</span><span class="w"> </span>Aug<span class="w"> </span><span class="mi">2015</span>’<span class="w"> </span>--&gt;</code></pre></figure>
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{{</span><span class="w"> </span><span class="nv">site</span><span class="p">.</span><span class="nv">time</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">date_to_string}}</span><span class="w">
+</span>&lt;!--<span class="w"> </span>would<span class="w"> </span>output<span class="w"> </span>‘<span class="mi">22</span><span class="w"> </span>Aug<span class="w"> </span><span class="mi">2015</span>’<span class="w"> </span>--&gt;</code></pre></figure>
 
 <p>It’s also possible to use more than one filter at a time. Here are a few of the standard filters available in Liquid:</p>
 
@@ -107,7 +107,7 @@ Written by <span class="p">{{</span><span class="s1">&#39;james&#39;</span><span
 
 <p>Liquid tags are functional, when applied they perform some type of action. They provide the basic programming logic for templates and allow you to build intelligent templates that can respond to a number of different factors. Tags are written with a curly brace followed by a percentage sign (<em>%</em>), contain the desired instructions, and end with a percentage sign and a curly brace. Tags usually come in twos, with an opening tag and a closing tag that wraps the targeted content. Here’s an example:</p>
 
-<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span></span><span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">title</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;About&#39;</span><span class="w"> </span><span class="p">%}</span>
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">title</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">'About'</span><span class="w"> </span><span class="p">%}</span>
     About this blog
 <span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span></code></pre></figure>
 
@@ -119,9 +119,9 @@ Written by <span class="p">{{</span><span class="s1">&#39;james&#39;</span><span
 
 <h3>for loops</h3>
 
-<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span></span>    <span class="p">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span>post<span class="w"> </span>in<span class="w"> </span>site.posts<span class="w"> </span><span class="p">%}</span>
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid">    <span class="p">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span>post<span class="w"> </span>in<span class="w"> </span>site.posts<span class="w"> </span><span class="p">%}</span>
       &lt;li&gt;
-	  &lt;a href=&quot;<span class="p">{{</span><span class="w"> </span><span class="nv">post</span><span class="p">.</span><span class="nv">url</span><span class="w"> </span><span class="p">}}</span>&quot;&gt;<span class="p">{{</span><span class="w"> </span><span class="nv">post</span><span class="p">.</span><span class="nv">title</span><span class="w"> </span><span class="p">}}</span>&lt;/a&gt;
+	  &lt;a href="<span class="p">{{</span><span class="w"> </span><span class="nv">post</span><span class="p">.</span><span class="nv">url</span><span class="w"> </span><span class="p">}}</span>"&gt;<span class="p">{{</span><span class="w"> </span><span class="nv">post</span><span class="p">.</span><span class="nv">title</span><span class="w"> </span><span class="p">}}</span>&lt;/a&gt;
       &lt;/li&gt;
 <span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span></code></pre></figure>
 
@@ -129,30 +129,30 @@ Written by <span class="p">{{</span><span class="s1">&#39;james&#39;</span><span
 
 <h3>if/else statements</h3>
 
-<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span></span>  <span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">paginator</span><span class="p">.</span><span class="nv">previous_page</span><span class="w"> </span><span class="p">%}</span>
-     &lt;a href=&quot;<span class="p">{{</span><span class="w"> </span><span class="nv">paginator</span><span class="p">.</span><span class="nv">previous_page_path</span><span class="w"> </span><span class="p">}}</span>&quot;&gt;Previous&lt;/a&gt;
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid">  <span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">paginator</span><span class="p">.</span><span class="nv">previous_page</span><span class="w"> </span><span class="p">%}</span>
+     &lt;a href="<span class="p">{{</span><span class="w"> </span><span class="nv">paginator</span><span class="p">.</span><span class="nv">previous_page_path</span><span class="w"> </span><span class="p">}}</span>"&gt;Previous&lt;/a&gt;
   <span class="p">{%</span><span class="w"> </span><span class="kr">else</span><span class="w"> </span><span class="p">%}</span>
     &lt;span&gt;No previous posts&lt;/span&gt;
   <span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span></code></pre></figure>
 
-<p>Allows the application of conditional logic within templates. In this example Jekyll would check to see if there are any posts older than the current one using the <strong>paginator</strong> object. If so, a link would be created to the previous posts. If not a message is created stating that there are no previous posts. There are many variations on the if/else statements syntax including <code>elseif</code>, <code>unless</code>, and <code>case</code> statements.</p>
+<p>Allows the application of conditional logic within templates. In this example Jekyll would check to see if there are any posts older than the current one using the <strong>paginator</strong> object. If so, a link would be created to the previous posts. If not a message is created stating that there are no previous posts. There are many variations on the if/else statements syntax including <code class="highlighter-rouge">elseif</code>, <code class="highlighter-rouge">unless</code>, and <code class="highlighter-rouge">case</code> statements.</p>
 
 <h3>includes</h3>
 
-<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span></span>  <span class="p">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span>footer.html<span class="w"> </span><span class="p">%}</span>
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid">  <span class="p">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span><span class="na">footer</span><span class="p">.</span><span class="na">html</span><span class="w"> </span><span class="p">%}</span>
  </code></pre></figure>
 
 <p>Inserts the included content at the desired location. In this example the contents of the file “footer.html” would be inserted at the location of the tag. Allows for the dynamic insertion of content.</p>
 
 <h3>variables</h3>
 
-<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span></span>  <span class="p">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="na">author</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;james&#39;</span><span class="w"> </span><span class="p">%}</span>
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid">  <span class="p">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">author</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'james'</span><span class="w"> </span><span class="p">%}</span>
   <span class="p">{{</span><span class="w"> </span><span class="nv">author</span><span class="w"> </span><span class="p">}}</span>
  </code></pre></figure>
 
 <p>There are two main ways to assign variables using Liquid. The <strong>assign</strong> method shown above assigns a literal string which is then stored for later use.</p>
 
-<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span></span>  <span class="p">{%</span><span class="w"> </span><span class="nt">capture</span><span class="w"> </span><span class="nv">site_tags</span><span class="w"> </span><span class="p">%}</span>
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid">  <span class="p">{%</span><span class="w"> </span><span class="nt">capture</span><span class="w"> </span><span class="na">site_tags</span><span class="w"> </span><span class="p">%}</span>
       <span class="p">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span>tag<span class="w"> </span>in<span class="w"> </span>site.tags<span class="w"> </span><span class="p">%}{{</span><span class="w"> </span><span class="nv">tag</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">first</span><span class="w"> </span><span class="p">}}</span>
            <span class="p">{%</span><span class="w"> </span><span class="kr">unless</span><span class="w"> </span><span class="nv">forloop</span><span class="p">.</span><span class="nv">last</span><span class="w"> </span><span class="p">%}</span>,<span class="p">{%</span><span class="w"> </span><span class="kr">endunless</span><span class="w"> </span><span class="p">%}</span>
       <span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span>

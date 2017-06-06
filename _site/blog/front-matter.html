@@ -55,22 +55,22 @@
 
 <p>The front matter must be the first item in a file and must take the form of valid YAML set between triple-dashed lines. Here is a basic example:</p>
 
-<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span></span><span class="nn">---</span>
-<span class="l l-Scalar l-Scalar-Plain">layout</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">default</span>
-<span class="l l-Scalar l-Scalar-Plain">title</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Welcome to Jekyll</span>
-<span class="l l-Scalar l-Scalar-Plain">date</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">2015-08-15 12:34</span>
-<span class="l l-Scalar l-Scalar-Plain">author</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">James Williamson</span>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="nn">---</span>
+<span class="s">layout</span><span class="pi">:</span> <span class="s">default</span>
+<span class="s">title</span><span class="pi">:</span> <span class="s">Welcome to Jekyll</span>
+<span class="s">date</span><span class="pi">:</span> <span class="s">2015-08-15 12:34</span>
+<span class="s">author</span><span class="pi">:</span> <span class="s">James Williamson</span>
 <span class="nn">---</span></code></pre></figure>
 
-<p>In this example Jekyll is instructed to use the <strong>default.html</strong> template for the content, and page variables for both the <strong>title</strong> of the page and the <strong>author</strong> are created. These can be written to the page using the <code>page.title</code> and <code>page.author</code> objects. A <strong>date</strong> for the page is given as well, and when used for a Post this will override the date used in the name of the post.</p>
+<p>In this example Jekyll is instructed to use the <strong>default.html</strong> template for the content, and page variables for both the <strong>title</strong> of the page and the <strong>author</strong> are created. These can be written to the page using the <code class="highlighter-rouge">page.title</code> and <code class="highlighter-rouge">page.author</code> objects. A <strong>date</strong> for the page is given as well, and when used for a Post this will override the date used in the name of the post.</p>
 
 <p>There are many predefined Global variables that you can set in the front matter of a page or post. These are:</p>
 
 <dl>
   <dt>layout</dt>
-  <dd>Specifies which template to use for the content. As such it must point to a file in the <strong>_layouts</strong> directory. Do not add the file extension to the template name. To reference the <strong>post.html</strong> template you would add <code>layout: post</code>.</dd>
+  <dd>Specifies which template to use for the content. As such it must point to a file in the <strong>_layouts</strong> directory. Do not add the file extension to the template name. To reference the <strong>post.html</strong> template you would add <code class="highlighter-rouge">layout: post</code>.</dd>
   <dt>permalink</dt>
-  <dd>Sets the permalink for the targeted file and is used to overwrite the default permalink style for a post. For example, the setting <code>permalink: /blog/:title</code> would overwrite the site permalink settings and locate the post at <strong>/blog/post-title/index.html</strong>.</dd>
+  <dd>Sets the permalink for the targeted file and is used to overwrite the default permalink style for a post. For example, the setting <code class="highlighter-rouge">permalink: /blog/:title</code> would overwrite the site permalink settings and locate the post at <strong>/blog/post-title/index.html</strong>.</dd>
   <dt>published</dt>
   <dd>A boolean value that you can set to <strong>false</strong> if you don’t want the post published as the site is generated.</dd>
   <dt>category</dt>
@@ -86,26 +86,27 @@
 
 <p>The most common form of custom variable is to store information like page titles, author names, and descriptions that can be added to the page or in <strong>meta</strong> tags to enhance page metadata. You can take this even further and control things like page layout as well. Let’s say that most pages in your site uses a simple sidebar, but occasionally you need to use a longer sidebar. In your template you could have the following markup:</p>
 
-<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span></span><span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">sidebar</span><span class="err">-</span><span class="nv">long</span><span class="w"> </span><span class="p">%}</span>
-    <span class="p">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span>sidebar-long.html<span class="w"> </span><span class="p">%}</span>
-    <span class="p">{%</span><span class="w"> </span><span class="kr">else</span><span class="w"> </span><span class="p">%}</span>
-    <span class="p">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span>sidebar.html<span class="w"> </span><span class="p">%}</span>
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">sidebar</span><span class="err">-</span><span class="nv">long</span><span class="w"> </span><span class="p">%}</span>
+    <span class="p">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span><span class="na">sidebar-long</span><span class="p">.</span><span class="na">html</span><span class="w"> </span><span class="na">%}
+    {% else %}
+    {% include sidebar</span><span class="p">.</span><span class="na">html</span><span class="w"> </span><span class="p">%}</span>
 <span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span></code></pre></figure>
 
 <p>Now in any page or post that uses this template all you would need to add is the following variable to the front matter:</p>
 
-<pre><code>sidebar-long: true
+<div class="highlighter-rouge"><pre class="highlight"><code>sidebar-long: true
 </code></pre>
+</div>
 
 <p>Combining includes, templates, and front matter variables gives you an incredible amount of control over how pages are built, and limits the amount of variations you need in the form of templates.</p>
 
 <p>You can even get to the point where you are generating entire pages with nothing but front matter. Let’s say you want to generate a single page for every tag that lists all posts tagged with that specific tag. You could create a template that generates everything dynamically based on the tag name. To create a new tag page, you simply name the file <strong>tag-name.md</strong> and add the following to the front matter:</p>
 
-<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span></span><span class="nn">---</span>
-<span class="l l-Scalar l-Scalar-Plain">layout</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">tag-page</span>
-<span class="l l-Scalar l-Scalar-Plain">title</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Tagged with Jekyll</span>
-<span class="l l-Scalar l-Scalar-Plain">tag</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Jekyll</span>
-<span class="l l-Scalar l-Scalar-Plain">permalink</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">/tags/:title</span>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="nn">---</span>
+<span class="s">layout</span><span class="pi">:</span> <span class="s">tag-page</span>
+<span class="s">title</span><span class="pi">:</span> <span class="s">Tagged with Jekyll</span>
+<span class="s">tag</span><span class="pi">:</span> <span class="s">Jekyll</span>
+<span class="s">permalink</span><span class="pi">:</span> <span class="s">/tags/:title</span>
 <span class="nn">---</span></code></pre></figure>
 
 <p>The rest of the file could be empty and Jekyll would dynamically generate the page based on the tag name.</p>
@@ -114,9 +115,10 @@
 
 <p>Jekyll provides built-in support for Sass and CoffeeScript, but won’t process those files automatically. To enable those files for processing, add an empty front matter region to the top of the page:</p>
 
-<pre><code>---
+<div class="highlighter-rouge"><pre class="highlight"><code>---
 ---
 </code></pre>
+</div>
 
 <p>The files will then be processed, and the resulting file will be located in the same directory in the generated site. The file <strong>css/layout.scss</strong> would generate <strong>css/layout.css</strong> in the finished site.</p>
 

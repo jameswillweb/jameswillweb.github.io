@@ -68,7 +68,7 @@
 
 <p>A simple Jekyll directory looks like this:</p>
 
-<pre><code>├── _config.yml 
+<div class="highlighter-rouge"><pre class="highlight"><code>├── _config.yml 
 ├── _includes 
 |   ├── footer.html 
 |   └── header.html 
@@ -83,12 +83,13 @@
 ├── _site  
 └── index.html
 </code></pre>
+</div>
 
 <p>The <strong>_config.yml</strong> file is a YAML file that contains the overall site configuration such as site title, author information, pagination, and permalinks. The <strong>_includes</strong> directory holds HTML snippets that can be injected on any desired page with a simple Liquid tag. The <strong>_layouts</strong> folder contains the HTML templates that are used to generate pages for the site, and the <strong>_posts</strong> directory contains the individual blog posts, written in either Markdown or HTML. Note the naming convention for the posts. This is used to date stamp the posts and can be used for site organization and permalinks. The <strong>css</strong> directory contains the CSS for the site, and in this case is not preceded by an underscore. Any directory without an underscore is not parsed, and is copied as-is when the site is generated. Jekyll also supports SASS, any <strong>.scss</strong> files with YAML front matter would be parsed and processed. The <strong>_site</strong> directory is where the generated site will be created. From there it can be uploaded to your server of choice. Finally the <strong>index.htm</strong> file contains the content and blogging logic for the home page of the blog, and typically uses one of the templates for overall page structure.</p>
 
 <p>In addition to the Liquid tags, Jekyll uses YAML front matter to guide the creation of pages. A post, for example, might have this YAML front matter at the top of the page:</p>
 
-<pre><code>---
+<div class="highlighter-rouge"><pre class="highlight"><code>---
 
 layout: post
 
@@ -98,8 +99,9 @@ category: jekyll
 
 ---
 </code></pre>
+</div>
 
-<p>This tells Jekyll to use the “post” template to assemble the page, and assigns the ‘title’ and ‘category’ variables that can be used on that page or throughout the site. Jekyll will process any file that contains YAML front matter. The front matter must be the first thing in the file and must take the form of valid YAML set between triple-dashed lines. It can contain any of the predefined global variables such as <strong>layout</strong>, <strong>permalink</strong>, or <strong>category</strong> or any custom variable you wish to create. If you wished to display the authors name, for example, you could add <strong>author: ‘author’s name’</strong> to the front matter and then reference that in your templates using <code>{{page.author}}</code>.</p>
+<p>This tells Jekyll to use the “post” template to assemble the page, and assigns the ‘title’ and ‘category’ variables that can be used on that page or throughout the site. Jekyll will process any file that contains YAML front matter. The front matter must be the first thing in the file and must take the form of valid YAML set between triple-dashed lines. It can contain any of the predefined global variables such as <strong>layout</strong>, <strong>permalink</strong>, or <strong>category</strong> or any custom variable you wish to create. If you wished to display the authors name, for example, you could add <strong>author: ‘author’s name’</strong> to the front matter and then reference that in your templates using <code class="highlighter-rouge"><span class="p">{</span><span class="err">{page.author</span><span class="p">}</span><span class="err">}</span></code>.</p>
 
 <h3>Is Jekyll right for you?</h3>
 

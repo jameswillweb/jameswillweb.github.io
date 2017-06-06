@@ -55,7 +55,7 @@
 
 <p>The <strong>_config.yml</strong> sits in the root of your source directory and, as the name suggests, controls the configuration options for your site. Let’s break down the options in the sample <strong>_config.yml</strong> that’s created when you generate a new Jekyll site before moving on to covering the Global config options.</p>
 
-<pre><code># Site settings
+<div class="highlighter-rouge"><pre class="highlight"><code># Site settings
 
 title: Your awesome site
 email: your-email@domain.com
@@ -73,12 +73,13 @@ github_username:  jekyll
 
 markdown: kramdown
 </code></pre>
+</div>
 
-<p>The important thing to note here is that they’ve split the configuration options into two sections, site settings and build settings. All of the site settings other than <strong>baseurl</strong> and <strong>url</strong> are basically site variables that can be reused throughout the site. As such, they are all optional. Storing the <strong>title</strong> of the site in a variable, for instance, makes it easy to set the title element for pages, or to use it in a heading element on a page. By setting these variables in the <strong>_config.yml</strong> file they are available to any page throughout the site. You could access the title, for example, by using the Liquid tag <code>{{site.title}}</code>.</p>
+<p>The important thing to note here is that they’ve split the configuration options into two sections, site settings and build settings. All of the site settings other than <strong>baseurl</strong> and <strong>url</strong> are basically site variables that can be reused throughout the site. As such, they are all optional. Storing the <strong>title</strong> of the site in a variable, for instance, makes it easy to set the title element for pages, or to use it in a heading element on a page. By setting these variables in the <strong>_config.yml</strong> file they are available to any page throughout the site. You could access the title, for example, by using the Liquid tag <code class="highlighter-rouge"><span class="p">{</span><span class="err">{site.title</span><span class="p">}</span><span class="err">}</span></code>.</p>
 
-<p>There is a difference between the <code>site.url</code> and <code>site.baseurl</code> objects and when you need them. By default, the <code>site.url</code> variable is used in the page head for things like canonical links and links to the RSS feed that are accessed by external systems, although it can be used to create absolute links within your site.</p>
+<p>There is a difference between the <code class="highlighter-rouge">site.url</code> and <code class="highlighter-rouge">site.baseurl</code> objects and when you need them. By default, the <code class="highlighter-rouge">site.url</code> variable is used in the page head for things like canonical links and links to the RSS feed that are accessed by external systems, although it can be used to create absolute links within your site.</p>
 
-<p>The <code>site.baseurl</code> variable indicates the root folder of your site. By default it is set to <code>" "</code> (empty string), which indicates your site is hosted at the root of http://yourdomain.com. However, if your site is located in http://yourdomain.com/blog, you have to set <code>site.baseurl</code> to <strong>/blog</strong> (note the slash). This will allow you to create relative links to assets that load correctly.</p>
+<p>The <code class="highlighter-rouge">site.baseurl</code> variable indicates the root folder of your site. By default it is set to <code class="highlighter-rouge">" "</code> (empty string), which indicates your site is hosted at the root of http://yourdomain.com. However, if your site is located in http://yourdomain.com/blog, you have to set <code class="highlighter-rouge">site.baseurl</code> to <strong>/blog</strong> (note the slash). This will allow you to create relative links to assets that load correctly.</p>
 
 <p>When creating your own site, you should give careful consideration to what type of information to store in your <strong>_config.yml</strong> file. Being able to access this data at any time throughout your site is a powerful option.</p>
 
@@ -86,73 +87,83 @@ markdown: kramdown
 
 <h3>local port</h3>
 
-<pre><code>port: PORT
+<div class="highlighter-rouge"><pre class="highlight"><code>port: PORT
 </code></pre>
+</div>
 
 <p>Listen to the given port. 4000 is the default.</p>
 
 <h3>base URL</h3>
 
-<pre><code>baseurl: URL
+<div class="highlighter-rouge"><pre class="highlight"><code>baseurl: URL
 </code></pre>
+</div>
 
 <p>Serves the website from the given base URL, for example <strong>/blog</strong> would serve the home page from the blog subdirectory. Can be used to construct URLs throughout the site as well.</p>
 
 <h3>source</h3>
 
-<pre><code>source: &lt;directory&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>source: &lt;directory&gt;
 </code></pre>
+</div>
 
-<p>Sets the directory Jekyll uses as the root directory for building files. By default it’s the current directory that the <code>build</code> command is run in.</p>
+<p>Sets the directory Jekyll uses as the root directory for building files. By default it’s the current directory that the <code class="highlighter-rouge">build</code> command is run in.</p>
 
 <h3>destination</h3>
 
-<pre><code>destination: &lt;directory&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>destination: &lt;directory&gt;
 </code></pre>
+</div>
 
-<p>Sets the directory where Jekyll writes the built site. By default Jekyll creates a <code>_site</code> directory in the <code>source</code> directory.</p>
+<p>Sets the directory where Jekyll writes the built site. By default Jekyll creates a <code class="highlighter-rouge">_site</code> directory in the <code class="highlighter-rouge">source</code> directory.</p>
 
 <h3>exclude</h3>
 
-<pre><code>exclude: [DIR, FILE, ...]
+<div class="highlighter-rouge"><pre class="highlight"><code>exclude: [DIR, FILE, ...]
 </code></pre>
+</div>
 
 <p>Lists files and directories to exclude from the build process. Useful for source asset files like .psd files and other files that are not part of the build process or final site.</p>
 
 <h3>include</h3>
 
-<pre><code>include: [DIR, FILE, ...]
+<div class="highlighter-rouge"><pre class="highlight"><code>include: [DIR, FILE, ...]
 </code></pre>
+</div>
 
-<p>Lists files and directories that are copied over to the finished site regardless of their filetype or extension. Dotfiles, for example, are excluded from the build, so you could force the inclusion of a .gitignore or .htaccess file. The default value for <code>include</code> contains .htacess.</p>
+<p>Lists files and directories that are copied over to the finished site regardless of their filetype or extension. Dotfiles, for example, are excluded from the build, so you could force the inclusion of a .gitignore or .htaccess file. The default value for <code class="highlighter-rouge">include</code> contains .htacess.</p>
 
 <h3>keep</h3>
 
-<pre><code>keep_files: [DIR, FILE, ...]
+<div class="highlighter-rouge"><pre class="highlight"><code>keep_files: [DIR, FILE, ...]
 </code></pre>
+</div>
 
 <p>During the build process the destination folder is wiped clean before the site is regenerated. If you have files or directories in the destination folder that are not part of the build process this setting can preserve those files. Useful for favicon files or other site assets that are unlikely to change and not controlled by Jekyll.</p>
 
 <h3>encoding</h3>
 
-<pre><code>encoding: ENCODING
+<div class="highlighter-rouge"><pre class="highlight"><code>encoding: ENCODING
 </code></pre>
+</div>
 
 <p>Sets the encoding used for files. The default is utf-8.</p>
 
 <h3>permalink</h3>
 
-<pre><code>permalink: [options]
+<div class="highlighter-rouge"><pre class="highlight"><code>permalink: [options]
 </code></pre>
+</div>
 
-<p>Specifies the permalink style used for posts and controls the directory structure for generated posts. The default, <code>date</code>, results in the permalink /YEAR/MO/DATE/name.html. Therefore a post titled <strong>2015-01-29-first-post.md</strong> would have the permalink of /2015/01/29/first-post.html, and would be generated using that directory structure. For a full list of permalink options, see the <a href="http://jekyllrb.com/docs/permalinks/" title="permalinks">Jekyll documentation on permalinks</a>.</p>
+<p>Specifies the permalink style used for posts and controls the directory structure for generated posts. The default, <code class="highlighter-rouge">date</code>, results in the permalink /YEAR/MO/DATE/name.html. Therefore a post titled <strong>2015-01-29-first-post.md</strong> would have the permalink of /2015/01/29/first-post.html, and would be generated using that directory structure. For a full list of permalink options, see the <a href="http://jekyllrb.com/docs/permalinks/" title="permalinks">Jekyll documentation on permalinks</a>.</p>
 
 <h3>pagination</h3>
 
-<pre><code>paginate: [num]
+<div class="highlighter-rouge"><pre class="highlight"><code>paginate: [num]
 </code></pre>
+</div>
 
-<p>Allows you to set the number of blog posts to display on the <strong>index.html</strong> page. This allows you to break your posts up and display them over a number of pages. For an overview of how pagination works, and how to also set the <code>paginate_path</code> option, see the <a href="http://jekyllrb.com/docs/pagination/" title="pagination">Jekyll documentation on pagination</a>.</p>
+<p>Allows you to set the number of blog posts to display on the <strong>index.html</strong> page. This allows you to break your posts up and display them over a number of pages. For an overview of how pagination works, and how to also set the <code class="highlighter-rouge">paginate_path</code> option, see the <a href="http://jekyllrb.com/docs/pagination/" title="pagination">Jekyll documentation on pagination</a>.</p>
 
 <h3>More information</h3>
 

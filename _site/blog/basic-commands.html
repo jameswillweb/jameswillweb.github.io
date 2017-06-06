@@ -51,60 +51,60 @@
        
     <p class="intro">This article is part of a series of posts about Jekyll from my lynda.com course Jekyll for Web Designers. For a complete list of articles in this series check out the <a href="../tags/index.html#jekyll+for+web+designers" title="articles">archives</a>.</p>
   
-        <p>To control Jekyll you’ll run a series of commands within your command-line interface. The Jekyll gem gives you the <code>jekyll</code> executable, which has several commands and options you can use to build and serve your site. Let’s explore these commands and their options:</p>
+        <p>To control Jekyll you’ll run a series of commands within your command-line interface. The Jekyll gem gives you the <code class="highlighter-rouge">jekyll</code> executable, which has several commands and options you can use to build and serve your site. Let’s explore these commands and their options:</p>
 
 <h3>build</h3>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>$ jekyll build
-<span class="c1">#  The current directory will be generated into ./_site</span>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>jekyll build
+<span class="c">#  The current directory will be generated into ./_site</span>
 
-$ jekyll build --destination &lt;destination&gt;
-<span class="c1">#  The current folder will be generated into &lt;destination&gt;</span>
+<span class="gp">$ </span>jekyll build --destination &lt;destination&gt;
+<span class="c">#  The current folder will be generated into &lt;destination&gt;</span>
 
-$ jekyll build --source &lt;source&gt; --destination &lt;destination&gt;
-<span class="c1"># The &lt;source&gt; folder will be generated into &lt;destination&gt;</span></code></pre></figure>
+<span class="gp">$ </span>jekyll build --source &lt;<span class="nb">source</span>&gt; --destination &lt;destination&gt;
+<span class="c"># The &lt;source&gt; folder will be generated into &lt;destination&gt;</span></code></pre></figure>
 
-<p>Build does just that; it takes the contents of the current directory and generates it into the destination directory. If that directory is not specified, it defaults to the <code>_site</code> directory inside the current directory. Both the source and destination directories can be passed as options, just provide the path to the directory after the option.</p>
+<p>Build does just that; it takes the contents of the current directory and generates it into the destination directory. If that directory is not specified, it defaults to the <code class="highlighter-rouge">_site</code> directory inside the current directory. Both the source and destination directories can be passed as options, just provide the path to the directory after the option.</p>
 
 <h3>doctor</h3>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>$ jekyll doctor
-<span class="c1">#  Checks for URL conflicts</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>jekyll doctor
+<span class="c">#  Checks for URL conflicts</span></code></pre></figure>
 
-<p>The <code>doctor</code> command checks your site for URL conflicts, errors with your permalinks, and deprecation warnings. This can be especially useful if you’ve moved pages around or reorganized your site.</p>
+<p>The <code class="highlighter-rouge">doctor</code> command checks your site for URL conflicts, errors with your permalinks, and deprecation warnings. This can be especially useful if you’ve moved pages around or reorganized your site.</p>
 
 <h3>help</h3>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>$ jekyll <span class="nb">help</span>
-<span class="c1"># Generates help documentation</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>jekyll <span class="nb">help</span>
+<span class="c"># Generates help documentation</span></code></pre></figure>
 
-<p>The <code>help</code> command generates a small help document that lists the current version of Jekyll, and reviews available commands and their options.</p>
+<p>The <code class="highlighter-rouge">help</code> command generates a small help document that lists the current version of Jekyll, and reviews available commands and their options.</p>
 
 <h3>new</h3>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>$ jekyll new &lt;path&gt;
-<span class="c1">#  Generates new site scaffold in targeted directory</span>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>jekyll new &lt;path&gt;
+<span class="c">#  Generates new site scaffold in targeted directory</span>
 
-$ jekyll new .
-<span class="c1">#  Generates new site scaffold in current directory</span>
+<span class="gp">$ </span>jekyll new .
+<span class="c">#  Generates new site scaffold in current directory</span>
 
-$ jekyll new --blank &lt;path&gt;
-<span class="c1">#  Generates basic site scaffold with empty directories and files</span></code></pre></figure>
+<span class="gp">$ </span>jekyll new --blank &lt;path&gt;
+<span class="c">#  Generates basic site scaffold with empty directories and files</span></code></pre></figure>
 
-<p>The <code>new</code> command generates a default Jekyll site in the specified directory. This is an extremely useful way to understand how Jekyll works, as you can explore and modify the default site. It’s also a great way to jump-start development, since many of the files and directories you need to create a Jekyll site will be created for you. The <code>blank</code> option creates a minimal directory structure with no files and an empty index file.</p>
+<p>The <code class="highlighter-rouge">new</code> command generates a default Jekyll site in the specified directory. This is an extremely useful way to understand how Jekyll works, as you can explore and modify the default site. It’s also a great way to jump-start development, since many of the files and directories you need to create a Jekyll site will be created for you. The <code class="highlighter-rouge">blank</code> option creates a minimal directory structure with no files and an empty index file.</p>
 
 <h3>serve</h3>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>$ jekyll serve
-<span class="c1"># Builds site and serves it at http://localhost:4000/</span>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>jekyll serve
+<span class="c"># Builds site and serves it at http://localhost:4000/</span>
 
-$ jekyll serve --detach
-<span class="c1"># Same as `jekyll serve` but will detach from the current terminal.</span>
+<span class="gp">$ </span>jekyll serve --detach
+<span class="c"># Same as `jekyll serve` but will detach from the current terminal.</span>
 
-$ jekyll serve --no-watch
-<span class="c1"># Same as `jekyll serve` but will not watch for changes or autoregenerate site.</span></code></pre></figure>
+<span class="gp">$ </span>jekyll serve --no-watch
+<span class="c"># Same as `jekyll serve` but will not watch for changes or autoregenerate site.</span></code></pre></figure>
 
-<p>The <code>serve</code> command generates the site and launches a built-in development server that allows you to preview your site. In its default option the server watches the source directory. Any changes made to source files will result in the server automatically regenerating those files and updating the site locally. To preview your site browse to http://localhost:4000/ unless you’ve specified a different base URL, in which case you’ll add that to the end of localhost:4000.</p>
+<p>The <code class="highlighter-rouge">serve</code> command generates the site and launches a built-in development server that allows you to preview your site. In its default option the server watches the source directory. Any changes made to source files will result in the server automatically regenerating those files and updating the site locally. To preview your site browse to http://localhost:4000/ unless you’ve specified a different base URL, in which case you’ll add that to the end of localhost:4000.</p>
 
         <footer>
         <p>Posted in <a href="/tags/index.html#jekyll" title="Pages tagged jekyll" rel="tag">jekyll</a>, <a href="/tags/index.html#terminal" title="Pages tagged terminal" rel="tag">terminal</a>, <a href="/tags/index.html#jekyll+for+web+designers" title="Pages tagged jekyll for web designers" rel="tag">jekyll for web designers</a></p>
