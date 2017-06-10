@@ -5,9 +5,56 @@
     <description>Simple Primate is the online home of James Williamson, lynda.com author, speaker and occasional web developer.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 06 Jun 2017 18:18:41 -0400</pubDate>
-    <lastBuildDate>Tue, 06 Jun 2017 18:18:41 -0400</lastBuildDate>
+    <pubDate>Sat, 10 Jun 2017 14:56:05 -0400</pubDate>
+    <lastBuildDate>Sat, 10 Jun 2017 14:56:05 -0400</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
+    
+      <item>
+        <title>Designing for the Unexpected</title>
+        <description>&lt;p&gt;Before I began doing web design and education full-time I was the art director at Discovery Place, a children’s science museum in Charlotte, North Carolina. Like most children’s museums the exhibits were interactive and designed to engage kids by being hands-on and fun. Helping to design new exhibits was challenging and an amazing amount of fun. I learned a lot through this process, but perhaps the biggest lesson I learned was to attempt to expect the unexpected.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/air-chair.jpg&quot; alt=&quot;My daughter Reagan in the Air Chair at Discovery Place&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;No matter how good we felt about a new exhibit we never knew whether it was a success or not until we could spend some time observing how people interacted with it. Kids are particularly amazing at ignoring what you would like them to do and instead doing some crazy thing that you never expected. One of the first things I did was to institute what I called the “one hour in the ranch” rule. Our offices and fabrication shop were located across the street from the museum, which was nicknamed “the ranch.” Everyone on my design staff was required once a week to go into the museum with a sketchbook, pick one exhibit, and then sketch and take notes of how the kids interacted with it. The insights we gained from these sessions were invaluable. Over and over again we saw kids, and often adults, doing the unexpected. By observing what the visitors to the museum were &lt;em&gt;actually&lt;/em&gt; doing we were better able to predict what they &lt;em&gt;might&lt;/em&gt; do with future exhibits.&lt;/p&gt;
+
+&lt;p&gt;For us this was a real challenge, as we followed a very specific set of design principles for each project. If we failed to adequately design for those principles there were some very real consequences. These principles were:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;The exhibit must be as safe as possible&lt;/strong&gt;. When you are designing interactive exhibits for children (which can often be at a very large scale) safety has to be the number one priority. That’s not as easy as it seems, especially given the unpredictable nature of people. I remember one exhibit in particular that got all the way through the design stage and into fabrication before someone noticed the perforations in the steel plates we were using weren’t small enough. If they were too big it would be easy for a child to accidentally get their finger caught in one and suffer an injury. This is where the unexpected worried you the most, safety is never guaranteed but we wanted to make sure that we minimized the risk as much as possible.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;The exhibit must be engaging&lt;/strong&gt;. The sensory overload in a children’s science museum is somewhere between an elementary school recess and a Friday night at Chuck E Cheese. To be successful an exhibit must attract and engage children to interact with it, otherwise there is no chance of it actually educating. At first this sounds like it would require each exhibit to be as flashy and loud as possible. However we found that by interspersing quiet spaces among the more kinetic exhibits we actually increased engagement. Just as no two adults are quite alike no two kids are exactly the same either. We learned to design the engagement around the experience and not the child. In doing so we were much more successful.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;The exhibit must educate&lt;/strong&gt;. Each exhibit had a set of learning objectives put forth by the S&amp;amp;E (Science and Education) department. Sometimes these were easy to envision, such as demonstrating magnetic polarity. Other times they were a bit more conceptual, like educating about water consumption. Often we would ask them to pare down the objectives or focus them a bit more. Exhibits that had a single focus, or that taught along a narrative were always easier to design and more successful than those that tried to teach multiple concepts at once. We also tried to design so that some questions were left open-ended so that visitors would seek out the answers on their own.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;The exhibit must be as accessible as possible&lt;/strong&gt;. I have to admit that we often failed at this one. By their nature many of the exhibits were kinetic and designed for play. The goal was to ensure that regardless of the physical design that there were certain elements that could be interacted with by everyone. Through observing how children interacted with some exhibits and avoided others I learned a lot about what accessibility means and have carried that into my work on the web. I learned to not make assumptions about disabilities and who might want to engage with an exhibit and instead make the experience as inclusive as possible.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;The exhibit should properly focus the user on the desired task&lt;/strong&gt;. This was probably the most difficult of all our principles because of the unpredictable nature of how someone might interact it. A good design should be self explanatory, meaning there should be minimal instructions and graphics necessary in order for people to successfully complete the task or engage it properly. It’s much easier to simply rely on step-by-step instructions to guide the visitor through the experience. However we found that printed instructions were often either missed or ignored. Audible instructions, on the other hand, were much more effective &lt;em&gt;and&lt;/em&gt; more inclusive. If the exhibit wasn’t focused properly the overall user experience tended to be frustrating or evolved into something unintended.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Although my time at Discovery Place was far removed from web design the lessons I learned there carried over seamlessly. I learned that there is no single “user story” that you can design for. Often we spend weeks with our Post-it notes trying to define our users into clearly defined categories. There certainly is value in this, however we shouldn’t ignore the fact that many of our users will be edge cases or not behave the way we expect them to. What kind of experience will they have on your site or app? Are your interactions focused enough to guide the user through them on their own, or are they likely to get frustrated and perhaps give up if it is not clear enough? Is your site accessible and inclusive so that everyone can participate?&lt;/p&gt;
+
+&lt;p&gt;Perhaps the biggest lesson I learned is this; observe how people use and interact with your design and continue to tweak it to accommodate them. Web analytics are great at showing us things like conversion rates, traffic patterns, and overall usage but often fail to expose the things that frustrate our users or point out how people might be using our designs in unanticipated ways. Make sure there are ways for your users to communicate with you and look for patterns that show failures, especially those that reveal unexpected requirements. Some of the most amazing discoveries are to be found in these unexpected places.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/led.jpg&quot; alt=&quot;My daughters looking at an LED exhibit at Discovery Place&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sat, 10 Jun 2017 00:00:00 -0400</pubDate>
+        <link>http://localhost:4000/blog/unexpected</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/unexpected</guid>
+        
+        <category>web design</category>
+        
+        <category>graphic design</category>
+        
+        <category>accessibility</category>
+        
+        
+      </item>
     
       <item>
         <title>It's What You Make, Not How You Make It.</title>
@@ -817,85 +864,6 @@ markdown: kramdown
         <category>jekyll</category>
         
         <category>terminal</category>
-        
-        <category>jekyll for web designers</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Exploring Jekyll</title>
-        <description>&lt;p&gt;Once Jekyll is installed you can begin to explore its functionality. In this post we’ll take a closer look at Jekyll’s default boilerplate site and discuss how you can use it to learn more about Jekyll.&lt;/p&gt;
-
-&lt;p&gt;The first step to exploring Jekyll is to create a new Jekyll site, serve it, and then preview it locally in your browser. Then you can begin to tweak the site to get a better understanding of how it all works together.&lt;/p&gt;
-
-&lt;h3&gt;Building a new site&lt;/h3&gt;
-
-&lt;p&gt;To build a new site, create a directory named &lt;code class=&quot;highlighter-rouge&quot;&gt;practice&lt;/code&gt; and navigate there in Terminal or whichever command line interface you’re using. Once there run the following commands:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;jekyll new explore
-&lt;span class=&quot;c&quot;&gt;# Creates the directory explore and builds a new boilerplate site inside it&lt;/span&gt;
-
-&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;explore
-&lt;span class=&quot;c&quot;&gt;# Navigates to explore, making it the current directory&lt;/span&gt;
-
-&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;ls
-&lt;span class=&quot;c&quot;&gt;# Lists the files and directories of the current site&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;You should see a list of files and directories that were created inside your new &lt;strong&gt;explore&lt;/strong&gt; directory. A closer examination would reveal a structure similar to this:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;|---_config.yml
-|---_includes
-    |---footer.html
-    |---head.html
-    |---header.html
-|---_layouts
-    |---default.html
-    |---page.html
-    |---post.html
-|---_posts
-    |---2015-08-23-welcome-to-jekyll.markdown
-|---_sass
-    |---_base.scss
-    |---_layout.scss
-    |---_syntax-highlighting.scss
-|---about.md
-|---css
-    |---main.scss
-|---feed.xml
-|---index.html
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Some highlights: The &lt;strong&gt;_config.yml&lt;/strong&gt; file contains the configuration settings for the blog, the &lt;strong&gt;_includes&lt;/strong&gt; folder holds HTML snippets that are used to generate page regions, the &lt;strong&gt;_layouts&lt;/strong&gt; directory contains the templates used to assemble individual pages, and the &lt;strong&gt;_posts&lt;/strong&gt; folder holds the markdown files for individual posts. The &lt;strong&gt;about.md&lt;/strong&gt; and &lt;strong&gt;index.html&lt;/strong&gt; are individual pages, found on the root of the site. Note that pages can be created either using HTML or markdown.&lt;/p&gt;
-
-&lt;p&gt;Feel free to open any of the files in a text editor and explore them; just don’t make any changes yet!&lt;/p&gt;
-
-&lt;h3&gt;Serving your new site&lt;/h3&gt;
-
-&lt;p&gt;Now run the following command:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;jekyll serve
-&lt;span class=&quot;c&quot;&gt;# Builds the site in the _site directory and serves it at http://localhost:4000&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;If you examine your directory structure you’ll now find a &lt;strong&gt;_site&lt;/strong&gt; directory that contains the generated site. Open up a browser and navigate to http://localhost:4000. Click through the site, explore the default post and note the default information. Using a text editor, open the markdown post in the &lt;strong&gt;_posts&lt;/strong&gt; directory. At the top of the file you’ll see the YAML front matter contained between the dashed lines. Change the title to “Exploring Jekyll.” Save the file and note in the Terminal window that the Jekyll server detects the change and regenerates the file. Refreshing the file in your browser should reflect the change you made to the default post.&lt;/p&gt;
-
-&lt;p&gt;Not all changes are automatically regenerated. Open the &lt;strong&gt;_config.yml&lt;/strong&gt; file in your text editor. Change the title of the site to “Working with Jekyll” and replace the placeholder contact information with your contact info and then save the file. Notice that the Jekyll server doesn’t automatically detect the change. Stop the server by typing &lt;code class=&quot;highlighter-rouge&quot;&gt;CTRL+C&lt;/code&gt; in the Terminal window. Run the &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt; command again and refresh the page in your browser. You should now see your updated information.&lt;/p&gt;
-
-&lt;p&gt;From here begin to experiment with making changes to templates, adding posts, and modifying the overall site configuration. This is a practice site, so it’s totally okay to break it! By exploring and experimenting with the Jekyll boilerplate site you can get a better sense of how Jekyll works and how your own site should be structured.&lt;/p&gt;
-
-</description>
-        <pubDate>Thu, 23 Apr 2015 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/blog/exploring-jekyll</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/exploring-jekyll</guid>
-        
-        <category>jekyll</category>
-        
-        <category>web design</category>
-        
-        <category>terminal</category>
-        
-        <category>blogging</category>
         
         <category>jekyll for web designers</category>
         
