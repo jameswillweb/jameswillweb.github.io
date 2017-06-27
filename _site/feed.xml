@@ -5,9 +5,46 @@
     <description>Simple Primate is the online home of James Williamson, lynda.com author, speaker and occasional web developer.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 10 Jun 2017 14:56:05 -0400</pubDate>
-    <lastBuildDate>Sat, 10 Jun 2017 14:56:05 -0400</lastBuildDate>
+    <pubDate>Tue, 27 Jun 2017 18:30:06 -0400</pubDate>
+    <lastBuildDate>Tue, 27 Jun 2017 18:30:06 -0400</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
+    
+      <item>
+        <title>The Long Goodbye</title>
+        <description>&lt;p&gt;I’ve been meaning to write this post for a while now, in fact it was the main reason I started blogging again. It’s a hard post to write, because I have some very difficult news to share. Although I have told many of you in private I haven’t made a public announcement, so here it is: I am terminally ill.&lt;/p&gt;
+
+&lt;p&gt;Just over four years ago I was diagnosed with ALS. Thanks to events like the ice bucket challenge most people know at least the basics of the disease. If you aren’t familiar with it, ALS is a motor neuron disease that slowly paralyzes you and gradually takes away your ability to eat, communicate, and breathe. As of right now there is no cure, although some promising treatments are on the horizon. I have no idea how much time I have left, and whether I’ll be able to hang on until a viable treatment exists, but I don’t really focus on that. Instead I focus on making the most of the time I have left.&lt;/p&gt;
+
+&lt;p&gt;Some of you may be wondering why I waited so long to publicly discuss my diagnosis. I don’t have a great answer for that; in fact it was something that I wondered about myself until I read the amazing blog post where &lt;a href=&quot;http://www.backupbrain.com/2016/05/ive-had-a-big-secret-now-im-sharing-it/&quot; title=&quot;Blog post by Tom Negrino discussing his cancer diagnosis&quot;&gt;Tom Negrino&lt;/a&gt; discussed his own terminal cancer diagnosis. He waited almost until the very end to address it because, as he put it, “I didn’t want to publicly become Cancer Guy.” I can identify with that. ALS is merely something I have, it doesn’t define me and I’ve always wanted the focus to be on my work and what I contribute to the community. I chose to go public now because the disease has finally progressed to the point that I can no longer hide it. Several of you have asked me why I haven’t published a course lately or why I stopped speaking at events. Now you know. Earlier this year I had to step away from my role as a full-time author at &lt;a href=&quot;http://lynda.com&quot; title=&quot;lynda.com&quot;&gt;lynda.com&lt;/a&gt;. It was an incredibly difficult decision forced upon me by this terrible disease.&lt;/p&gt;
+
+&lt;p&gt;I want to thank the incredible people at lynda and LinkedIn for their support. I’m beyond blessed to be a part of organizations that value their people and help them through difficult times. To list all the ways that they have supported me and helped me to stay productive for as long as I could would require a totally separate blog post. Let’s just say everyone went above and beyond for me and for that I will be eternally grateful.&lt;/p&gt;
+
+&lt;h3&gt;So how am I doing now?&lt;/h3&gt;
+
+&lt;p&gt;ALS is an incredibly individual disease. Most people survive for about 2 to 5 years after their initial diagnosis, but everyone progresses in different ways and at different speeds. Seen in that light I’m doing pretty well. My speech and swallowing have not been greatly affected yet, so I’m still able to communicate and eat normally. My extremities have been involved the most, as a result I’m no longer able to walk and fine motor control is difficult. I need assistance doing basic chores that most people take for granted like brushing my teeth or getting dressed. Typing has been reduced to a single finger, so I use voice dictation for most of my writing. The most threatening aspect for me at the moment is my breathing. My diaphragm was affected very early on and now it is difficult for me to breathe on my own. I use a device called a NIV that allows me to take full breaths during the day and to sleep at night in a prone position. Although the physical part of the disease is taxing the mental part is probably the worst. It’s difficult to continually adjust to losing more and more of your abilities when the reminders of who you used to be are all around you. In my closet are running shoes that I will never use again, in my garage is a mountain bike gathering cobwebs, and in my driveway is a basketball goal that I can no longer use to play with my kids. I refer to it as the “long goodbye.” On the one hand it’s a blessing to be able to let the people around you know how much you love and appreciate them. On the other it’s very difficult to have your life slowly fall away from you piece by piece. Thankfully I am surrounded by a loving family and an amazing community of friends. Just knowing that you are loved and having so many people willing to help out in any way is incredible and I am extremely blessed.&lt;/p&gt;
+
+&lt;h3&gt;What’s next?&lt;/h3&gt;
+
+&lt;p&gt;Since I can no longer record courses and it’s difficult to speak publicly I plan on using this blog as a way to continue to contribute to the web community. As you can imagine I’m increasingly focused on accessibility, so I plan on writing several posts on what I’ve learned as my disability has grown. I will also probably start writing a few more personal posts since the blog is a good way of keeping everyone up to date with how I am doing. I’ll be doing a fundraiser fairly soon for ALS research so please be on the lookout for that.&lt;/p&gt;
+
+&lt;p&gt;Thank you all for your support. If you have ever watched one of my courses, attended one of my workshops, or watched me speak at a conference you’ve helped me have a career that allowed me to do what I love. I can’t thank you enough for that and I hope that in some small way I have helped you grow and advance as web developer. Messages of support are great, so feel free to reach out via &lt;a href=&quot;https://twitter.com/jameswillweb&quot; title=&quot;my twitter profile&quot;&gt;Twitter&lt;/a&gt; or by &lt;a href=&quot;/contact.html&quot; title=&quot;contact page&quot;&gt;contacting me directly through this blog&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I love you all.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/mygirls.jpg&quot; alt=&quot;My daughters and I at the beach&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 27 Jun 2017 00:00:00 -0400</pubDate>
+        <link>http://localhost:4000/blog/long-goodbye</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/long-goodbye</guid>
+        
+        <category>ALS</category>
+        
+        <category>personal</category>
+        
+        <category>accessibility</category>
+        
+        
+      </item>
     
       <item>
         <title>Designing for the Unexpected</title>
@@ -33,7 +70,7 @@
     &lt;p&gt;&lt;strong&gt;The exhibit must be as accessible as possible&lt;/strong&gt;. I have to admit that we often failed at this one. By their nature many of the exhibits were kinetic and designed for play. The goal was to ensure that regardless of the physical design that there were certain elements that could be interacted with by everyone. Through observing how children interacted with some exhibits and avoided others I learned a lot about what accessibility means and have carried that into my work on the web. I learned to not make assumptions about disabilities and who might want to engage with an exhibit and instead make the experience as inclusive as possible.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;The exhibit should properly focus the user on the desired task&lt;/strong&gt;. This was probably the most difficult of all our principles because of the unpredictable nature of how someone might interact it. A good design should be self explanatory, meaning there should be minimal instructions and graphics necessary in order for people to successfully complete the task or engage it properly. It’s much easier to simply rely on step-by-step instructions to guide the visitor through the experience. However we found that printed instructions were often either missed or ignored. Audible instructions, on the other hand, were much more effective &lt;em&gt;and&lt;/em&gt; more inclusive. If the exhibit wasn’t focused properly the overall user experience tended to be frustrating or evolved into something unintended.&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;The exhibit should properly focus the user on the desired task&lt;/strong&gt;. This was probably the most difficult of all our principles because of the unpredictable nature of how someone might interact with it. A good design should be self explanatory, meaning there should be minimal instructions and graphics necessary in order for people to successfully complete the task or engage with it properly. It’s much easier to simply rely on step-by-step instructions to guide the visitor through the experience. However we found that printed instructions were often either missed or ignored. Audible instructions, on the other hand, were much more effective &lt;em&gt;and&lt;/em&gt; more inclusive. If the exhibit wasn’t focused properly the overall user experience tended to be frustrating or evolved into something unintended.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
@@ -794,76 +831,6 @@ markdown: kramdown
         <category>yaml</category>
         
         <category>markdown</category>
-        
-        <category>jekyll for web designers</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Basic Jekyll Commands</title>
-        <description>&lt;p&gt;To control Jekyll you’ll run a series of commands within your command-line interface. The Jekyll gem gives you the &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll&lt;/code&gt; executable, which has several commands and options you can use to build and serve your site. Let’s explore these commands and their options:&lt;/p&gt;
-
-&lt;h3&gt;build&lt;/h3&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;jekyll build
-&lt;span class=&quot;c&quot;&gt;#  The current directory will be generated into ./_site&lt;/span&gt;
-
-&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;jekyll build --destination &amp;lt;destination&amp;gt;
-&lt;span class=&quot;c&quot;&gt;#  The current folder will be generated into &amp;lt;destination&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;jekyll build --source &amp;lt;&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt;&amp;gt; --destination &amp;lt;destination&amp;gt;
-&lt;span class=&quot;c&quot;&gt;# The &amp;lt;source&amp;gt; folder will be generated into &amp;lt;destination&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Build does just that; it takes the contents of the current directory and generates it into the destination directory. If that directory is not specified, it defaults to the &lt;code class=&quot;highlighter-rouge&quot;&gt;_site&lt;/code&gt; directory inside the current directory. Both the source and destination directories can be passed as options, just provide the path to the directory after the option.&lt;/p&gt;
-
-&lt;h3&gt;doctor&lt;/h3&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;jekyll doctor
-&lt;span class=&quot;c&quot;&gt;#  Checks for URL conflicts&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;doctor&lt;/code&gt; command checks your site for URL conflicts, errors with your permalinks, and deprecation warnings. This can be especially useful if you’ve moved pages around or reorganized your site.&lt;/p&gt;
-
-&lt;h3&gt;help&lt;/h3&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;jekyll &lt;span class=&quot;nb&quot;&gt;help&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# Generates help documentation&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;help&lt;/code&gt; command generates a small help document that lists the current version of Jekyll, and reviews available commands and their options.&lt;/p&gt;
-
-&lt;h3&gt;new&lt;/h3&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;jekyll new &amp;lt;path&amp;gt;
-&lt;span class=&quot;c&quot;&gt;#  Generates new site scaffold in targeted directory&lt;/span&gt;
-
-&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;jekyll new .
-&lt;span class=&quot;c&quot;&gt;#  Generates new site scaffold in current directory&lt;/span&gt;
-
-&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;jekyll new --blank &amp;lt;path&amp;gt;
-&lt;span class=&quot;c&quot;&gt;#  Generates basic site scaffold with empty directories and files&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;new&lt;/code&gt; command generates a default Jekyll site in the specified directory. This is an extremely useful way to understand how Jekyll works, as you can explore and modify the default site. It’s also a great way to jump-start development, since many of the files and directories you need to create a Jekyll site will be created for you. The &lt;code class=&quot;highlighter-rouge&quot;&gt;blank&lt;/code&gt; option creates a minimal directory structure with no files and an empty index file.&lt;/p&gt;
-
-&lt;h3&gt;serve&lt;/h3&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;jekyll serve
-&lt;span class=&quot;c&quot;&gt;# Builds site and serves it at http://localhost:4000/&lt;/span&gt;
-
-&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;jekyll serve --detach
-&lt;span class=&quot;c&quot;&gt;# Same as `jekyll serve` but will detach from the current terminal.&lt;/span&gt;
-
-&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;jekyll serve --no-watch
-&lt;span class=&quot;c&quot;&gt;# Same as `jekyll serve` but will not watch for changes or autoregenerate site.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;serve&lt;/code&gt; command generates the site and launches a built-in development server that allows you to preview your site. In its default option the server watches the source directory. Any changes made to source files will result in the server automatically regenerating those files and updating the site locally. To preview your site browse to http://localhost:4000/ unless you’ve specified a different base URL, in which case you’ll add that to the end of localhost:4000.&lt;/p&gt;
-</description>
-        <pubDate>Thu, 30 Apr 2015 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/blog/basic-commands</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/basic-commands</guid>
-        
-        <category>jekyll</category>
-        
-        <category>terminal</category>
         
         <category>jekyll for web designers</category>
         
