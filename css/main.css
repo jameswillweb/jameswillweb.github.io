@@ -461,7 +461,7 @@ a:hover {
 figure {
 	margin: 1em 0;
 }
-img, object, embed {
+img, object, embed, video {
 	max-width: 100%;
 	height: auto;
 }
@@ -470,6 +470,14 @@ img, object, embed {
 }
 .right {
 	float: right;
+}
+.flex-row {
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.flex-item {
+	margin-right: 20px;
 }
 /*micro-clearfix by Nicolas Gallagher http://nicolasgallagher.com/micro-clearfix-hack/*/
 /* For modern browsers */
