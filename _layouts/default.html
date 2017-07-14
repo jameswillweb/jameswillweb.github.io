@@ -68,5 +68,9 @@
         this.setAttribute('aria-expanded', 'true');
       }
     });
+    //Google analytics
+    {% if site.google_analytics and jekyll.environment == 'production' %}
+    {% include analytics.html %}
+    {% endif %}
 </script>
 </html>

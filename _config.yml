@@ -5,6 +5,7 @@ baseurl: ""
 url: "http://www.simpleprimate.com" 
 tagline: Monkeying around with code
 author: "James Williamson"
+google_analytics: UA—102607779-1
 
 # Build settings
 gems: [jekyll-paginate]
