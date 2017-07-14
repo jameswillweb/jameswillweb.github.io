@@ -5,9 +5,81 @@
     <description>Simple Primate is the online home of James Williamson, lynda.com author, speaker and occasional web developer.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 12 Jul 2017 21:29:43 -0400</pubDate>
-    <lastBuildDate>Wed, 12 Jul 2017 21:29:43 -0400</lastBuildDate>
+    <pubDate>Fri, 14 Jul 2017 17:53:00 -0400</pubDate>
+    <lastBuildDate>Fri, 14 Jul 2017 17:53:00 -0400</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
+    
+      <item>
+        <title>Git rebase to the rescue</title>
+        <description>&lt;p&gt;The other day I found myself having serious trouble publishing a new post to my blog. I was able to solve the problem through the use of Git rebase and I thought I would share my experience in case somebody else happens to go through the same thing.&lt;/p&gt;
+
+&lt;h3&gt;The problem&lt;/h3&gt;
+
+&lt;p&gt;I host this blog through &lt;a href=&quot;https://pages.github.com/&quot; title=&quot;Github Pages&quot;&gt;Github Pages&lt;/a&gt; because it’s quick, easy, and free. Although I love the ease-of-use it provides me it is not without its downsides. Recently I recorded a quick screen cast for a friend of mine who needed help solving a problem. I created a unique page on my site to host the video, tested it locally and committed the changes. I’m not the type to read a site’s &lt;a href=&quot;https://help.github.com/articles/github-terms-of-service/&quot; title=&quot;Github Pages terms of service&quot;&gt;terms of service&lt;/a&gt; so I had no idea that Github Pages has a file site limitation of 100mb. The upload was rejected and I had to find an alternate means of showing the video to my friend. No big deal, I removed the video and related files from my local directory and didn’t think much more about it.&lt;/p&gt;
+
+&lt;p&gt;It only became an issue later when I wrote another blog post. I committed the changes, which also included removing the failed video files from the previous commit. At this point my remote repo was now two commits behind my local repository. When I attempted to push my latest commit it pushed both of them. So even though the large video file wasn’t physically present it was still blocking my ability to publish blog posts. Version control’s gotta version, after all. Unless I could figure out a way to get rid of the offending commit I was stuck.&lt;/p&gt;
+
+&lt;h3&gt;The solution&lt;/h3&gt;
+
+&lt;p&gt;You can probably tell by now that I am not a Git expert, in fact I would categorize myself as a casual user at best. My initial response was to do a force push. When that didn’t work I tried removing the file directly using &lt;code class=&quot;highlighter-rouge&quot;&gt;git rm --cached filename&lt;/code&gt;. It was equally unsuccessful. I really didn’t want to have to do something like flattening all my commits or creating a new branch, and I just knew that there must be a way to remove individual commits. Although I’ve never needed to use it before I remember reading about Git rebase and thought that it might offer me a solution.&lt;/p&gt;
+
+&lt;h4&gt;Git rebase&lt;/h4&gt;
+
+&lt;p&gt;You can think of rebase as Git merge on steroids. Its main focus is on altering commit histories and solving complex merge issues that usually stem from team-based workflows. I’m not even going to pretend to act like I know how it works. If you want to learn more about it I highly suggest &lt;a href=&quot;https://git-scm.com/book/en/v2/Git-Branching-Rebasing&quot; title=&quot;article on Git rebase&quot;&gt;this article&lt;/a&gt; from the book &lt;a href=&quot;https://git-scm.com/book/en/v2&quot; title=&quot;online version of the book Pro Git&quot;&gt;Pro Git&lt;/a&gt; by Scott Chacon.&lt;/p&gt;
+
+&lt;h4&gt;Removing individual commits with rebase&lt;/h4&gt;
+
+&lt;p&gt;Using the &lt;strong&gt;interactive flag&lt;/strong&gt; you can use rebase to display and edit individual commits, which is exactly what I needed to do. In my terminal window I typed the command&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git rebase -i HEAD~2&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;This tells Git that you want to interact with a number of previous commits. Since I used the number 2 I only wanted to display and edit the previous two commits.&lt;/p&gt;
+
+&lt;p&gt;Because I wasn’t smart enough to change my default text editor Git then opened up the following message in Vim.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;pick c58c9d3 add video
+pick a4945a1 post update
+
+&lt;span class=&quot;c&quot;&gt;# Rebase bc4a787..a4945a1 onto bc4a787 (2 commands)&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Commands:&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# p, pick = use commit&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# r, reword = use commit, but edit the commit message&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# e, edit = use commit, but stop for amending&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# s, squash = use commit, but meld into previous commit&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# f, fixup = like &quot;squash&quot;, but discard this commit's log message&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# x, exec = run command (the rest of the line) using shell&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# d, drop = remove commit&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# These lines can be re-ordered; they are executed from top to bottom.&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# If you remove a line here THAT COMMIT WILL BE LOST.&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# However, if you remove everything, the rebase will be aborted.&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Note that empty commits are commented out&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;I used the &lt;strong&gt;drop&lt;/strong&gt; command to remove the first commit, saved the file, and exited Vim. At this point I thought I was home free but I had one more problem to deal with. I had forgotten to add my directory structure files to my &lt;code class=&quot;highlighter-rouge&quot;&gt;.gitignore&lt;/code&gt; file and Git warned of a conflict between my local &lt;code class=&quot;highlighter-rouge&quot;&gt;.DS_Store&lt;/code&gt; files. Since they are binary files it couldn’t continue with the rebase until I resolved the conflict. I committed the most recent file and completed the rebase by telling Git to continue.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git rebase --continue&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;After that it was a simple matter of making sure my local repo was current and then pushing the changes to my Github Pages repo. Although in my case I didn’t have to, I read in the Github Pages documentation that you might have to do a force push after a rebase, so be on the lookout for that if you face a similar situation.&lt;/p&gt;
+
+&lt;p&gt;Hopefully you won’t ever find yourself in a jam like that, but if you do keep in mind that Git rebase can save a lot of time and trouble if you ever need to make edits your commit history.&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 13 Jul 2017 00:00:00 -0400</pubDate>
+        <link>http://localhost:4000/blog/rebase</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/rebase</guid>
+        
+        <category>git</category>
+        
+        <category>github pages</category>
+        
+        <category>web design</category>
+        
+        
+      </item>
     
       <item>
         <title>What I've learned about motor impairment</title>
@@ -29,11 +101,11 @@
 
 &lt;h4&gt;Show me my password&lt;/h4&gt;
 
-&lt;p&gt;Perhaps the most frustrating input issue for me is not being able to see my password as I type. Whether I’m using voice dictation or a single finger on my keyboard precise input is extremely difficult. This difficulty is increased when you introduce special characters and many of the requirements found in passwords. Not being able to see what I’ve input equates to a high degree of failure when entering passwords. Yes, password managers do help and I’m not above copying and pasting into the input field but I really shouldn’t have to. &lt;a href=&quot;http://daverupert.com/&quot; title=&quot;Dave Rupert, the man, the myth, the legend&quot;&gt;Dave Rupert&lt;/a&gt; recently tweeted this animation of an experimental password field in Microsoft Edge that has the option baked into it. Until this pattern becomes standard in every browser it’s up to you to make sure users have the option of displaying their password.&lt;/p&gt;
+&lt;p&gt;Perhaps the most frustrating input issue for me is not being able to see my password as I type. Whether I’m using voice dictation or a single finger on my keyboard precise input is extremely difficult. This difficulty is increased when you introduce special characters and many of the requirements found in passwords. Not being able to see what I’ve input equates to a high degree of failure when entering passwords. Yes, password managers do help and I’m not above copying and pasting into the input field but I really shouldn’t have to. &lt;a href=&quot;http://daverupert.com/&quot; title=&quot;Dave Rupert, the man, the myth, the legend&quot;&gt;Dave Rupert&lt;/a&gt; recently tweeted this animation of the password field in Microsoft Edge that has the option baked into it. Until this pattern becomes standard in every browser it’s up to you to make sure users have the option of displaying their password.&lt;/p&gt;
 
 &lt;figure&gt;
     &lt;video src=&quot;/movies/password.mp4&quot; controls=&quot;&quot;&gt;&lt;/video&gt;
-    &lt;figcaption&gt;Experimental password input in Microsoft Edge that allows the user to toggle password visibility.&lt;/figcaption&gt;
+    &lt;figcaption&gt;Password input in Microsoft Edge that allows the user to toggle password visibility.&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;h3&gt;Allow for fine motor control issues&lt;/h3&gt;
@@ -65,7 +137,7 @@
 
 &lt;h4&gt;Avoid small hit targets&lt;/h4&gt;
 
-&lt;p&gt;Apple actually did a pretty good job of educating people about the importance of larger hit areas. Dubbed the “fat fingers” rule we were told to make our hit targets a minimum of 16px x 16px. As phone sizes have gotten larger and the viewport easier to control that seems to have gone out the window. Take for example Apple’s default messenger application. Because of the larger screen sizes of the iPhone 6 and 7, they have crammed more and more items into the keyboard and controls. Since I’m still using an iPhone 5 the screen real estate is not large enough to comfortably hold all of the inputs. It’s much easier for me now to dictate text messages rather than type them, but the reduced size of the icons and my less than stellar fine motor control usually results in me unintentionally switching keyboards five or six times or hitting the spacebar several times before finally triggering dictation. Equally problematic is the input field for the text message itself. So little screen real estate remains that instead of merely triggering a text I end up selecting insert media or any of the other myriad options rather then a simple text message. When designing hit targets make sure you not only have a large enough hit area but there is enough negative space around it to avoid unwanted selections. Remember it’s not just the size on someone’s finger that you’re designing for it’s also the amount of control they have over that finger.&lt;/p&gt;
+&lt;p&gt;Apple actually did a pretty good job of educating people about the importance of larger hit areas. Dubbed the “fat fingers” rule we were told to make our hit targets a minimum of 44px x 44px. As phone sizes have gotten larger and the viewport easier to control that seems to have gone out the window. Take for example Apple’s default messenger application. Because of the larger screen sizes of the iPhone 6 and 7, they have crammed more and more items into the keyboard and controls. Since I’m still using an iPhone 5 the screen real estate is not large enough to comfortably hold all of the inputs. It’s much easier for me now to dictate text messages rather than type them, but the reduced size of the icons and my less than stellar fine motor control usually results in me unintentionally switching keyboards five or six times or hitting the spacebar several times before finally triggering dictation. Equally problematic is the input field for the text message itself. So little screen real estate remains that instead of merely triggering a text I end up selecting insert media or any of the other myriad options rather then a simple text message. When designing hit targets make sure you not only have a large enough hit area but there is enough negative space around it to avoid unwanted selections. Remember it’s not just the size on someone’s finger that you’re designing for it’s also the amount of control they have over that finger.&lt;/p&gt;
 
 &lt;figure&gt;
     &lt;img src=&quot;/images/ios-keyboard.png&quot; alt=&quot;IOS keyboard on an iPhone 5&quot; /&gt;
@@ -94,7 +166,7 @@
 
 &lt;h3&gt;Final thoughts&lt;/h3&gt;
 
-&lt;p&gt;Designing for motor impairments requires as much consideration as other disabilities but doesn’t really have a single approach that guarantees accessibility. Rather you need to consider how your interactions might limit those with motor function disabilities and whether or not you can modify them to be more inclusive or provide alternate means of addressing them. Far from being a niche concern visitors with some form of motor impairment likely make up a significant percentage of your users. I would encourage you to test your website or application with your less dominant hand. Is it still easy to use? If touch is involved try completing your interactions with a single finger other than your index finger. Can you still complete all the tasks? Designing with these restrictions in mind will create a more inclusive site and likely result in a better user experience for everyone.&lt;/p&gt;
+&lt;p&gt;Designing for motor impairments requires as much consideration as other disabilities but doesn’t really have a single approach that guarantees accessibility. Rather you need to consider how your interactions might limit those with motor function disabilities and whether or not you can modify them to be more inclusive or provide alternate means of addressing them. Far from being a niche concern, visitors with some form of motor impairment likely make up a significant percentage of your users. I would encourage you to test your website or application with your less dominant hand. Is it still easy to use? If touch is involved try completing your interactions with a single finger other than your index finger. Can you still complete all the tasks? Designing with these restrictions in mind will create a more inclusive site and likely result in a better user experience for everyone.&lt;/p&gt;
 
 </description>
         <pubDate>Wed, 12 Jul 2017 00:00:00 -0400</pubDate>
@@ -668,135 +740,6 @@ This is as well.
         <category>markdown</category>
         
         <category>html</category>
-        
-        <category>jekyll for web designers</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Jekyll: Liquid Syntax Basics</title>
-        <description>&lt;p&gt;Jekyll uses the &lt;a href=&quot;http://liquidmarkup.org/&quot; title=&quot;liquid&quot;&gt;Liquid&lt;/a&gt; template language to control the logic of templates and assemble pages dynamically. To get the most out of Jekyll, and to build effective templates you need to understand the basics of how Liquid works. In this post we’ll cover the basics of Liquid syntax so that as you begin to author templates, you’ll have a greater understanding of Jekyll’s capabilities and how Liquid can help you build more powerful sites.&lt;/p&gt;
-
-&lt;p&gt;Liquid was created in 2006 as a Ruby template language for the ecommerce site &lt;a href=&quot;https://docs.shopify.com/themes/liquid-documentation/basics&quot; title=&quot;Shopify themes&quot;&gt;Shopify&lt;/a&gt;. It remains an integral part of Shopify, but has been spun off for general use as well.&lt;/p&gt;
-
-&lt;p&gt;Liquid uses a combination of &lt;strong&gt;tags&lt;/strong&gt;, &lt;strong&gt;objects&lt;/strong&gt;, and &lt;strong&gt;filters&lt;/strong&gt; to load and format content. Within tags, logic can be applied to loop through objects, create variables, and apply conditional statements to control the building of content.&lt;/p&gt;
-
-&lt;p&gt;There are two basic types of markup in Liquid, &lt;strong&gt;output&lt;/strong&gt; and &lt;strong&gt;tags&lt;/strong&gt;. Output writes content to the page while tags perform some type of function, like looping through an array. Let’s explore output markup first.&lt;/p&gt;
-
-&lt;h3&gt;Output&lt;/h3&gt;
-
-&lt;p&gt;Output writes content to the page. Output tags start with two curly braces, contain the content to be written to the page, and then end with two curly braces. Here’s an example:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-liquid&quot; data-lang=&quot;liquid&quot;&gt;Written by &lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;author&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;
-Written by &lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;author&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;
-Written by &lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'james'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;In this instance the value of &lt;code class=&quot;highlighter-rouge&quot;&gt;author&lt;/code&gt; would be evaluated and written to the page, the &lt;code class=&quot;highlighter-rouge&quot;&gt;page&lt;/code&gt; object would be parsed to find the value of the &lt;code class=&quot;highlighter-rouge&quot;&gt;author&lt;/code&gt; property and that would be written to the page, and then the literal string “james” would be written to the page.&lt;/p&gt;
-
-&lt;p&gt;Output markup can be further modified through the use of filters. Filters are methods that can be used to transform the results of the output tags. Filters appear to the right of the output parameter, and are separated using the ‘pipe’ character &lt;code class=&quot;highlighter-rouge&quot;&gt;( | )&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Here’s a filter in action:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-liquid&quot; data-lang=&quot;liquid&quot;&gt;&lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;date_to_string}}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&amp;lt;!--&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;would&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;output&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;‘&lt;span class=&quot;mi&quot;&gt;22&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;Aug&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2015&lt;/span&gt;’&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;--&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;It’s also possible to use more than one filter at a time. Here are a few of the standard filters available in Liquid:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;date - reformat a date&lt;/li&gt;
-  &lt;li&gt;capitalize - capitalize words&lt;/li&gt;
-  &lt;li&gt;downcase - convert a string to lowercase&lt;/li&gt;
-  &lt;li&gt;upcase - convert a string to uppercase&lt;/li&gt;
-  &lt;li&gt;first - get the first element of an array&lt;/li&gt;
-  &lt;li&gt;last - get the last element of an array&lt;/li&gt;
-  &lt;li&gt;join - join elements of an array with specific character between them&lt;/li&gt;
-  &lt;li&gt;sort - sort elements of an array&lt;/li&gt;
-  &lt;li&gt;size - return the size of an array or string&lt;/li&gt;
-  &lt;li&gt;strip_html - strip html from string&lt;/li&gt;
-  &lt;li&gt;strip_newlines - strip all newlines from string&lt;/li&gt;
-  &lt;li&gt;replace - replace each occurrence&lt;/li&gt;
-  &lt;li&gt;replace_first - replace the first occurrence&lt;/li&gt;
-  &lt;li&gt;remove - remove each occurrence&lt;/li&gt;
-  &lt;li&gt;remove_first&lt;/li&gt;
-  &lt;li&gt;truncate - truncate a string down to x characters.&lt;/li&gt;
-  &lt;li&gt;truncatewords - truncate a string down to x words&lt;/li&gt;
-  &lt;li&gt;prepend - prepend a string&lt;/li&gt;
-  &lt;li&gt;append - append a string&lt;/li&gt;
-  &lt;li&gt;slice - slice a string. Takes an offset and length.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Filters are an incredibly powerful way to transform content within your templates. It’s important to understand how they work, and what their capabilities are, so that you can format content correctly as well as generate the desired output. For a full list of available filters and how they work, check out the &lt;a href=&quot;https://docs.shopify.com/themes/liquid-documentation/filters&quot; title=&quot;filters&quot;&gt;filter documentation&lt;/a&gt; on the Shopify site.&lt;/p&gt;
-
-&lt;h3&gt;Tags&lt;/h3&gt;
-
-&lt;p&gt;Liquid tags are functional, when applied they perform some type of action. They provide the basic programming logic for templates and allow you to build intelligent templates that can respond to a number of different factors. Tags are written with a curly brace followed by a percentage sign (&lt;em&gt;%&lt;/em&gt;), contain the desired instructions, and end with a percentage sign and a curly brace. Tags usually come in twos, with an opening tag and a closing tag that wraps the targeted content. Here’s an example:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-liquid&quot; data-lang=&quot;liquid&quot;&gt;&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'About'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
-    About this blog
-&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;endif&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;In this example Jekyll would check the current page title. If the value is “About” then the text “About this blog” will be written to the page.&lt;/p&gt;
-
-&lt;p&gt;Tags are organized in four distinct categories; Control Flow, Iteration, Theme, and Variables. Control Flow tags are used to apply conditional logic, such as &lt;strong&gt;if/else&lt;/strong&gt; statements. Iteration tags allow you to loop through code and run code repeatedly. They contain tags like &lt;strong&gt;for loops&lt;/strong&gt; and &lt;strong&gt;cycles&lt;/strong&gt;. Theme tags are typically template-specific tags and allow you to output specific markup, add comments, control arrays, and handle pagination.&lt;/p&gt;
-
-&lt;p&gt;Here’s a sample of some of the more commonly used tags in templates:&lt;/p&gt;
-
-&lt;h3&gt;for loops&lt;/h3&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-liquid&quot; data-lang=&quot;liquid&quot;&gt;    &lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;post&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;in&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;site.posts&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
-      &amp;lt;li&amp;gt;
-	  &amp;lt;a href=&quot;&lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;&quot;&amp;gt;&lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;&amp;lt;/a&amp;gt;
-      &amp;lt;/li&amp;gt;
-&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;endfor&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Loops over collections, executing code for as long as the conditions within the loop lasts. In this example Jekyll would loop through all posts in the site and for each one create a list item that contains a link to that specific post via its URL and title. Note the use of output tags within the &lt;strong&gt;for&lt;/strong&gt; loop.&lt;/p&gt;
-
-&lt;h3&gt;if/else statements&lt;/h3&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-liquid&quot; data-lang=&quot;liquid&quot;&gt;  &lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;paginator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;previous_page&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
-     &amp;lt;a href=&quot;&lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;paginator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;previous_page_path&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;&quot;&amp;gt;Previous&amp;lt;/a&amp;gt;
-  &lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
-    &amp;lt;span&amp;gt;No previous posts&amp;lt;/span&amp;gt;
-  &lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;endif&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Allows the application of conditional logic within templates. In this example Jekyll would check to see if there are any posts older than the current one using the &lt;strong&gt;paginator&lt;/strong&gt; object. If so, a link would be created to the previous posts. If not a message is created stating that there are no previous posts. There are many variations on the if/else statements syntax including &lt;code class=&quot;highlighter-rouge&quot;&gt;elseif&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;unless&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;case&lt;/code&gt; statements.&lt;/p&gt;
-
-&lt;h3&gt;includes&lt;/h3&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-liquid&quot; data-lang=&quot;liquid&quot;&gt;  &lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;footer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
- &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Inserts the included content at the desired location. In this example the contents of the file “footer.html” would be inserted at the location of the tag. Allows for the dynamic insertion of content.&lt;/p&gt;
-
-&lt;h3&gt;variables&lt;/h3&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-liquid&quot; data-lang=&quot;liquid&quot;&gt;  &lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;assign&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;author&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'james'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;author&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;
- &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;There are two main ways to assign variables using Liquid. The &lt;strong&gt;assign&lt;/strong&gt; method shown above assigns a literal string which is then stored for later use.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-liquid&quot; data-lang=&quot;liquid&quot;&gt;  &lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;capture&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;site_tags&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;tag&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;in&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;site.tags&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}{{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;tag&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;first&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;
-           &lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;unless&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;forloop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;last&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;,&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;endunless&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;endfor&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;endcapture&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;The &lt;strong&gt;capture&lt;/strong&gt; method, shown above, captures the values inside of the opening and closing tags and stores it in a string. In the example shown Jekyll would loop through all tags in the site, pull each one out, and separate them with a comma. The resulting variable “site_tags” would contain a comma-separated list of all tags within the site.&lt;/p&gt;
-
-&lt;p&gt;Tags give you the ability to create templates that generate dynamic templates using intelligent logic. For more information on them, and for a complete list of available tags, check out the &lt;a href=&quot;https://docs.shopify.com/themes/liquid-documentation/tags&quot; title=&quot;tags documentation&quot;&gt;Liquid documentation&lt;/a&gt; on tags.&lt;/p&gt;
-
-</description>
-        <pubDate>Sun, 07 Jun 2015 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/blog/liquid-syntax</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/liquid-syntax</guid>
-        
-        <category>liquid</category>
-        
-        <category>jekyll</category>
-        
-        <category>templates</category>
         
         <category>jekyll for web designers</category>
         
