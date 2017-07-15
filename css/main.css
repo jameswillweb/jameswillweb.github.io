@@ -618,7 +618,7 @@ pre {
 	white-space: -pre-wrap;
 	white-space: -o-pre-wrap;
 	word-wrap: break-word;
-	width: 80%;
+	width: 100%;
 }
 pre.wrong {
 	border-left-color: red;
