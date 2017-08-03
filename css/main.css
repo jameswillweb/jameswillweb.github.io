@@ -989,7 +989,7 @@ nav {
     padding-left: 1em;
     margin-bottom: 1em;
 }
-.js .menu {
+.js #menu {
 	display: none;
 }
 .js .is-active {
