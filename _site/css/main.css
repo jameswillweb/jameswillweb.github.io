@@ -618,7 +618,7 @@ pre {
 	white-space: -pre-wrap;
 	white-space: -o-pre-wrap;
 	word-wrap: break-word;
-	width: 80%;
+	width: 100%;
 }
 pre.wrong {
 	border-left-color: red;
@@ -989,10 +989,10 @@ nav {
     padding-left: 1em;
     margin-bottom: 1em;
 }
-.js .menu {
+.js #menu {
 	display: none;
 }
-.js .is-active {
+.js #menu.is-active {
 	display: block;
 }
 nav li {

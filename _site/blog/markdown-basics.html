@@ -19,7 +19,7 @@
             document.documentElement.className = "js";
         }());
   </script>
-  <link rel="canonical" href="/blog/markdown-basics">
+  <link rel="canonical" href="http://localhost:4000/blog/markdown-basics">
   <link rel="stylesheet" href="/css/main.css">
   <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -30,9 +30,9 @@
  <h1><a href="/index.html" title="articles" class="siteTitle">Simple<span class="primate">Primate</span></a></h1>
  <p>Monkeying around with code</p>
 </header>
-<nav role="navigation">
+<nav aria-label="main navigation">
 <button id="toggle" aria-expanded="false" aria-controls="menu">Menu</button>
-<ul class="menu">
+<ul id="menu">
   <li><a href="/index.html" title="articles">Blog</a></li>
   <li><a href="/about.html" title="learn more about me">About</a></li>
   <li><a href="/speaking.html" title="speaking engagements">Speaking</a></li>
@@ -348,7 +348,7 @@ This is as well.
   });
     //menu toggle for small screens
     var toggle = document.querySelector('#toggle');
-    var menu = document.querySelector('.menu');
+    var menu = document.querySelector('#menu');
 
     toggle.addEventListener('click', function(){
       if (menu.classList.contains('is-active')) {

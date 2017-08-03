@@ -992,7 +992,7 @@ nav {
 .js #menu {
 	display: none;
 }
-.js .is-active {
+.js #menu.is-active {
 	display: block;
 }
 nav li {
