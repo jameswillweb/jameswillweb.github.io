@@ -551,12 +551,12 @@ nav li a {
 	letter-spacing: 0.1em;
 }
 .skipnav {
-	padding:6px;
+	padding:.5em 1em;
 	position: absolute;
 	top:-40px;
 	left:0px;
 	color:white;
-	border-bottom-right-radius:8px;
+	border-radius:0 0 8px 8px;
 	background:transparent;
 	-webkit-transition: top 1s ease-out, background 1s linear;
     transition: top 1s ease-out, background 1s linear;
@@ -1105,6 +1105,7 @@ body {
 	width: 80%;
     max-width: 1270px;
 	margin: 0 auto;
+    position: relative;
 }
 .posts, .page-header, .archive {
 	float: left;

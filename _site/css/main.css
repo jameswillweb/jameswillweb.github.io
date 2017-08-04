@@ -550,6 +550,27 @@ nav li a {
 	text-decoration: none;
 	letter-spacing: 0.1em;
 }
+.skipnav {
+	padding:.5em 1em;
+	position: absolute;
+	top:-40px;
+	left:0px;
+	color:white;
+	border-radius:0 0 8px 8px;
+	background:transparent;
+	-webkit-transition: top 1s ease-out, background 1s linear;
+    transition: top 1s ease-out, background 1s linear;
+}
+
+.skipnav:focus {
+	position:absolute;
+	left:0px;
+	top:0px;
+	background:#991B1F;
+	outline:0;	
+	-webkit-transition: top .1s ease-in, background .5s linear;
+    transition: top .1s ease-in, background .5s linear;
+}
 
 /* -------------------------------------------------- 
    article styles
@@ -1084,6 +1105,7 @@ body {
 	width: 80%;
     max-width: 1270px;
 	margin: 0 auto;
+    position: relative;
 }
 .posts, .page-header, .archive {
 	float: left;
