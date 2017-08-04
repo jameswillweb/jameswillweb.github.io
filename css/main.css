@@ -550,6 +550,27 @@ nav li a {
 	text-decoration: none;
 	letter-spacing: 0.1em;
 }
+.skipnav {
+	padding:6px;
+	position: absolute;
+	top:-40px;
+	left:0px;
+	color:white;
+	border-bottom-right-radius:8px;
+	background:transparent;
+	-webkit-transition: top 1s ease-out, background 1s linear;
+    transition: top 1s ease-out, background 1s linear;
+}
+
+.skipnav:focus {
+	position:absolute;
+	left:0px;
+	top:0px;
+	background:#991B1F;
+	outline:0;	
+	-webkit-transition: top .1s ease-in, background .5s linear;
+    transition: top .1s ease-in, background .5s linear;
+}
 
 /* -------------------------------------------------- 
    article styles
