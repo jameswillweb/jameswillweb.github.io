@@ -2,6 +2,7 @@
 layout: post
 title:  "Installing Jekyll"
 date:   2015-03-11
+type: post
 tags: [jekyll, web design, terminal,jekyll for web designers]
 description: Getting started with Jekyll is relatively simple, although perhaps not quite as simple as their documentation would have you believe. There are a number of dependencies and requirements you have to satisfy before installing and using Jekyll. Let’s explore those dependencies and talk about the process of getting started with Jekyll.
 intro: This article is part of a series of posts about Jekyll from my lynda.com course Jekyll for Web Designers. For a complete list of articles in this series check out the <a href="../tags/index.html#jekyll+for+web+designers" title="articles">archives</a>.

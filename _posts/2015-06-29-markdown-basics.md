@@ -2,6 +2,7 @@
 layout: post
 title:  "Jekyll: Markdown Basics"
 date:   2015-06-29
+type: post
 tags: [jekyll, markdown, html, jekyll for web designers]
 description: In Jekyll, content for pages and posts can be written in either HTML or Markdown. Although there will be times that HTML is the more appropriate choice, Markdown provides a more natural writing environment that makes blogging easier and less of a chore.
 intro: This article is part of a series of posts about Jekyll from my lynda.com course Jekyll for Web Designers. For a complete list of articles in this series check out the <a href="../tags/index.html#jekyll+for+web+designers" title="articles">archives</a>.

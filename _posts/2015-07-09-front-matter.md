@@ -2,6 +2,7 @@
 layout: post
 title:  "YAML front matter in Jekyll"
 date:   2015-07-09
+type: post
 tags: [jekyll, web design, yaml, jekyll for web designers]
 description: YAML front matter is perhaps the most important aspect of creating sites through Jekyll. It allows you to control how Jekyll processes and builds pages, create page-specific variables, and triggers file processing. Let’s take a closer look at front matter and how it can help you create more efficient Jekyll sites.
 intro: This article is part of a series of posts about Jekyll from my lynda.com course Jekyll for Web Designers. For a complete list of articles in this series check out the <a href="../tags/index.html#jekyll+for+web+designers" title="articles">archives</a>.

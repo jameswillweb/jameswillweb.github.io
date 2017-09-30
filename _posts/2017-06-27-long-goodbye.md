@@ -2,6 +2,7 @@
 layout: post
 title: The Long Goodbye
 date:  2017-06-27
+type: post
 tags: [ALS, personal, accessibility]
 description: I've been meaning to write this post for a while now. It's a hard post to write, because I have some very difficult news to share.
 ---

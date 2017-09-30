@@ -2,6 +2,7 @@
 layout: post
 title:  "Jekyll: Liquid Syntax Basics"
 date:   2015-06-07
+type: post
 tags: [liquid, jekyll, templates,jekyll for web designers]
 description: Jekyll uses the Liquid template language to control the logic of templates and assemble pages dynamically. To get the most out of Jekyll, and to build effective templates you need to understand the basics of how Liquid works.
 intro: This article is part of a series of posts about Jekyll from my lynda.com course Jekyll for Web Designers. For a complete list of articles in this series check out the <a href="../tags/index.html#jekyll+for+web+designers" title="articles">archives</a>.

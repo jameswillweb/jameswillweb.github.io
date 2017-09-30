@@ -2,6 +2,7 @@
 layout: post
 title:  "Learning Github"
 date:   2014-03-26
+type: post
 tags: [git, web design, github]
 description: When I first started learning Github I kept running into frustrating roadblocks. It seemed like every tutorial I took, or article I read, assumed I was a developer and used terms and terminology that I just wasn't familiar with. Perhaps worse than that, because certain things were assumed it would often halt my learning process because I wouldn't understand how to fill in the blanks between steps.
 ---
