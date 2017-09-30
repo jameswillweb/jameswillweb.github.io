@@ -34,11 +34,11 @@
 <nav aria-label="main navigation">
 <button id="toggle" aria-expanded="false" aria-controls="menu">Menu</button>
 <ul id="menu">
-  <li><a href="{{site.baseurl}}/index.html" title="articles">Blog</a></li>
-  <li><a href="{{site.baseurl}}/about.html" title="learn more about me">About</a></li>
-  <li><a href="{{site.baseurl}}/speaking.html" title="speaking engagements">Speaking</a></li>
-  <li><a href="{{site.baseurl}}/contact.html" title="contact me">Contact</a></li>
-  <li><a href="{{site.baseurl}}/tags" title="all posts">Archives</a></li>
+  <li><a href="{{site.baseurl}}/index.html" title="articles" {% if page.type == 'post' %}aria-current="page"{% endif %}>Blog</a></li>
+  <li><a href="{{site.baseurl}}/about.html" title="learn more about me" {% if page.type == 'about' %}aria-current="page"{% endif %}>About</a></li>
+  <li><a href="{{site.baseurl}}/speaking.html" title="speaking engagements" {% if page.type == 'speaking' %}aria-current="page"{% endif %}>Speaking</a></li>
+  <li><a href="{{site.baseurl}}/contact.html" title="contact me" {% if page.type == 'contact' %}aria-current="page"{% endif %}>Contact</a></li>
+  <li><a href="{{site.baseurl}}/tags" title="all posts" {% if page.type == 'archive' %}aria-current="page"{% endif %}>Archives</a></li>
   </ul>
 </nav>
 	{{content}}

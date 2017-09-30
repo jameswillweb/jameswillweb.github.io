@@ -1036,6 +1036,9 @@ nav li a {
 	max-width: 100%;
 	width:100%;
 }
+nav li a[aria-current] {
+	background: #333;
+}
 nav li a:hover {
 	color: white;
 }
@@ -1161,6 +1164,9 @@ nav li a {
     text-transform: uppercase;
 	text-decoration: none;
 	letter-spacing: 0.1em;
+}
+nav li a[aria-current] {
+	color: #333;
 }
 nav a:hover,nav a:focus {
 	color: #333;

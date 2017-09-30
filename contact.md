@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Contact me
+type: contact
 ---
 
 ### Hey there...
