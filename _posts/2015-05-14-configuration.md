@@ -2,7 +2,6 @@
 layout: post
 title:  "Jekyll Configuration Options"
 date:   2015-05-14
-type: post
 tags: [jekyll, yaml, markdown,jekyll for web designers]
 description: One of the main reasons to use a static site generator like Jekyll is the automation it provides for repetitive tasks and page generation. In Jekyll many of those automations are driven by the configuration file. In order to harness the true power of Jekyll it’s important to understand how this file works and what your options are when using it.
 intro: This article is part of a series of posts about Jekyll from my lynda.com course Jekyll for Web Designers. For a complete list of articles in this series check out the <a href="../tags/index.html#jekyll+for+web+designers" title="articles">archives</a>.

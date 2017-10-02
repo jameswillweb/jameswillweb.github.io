@@ -2,7 +2,6 @@
 layout: post
 title:  "Exploring Jekyll"
 date:   2015-04-23
-type: post
 tags: [jekyll, web design, terminal, blogging,jekyll for web designers]
 description: Once Jekyll is installed you can begin to explore its functionality. In this post we’ll take a closer look at Jekyll’s default boilerplate site and discuss how you can use it to learn more about Jekyll.
 intro: This article is part of a series of posts about Jekyll from my lynda.com course Jekyll for Web Designers. For a complete list of articles in this series check out the <a href="../tags/index.html#jekyll+for+web+designers" title="articles">archives</a>.

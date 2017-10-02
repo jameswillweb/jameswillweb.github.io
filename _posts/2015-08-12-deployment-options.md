@@ -2,7 +2,6 @@
 layout: post
 title:  "Jekyll Deployment Options"
 date:   2015-08-01
-type: post
 tags:  [jekyll, deployment, github pages, git,jekyll for web designers]
 description: Once you’ve finished building your Jekyll site you’ll need to decide where and how you want to deploy it. Since Jekyll builds static content you can serve it almost anywhere. If the server can handle HTML, CSS, and JavaScript, it can serve your site. With that in mind let’s take a look at some of the most common options for deploying Jekyll sites.
 intro: This article is part of a series of posts about Jekyll from my lynda.com course Jekyll for Web Designers. For a complete list of articles in this series check out the <a href="../tags/index.html#jekyll+for+web+designers" title="articles">archives</a>.

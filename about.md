@@ -1,6 +1,6 @@
 ---
 layout: page
-type: about
+current: about
 title: Hey there!
 ---
 

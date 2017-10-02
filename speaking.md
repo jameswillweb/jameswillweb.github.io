@@ -1,6 +1,6 @@
 ---
 layout: page
-type: speaking
+current: speaking
 title: Speaking engagements
 ---
 

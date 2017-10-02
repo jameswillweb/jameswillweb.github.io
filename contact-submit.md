@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Contact me
-type: contact
+current: contact
 ---
 
 ### Hey there...

@@ -5,9 +5,86 @@
     <description>Simple Primate is the online home of James Williamson, lynda.com author, speaker and occasional web developer.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 30 Sep 2017 13:21:46 -0400</pubDate>
-    <lastBuildDate>Sat, 30 Sep 2017 13:21:46 -0400</lastBuildDate>
+    <pubDate>Mon, 02 Oct 2017 16:06:57 -0400</pubDate>
+    <lastBuildDate>Mon, 02 Oct 2017 16:06:57 -0400</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
+    
+      <item>
+        <title>Creating accessible menus-Part 1</title>
+        <description>&lt;p&gt;I’ve recently been tweaking my site navigation to make it a bit cleaner and more accessible. Even though my menu is super simple I wanted to share the process with you in the hopes that it might be useful to anyone looking to make their own navigation more accessible.&lt;/p&gt;
+
+&lt;h3&gt;Basic structure&lt;/h3&gt;
+
+&lt;p&gt;As I mentioned the navigation for my site is extremely simple, it’s basically just five links to the various areas of my blog. So I started out with a clean, semantic list of links wrapped in a &lt;code class=&quot;highlighter-rouge&quot;&gt;nav&lt;/code&gt; element. Since I use Jekyll to build my blog there’s a little bit of liquid markup in the links themselves, but not much else.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;nav&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;ul&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{site.baseurl}}/index.html&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;title=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;articles&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Blog&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{site.baseurl}}/about.html&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;title=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;learn more about me&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;About&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{site.baseurl}}/speaking.html&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;title=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;speaking engagements&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Speaking&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{site.baseurl}}/contact.html&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;title=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;contact me&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Contact&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{site.baseurl}}/tags&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;title=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;all posts&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Archives&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/ul&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/nav&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;As the HTML5 structural elements are well supported by assistive technologies I don’t need to add an &lt;a href=&quot;https://www.w3.org/TR/wai-aria/roles&quot; title=&quot;W3C specification on wai-aria roles&quot;&gt;ARIA landmark role&lt;/a&gt; to the nav element, it’s accessible just the way it is. &lt;em&gt;I can’t stress enough how the majority of your accessible needs can be met by just ensuring that you have clean, standards-based markup&lt;/em&gt;. Too often developers find themselves having to bolt on accessibility to code simply because it wasn’t written properly to begin with.&lt;/p&gt;
+
+&lt;h3&gt;Adding an accessible name&lt;/h3&gt;
+
+&lt;p&gt;It’s a good idea to ensure that any element or region that can be interacted with has an &lt;strong&gt;accessible name&lt;/strong&gt;. These can be used by assistive technology to identify the element or give more information about it. Many HTML elements already have mechanisms that are used to generate accessible names such as the alt attribute on img elements or the text within a link. If you are new to the concept of accessible names The Paciello Group has a &lt;a href=&quot;https://developer.paciellogroup.com/blog/2017/04/what-is-an-accessible-name/&quot; title=&quot;what is an accessible name?&quot;&gt;nice introductory article on them&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;In the case of my site navigation each of the links has their own accessible name based on the text within the links. However the nav element representing the site’s main navigation does not. It’s always bothered me that both the HTML5 outline algorithm and the WAI-ARIA landmark roles have no way to identify different types of navigation blocks, specifically a site’s main navigation. Although my site is very simple I might choose later on to add additional blocks of navigation or groups of links. If I decide to use a nav element for each of them how are assistive user agents supposed to tell them apart? &lt;a href=&quot;https://twitter.com/dstorey&quot; title=&quot;David Storey on twitter&quot;&gt;David Storey&lt;/a&gt; recently &lt;a href=&quot;https://discourse.wicg.io/t/nav-type-attribute-proposal/2241&quot; title=&quot;proposal to enhance nav element landmark mapping&quot;&gt;proposed adding a type attribute to the nav element&lt;/a&gt; as a way of identifying and correctly mapping their roles. Until something like that is adopted we still need to be able to identify the site’s main navigation.&lt;/p&gt;
+
+&lt;p&gt;I could have added a heading to my nav element, but to me that seems overly intrusive and a bit of an overkill for what I need. Thankfully there’s an easy way to add accessible names to elements that don’t have built-in mechanisms for them by using ARIA. The &lt;code class=&quot;highlighter-rouge&quot;&gt;aria-label&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;aria-labelledby&lt;/code&gt; attributes allow us to provide alternative accessible names for elements. By adding the aria-label attribute to my nav element I can correctly identify it as my site’s main navigation. I modified my nav element to look like this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;nav&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;aria-label=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;main navigation&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3&gt;Skipping navigation&lt;/h3&gt;
+
+&lt;p&gt;Although my site nav is pretty small I doubt that anyone using a screen reader is going to want to hear the menu read every time they browse to a page. Even though I have the main content identified by using a &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;main&amp;gt;&lt;/code&gt; element giving users a way to skip past the navigation directly to the content is a good idea. Skip nav links have been around for a long time, and I didn’t see the need to reinvent the wheel here. I pretty much used the same approach that &lt;a href=&quot;https://webaim.org/techniques/skipnav/&quot; title=&quot;WebAIM article on skip navigation techniques&quot;&gt;WebAIM uses on their site&lt;/a&gt;. Just below the opening body tag I added:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;skipnav&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;#main&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;skip to main content&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;I made sure to add the corresponding ID attribute to my main element and then switched my attention to styling my skip navigation link. Obviously I didn’t want the skip navigation link to be visible by default but I did want it to become visible if focus was established on it. That way keyboard users could take advantage of it as well. I had to tweak the positioning a bit to ensure that it appeared where I wanted it to but overall the styling is pretty simple:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nc&quot;&gt;.skipnav&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;nl&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;.5em&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1em&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;nl&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;absolute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;nl&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;-40px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;nl&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;white&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;nl&quot;&gt;border-radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;8px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;8px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;nl&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;transparent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;nl&quot;&gt;-webkit-transition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;top&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1s&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ease-out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;background&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1s&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;linear&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;transition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;top&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1s&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ease-out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;background&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1s&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;linear&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nc&quot;&gt;.skipnav&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:focus&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;nl&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;absolute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;nl&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;nl&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;nl&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;#991B1F&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;nl&quot;&gt;outline&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;	
+	&lt;span class=&quot;nl&quot;&gt;-webkit-transition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;top&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;.1s&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ease-in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;background&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;.5s&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;linear&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;transition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;top&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;.1s&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ease-in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;background&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;.5s&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;linear&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;To hide it I simply positioned it above the top of the page, that way it’s not hidden from screen readers or other assistive tech. I added a &lt;code class=&quot;highlighter-rouge&quot;&gt;position: relative&lt;/code&gt; to the &lt;code class=&quot;highlighter-rouge&quot;&gt;body&lt;/code&gt; element at large screen sizes to ensure that it appears just above the title of the site and added a simple animation so that its appearance wouldn’t be too jarring for keyboard users.&lt;/p&gt;
+
+&lt;h3&gt;Next steps&lt;/h3&gt;
+
+&lt;p&gt;With the basics out of the way I needed to tackle two remaining things. First, I wanted to identify which link indicates the current page and then I needed to make the menu responsive and find a way to create an accessible toggle for the menu at small screen sizes. I’ll cover how I approached those challenges in my next post.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 02 Oct 2017 00:00:00 -0400</pubDate>
+        <link>http://localhost:4000/blog/nav-1</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/nav-1</guid>
+        
+        <category>web design</category>
+        
+        <category>accessibility</category>
+        
+        
+      </item>
     
       <item>
         <title>Git rebase to the rescue</title>
@@ -529,217 +606,6 @@ pick a4945a1 post update
         <category>web design</category>
         
         <category>yaml</category>
-        
-        <category>jekyll for web designers</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Jekyll: Markdown Basics</title>
-        <description>&lt;p&gt;In Jekyll, content for pages and posts can be written in either HTML or Markdown. Although there will be times that HTML is the more appropriate choice, Markdown provides a more natural writing environment that makes blogging easier and less of a chore. In this post we’ll examine how Jekyll uses Markdown and cover some basic Markdown syntax.&lt;/p&gt;
-
-&lt;p&gt;If you’ve never used it before, Markdown is a text-to-HTML converter that let’s you write text naturally in plain text format and then convert it to valid HTML. To learn more about it, read John Gruber’s post introducing Markdown on &lt;a href=&quot;http://daringfireball.net/projects/markdown/&quot; title=&quot;Introducing Markdown&quot;&gt;Daring Fireball&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Jekyll supports multiple Markdown rendering engines and allows you to specify which engine to use in the site’s configuration. Currently Jekyll supports &lt;a href=&quot;http://kramdown.gettalong.org/index.html&quot; title=&quot;Kramdown&quot;&gt;Kramdown&lt;/a&gt;, &lt;a href=&quot;https://github.com/vmg/redcarpet&quot; title=&quot;Redcarpet&quot;&gt;Redcarpet&lt;/a&gt;, and &lt;a href=&quot;http://dafoster.net/projects/rdiscount/&quot; title=&quot;Rdiscount&quot;&gt;RDiscount&lt;/a&gt;, although you’re free to use any rendering engine you have installed or even write your own!&lt;/p&gt;
-
-&lt;p&gt;To specify a rendering engine, simply add this line to your &lt;strong&gt;_config,yml&lt;/strong&gt; file:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;markdown: kramdown
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;For the most part, the rendering engines are the same, although they do have subtle differences in syntax and element support. Currently Kramdown is the default Markdown renderer for Jekyll. Let’s take a look at some basic Kramdown syntax.&lt;/p&gt;
-
-&lt;p&gt;The following passage:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# My main heading
-{: .intro }
-
-This is my initial paragraph. In it I’d like to provide a link to the [Jekyll homepage](http://jekyllrb.com/ &quot;Jekyll&quot;). I want to add **bold** and *italic* formatting to text as well using the `strong` and `emphasis` tags.
-
-This is another paragraph. I’d like to follow it with an unordered list.
-
-* item 1
-* item 2
-* item 3
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Would be rendered in HTML as:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;intro&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;My main heading&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This is my initial paragraph. In it I’d like to provide a link to the &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://jekyllrb.com/&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;title=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Jekyll&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Jekyll homepage&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;. I want to add &lt;span class=&quot;nt&quot;&gt;&amp;lt;strong&amp;gt;&lt;/span&gt;bold&lt;span class=&quot;nt&quot;&gt;&amp;lt;/strong&amp;gt;&lt;/span&gt; and &lt;span class=&quot;nt&quot;&gt;&amp;lt;em&amp;gt;&lt;/span&gt;italic&lt;span class=&quot;nt&quot;&gt;&amp;lt;/em&amp;gt;&lt;/span&gt; formatting to text as well using the &lt;span class=&quot;nt&quot;&gt;&amp;lt;code&amp;gt;&lt;/span&gt;strong&lt;span class=&quot;nt&quot;&gt;&amp;lt;/code&amp;gt;&lt;/span&gt; and &lt;span class=&quot;nt&quot;&gt;&amp;lt;code&amp;gt;&lt;/span&gt;emphasis&lt;span class=&quot;nt&quot;&gt;&amp;lt;/code&amp;gt;&lt;/span&gt; tags.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
-	&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This is another paragraph. I’d like to follow it with an unordered list.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;ul&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;item 1&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;item 2&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;item 3&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/ul&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;As you can see, Markdown frees you from many of the structural restraints that would make it difficult to author something like a blog post using HTML. To write two paragraphs, for example, you simply write two paragraphs, no &amp;lt;p&amp;gt; tags or special formatting required. Let’s take a quick look at how to format some of the basic HTML elements in Kramdown.&lt;/p&gt;
-
-&lt;h3&gt;Paragraphs&lt;/h3&gt;
-
-&lt;p&gt;Consecutive lines of text are formatted as a single paragraph. As a block level element, you must to add a blank line after it to separate it from other block-level elements.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;This is a paragraph.
-
-This is as well.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Renders as:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This is a paragraph.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This is as well.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h3&gt;Headings&lt;/h3&gt;
-
-&lt;p&gt;There are multiple ways to format headings in Kramdown. The easiest is to preceed the heading with hash characters (&lt;strong&gt;#&lt;/strong&gt;) equal to the heading level. An &lt;code class=&quot;highlighter-rouge&quot;&gt;h1&lt;/code&gt; for example, would be written as &lt;code class=&quot;highlighter-rouge&quot;&gt;#heading 1&lt;/code&gt;.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# This is a heading 1
-
-## This is a heading 2
-
-### This is a heading 3
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Renders as:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;This is a heading 1&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;h2&amp;gt;&lt;/span&gt;This is a heading 2&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h2&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;h3&amp;gt;&lt;/span&gt;This is a heading 3&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h3&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h3&gt;Blockquotes&lt;/h3&gt;
-
-&lt;p&gt;Blockquotes are formatted using the “greater than” character (&lt;strong&gt;&amp;gt;&lt;/strong&gt;) at the start of the blockquote. Text inside a blockquote is wrapped with a paragraph.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; This is a blockquote.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Renders as:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;blockquote&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This is a blockquote.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/blockquote&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h3&gt;Ordered Lists&lt;/h3&gt;
-
-&lt;p&gt;To create an ordered list, simply type a list started by a number followed by a period. Each list item should be on a separate line. Nested lists are created by indenting a list underneath an existing list item.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. This is the first item
-2. This is the second item
-3. This is the third item
-    1. This is a nested list
-    2. More nested list
-4. This is the fourth item.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Renders as:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;ol&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;This is the first item&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;This is the second item&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;This is the third item
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;ol&amp;gt;&lt;/span&gt;
-            &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;This is a nested list&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
-            &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;More nested list&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
-          &lt;span class=&quot;nt&quot;&gt;&amp;lt;/ol&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;This is the fourth item.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/ol&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h3&gt;Block-level attributes&lt;/h3&gt;
-
-&lt;p&gt;Often you may wish to assign attributes to block-level elements. To do this, follow the element with a &lt;em&gt;block inline attribute list&lt;/em&gt; (block IAL). A block IAL consists of a left curly brace, followed by a colon, the attribute definitions and a right curly brace.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Apply the class “main” to this heading
-{: .main}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Renders as:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;main&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Apply the class “main” to this heading&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Classes are applied with the syntax &lt;code class=&quot;highlighter-rouge&quot;&gt;.className&lt;/code&gt; and IDs with &lt;code class=&quot;highlighter-rouge&quot;&gt;#ID-name&lt;/code&gt;. For any other attribute you simply write the desired syntax:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Another heading with the ‘role’ attribute applied
-{: role=&quot;banner&quot;}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Renders as:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;role=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;banner&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Another heading with the ‘role’ attribute applied
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;For multiple attributes, create a space-separated list inside the blockIAL.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# This heading has two classes and one ID applied
-{: .class1 .class2 #ID-1}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Renders as:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;class1 class2&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ID-1&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;This heading has two classes and one ID applied&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h3&gt;Inline formatting&lt;/h3&gt;
-
-&lt;p&gt;Emphasis can be added to text by surrounding the text with either asterisks or underscores. This will result in wrapping the content in either the &lt;code class=&quot;highlighter-rouge&quot;&gt;strong&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;emphasis&lt;/code&gt; tag depending upon how many are used:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;I want to wrap **this text** in a strong tag and *this text* in an emphasis tag.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Renders as:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;I want to wrap &lt;span class=&quot;nt&quot;&gt;&amp;lt;strong&amp;gt;&lt;/span&gt;this text&lt;span class=&quot;nt&quot;&gt;&amp;lt;/strong&amp;gt;&lt;/span&gt; in a strong tag and &lt;span class=&quot;nt&quot;&gt;&amp;lt;em&amp;gt;&lt;/span&gt;this text&lt;span class=&quot;nt&quot;&gt;&amp;lt;/em&amp;gt;&lt;/span&gt; in an emphasis tag.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h3&gt;Links&lt;/h3&gt;
-
-&lt;p&gt;You can create a link by surrounding the text with square brackets and then directly following it with the link URL in parentheses. To add a title attribute, add the desired title in straight quotes (“ “) after the link URL.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;I usually search using [Google](https://www.google.com &quot;Google&quot;).
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Renders as:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;I usually search using &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://www.google.com&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;title=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Google&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Google&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h3&gt;Images&lt;/h3&gt;
-
-&lt;p&gt;Images are similar to links, but use an exclamation mark before the square brackets. The link text will become the alternative text of the image and the link URL specifies the image source.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;![My dog](/images/Baxter.jpg)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Renders as:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/images/Baxter.jpg&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;alt=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;My dog&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;As you can see, Markdown is simple to write, and once you’ve learned the basic formatting options, generating semantic HTML is fairly simple. One of the most powerful Markdown features is the ability to nest HTML directly inside a Markdown document. That way if you’re unable to use Markdown to get exactly the HTML you need, you can simply inject HTML into the document and then continue using Markdown.&lt;/p&gt;
-
-&lt;p&gt;For more information on Kramdown and for a more complete reference, visit Kramdown’s &lt;a href=&quot;http://kramdown.gettalong.org/index.html&quot; title=&quot;Kramdown&quot;&gt;project page&lt;/a&gt;.&lt;/p&gt;
-
-</description>
-        <pubDate>Mon, 29 Jun 2015 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/blog/markdown-basics</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/markdown-basics</guid>
-        
-        <category>jekyll</category>
-        
-        <category>markdown</category>
-        
-        <category>html</category>
         
         <category>jekyll for web designers</category>
         

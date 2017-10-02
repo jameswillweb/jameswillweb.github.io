@@ -2,7 +2,6 @@
 layout: post
 title:  "Welcome to Jekyll!"
 date:   2015-02-15
-type: post
 tags: [jekyll, web design, blogging, yaml, liquid,jekyll for web designers]
 description: Jekyll bills itself as “a simple, blog-aware, static site generator.” It takes source files like templates, stylesheets, includes, and posts and uses them to generate a website that can then be hosted on your server of choice. This means that the entire website is generated at once, and visitors are simply served static files.
 intro: This article is part of a series of posts about Jekyll from my lynda.com course Jekyll for Web Designers. For a complete list of articles in this series check out the <a href="../tags/index.html#jekyll+for+web+designers" title="articles">archives</a>.

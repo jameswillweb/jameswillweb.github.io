@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Designing for the Unexpected
-date:  2017-06-10
 type: post
 tags: [web design, graphic design, accessibility]
 description: Designing for the unexpected is hard, if not impossible. However we can train ourselves to make the unpredictable nature of people a part of our design process. Here's what I learned while designing for kids.
