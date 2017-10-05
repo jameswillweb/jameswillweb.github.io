@@ -524,7 +524,7 @@ a.siteTitle {
 	color: black;
     text-decoration: none;
 }
-asiteTitle:hover {
+a.siteTitle:hover {
 	color: transparent;
     text-decoration: none;
 }
@@ -630,7 +630,7 @@ a.more:after {
 	content: ']';
 }
 pre {
-	font-size: 1.4em;
+	font-size: 1.2em;
 	line-height: 1.6;
 	color: white;
 	padding: .5em 1em;
