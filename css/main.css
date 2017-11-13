@@ -272,10 +272,8 @@ td,
 th {
   padding: 0;
 }
- /* end normalize styles
- */
- /* syntax highlighting
- */
+ /* end normalize styles*/
+ /* syntax highlighting*/
   .highlight .hll {
     background-color: #ffffcc; }
   .highlight .c {
