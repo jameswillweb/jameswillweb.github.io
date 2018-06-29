@@ -272,10 +272,8 @@ td,
 th {
   padding: 0;
 }
- /* end normalize styles
- */
- /* syntax highlighting
- */
+ /* end normalize styles*/
+ /* syntax highlighting*/
   .highlight .hll {
     background-color: #ffffcc; }
   .highlight .c {
@@ -522,10 +520,6 @@ header h1 {
 }
 a.siteTitle {
 	color: black;
-    text-decoration: none;
-}
-a.siteTitle:hover {
-	color: transparent;
     text-decoration: none;
 }
 header p {

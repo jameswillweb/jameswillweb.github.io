@@ -5,9 +5,69 @@
     <description>Simple Primate is the online home of James Williamson, lynda.com author, speaker and occasional web developer.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 05 Oct 2017 13:32:04 -0400</pubDate>
-    <lastBuildDate>Thu, 05 Oct 2017 13:32:04 -0400</lastBuildDate>
+    <pubDate>Wed, 09 May 2018 14:16:48 -0400</pubDate>
+    <lastBuildDate>Wed, 09 May 2018 14:16:48 -0400</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
+    
+      <item>
+        <title>Coding with kids</title>
+        <description>&lt;p&gt;Recently I had the opportunity to teach a coding workshop to my daughter Alayna’s fourth grade class. It was an absolute blast so I thought I would write a post about it. First off I want to thank her teacher Ms. Baumann for allowing me to come and conduct the workshop. She is one of those rare teachers that connects on a personal level with all of her students. Watching her conduct her class was a treat, it’s rare to see that many 9 to 10-year-olds paying such close attention. They were extremely polite, attentive, and focused. With that many kids it’s easy for discussions to get out of hand but she has created an atmosphere of respect and an eagerness for learning that made my job easy.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ypa-preso.jpg&quot; alt=&quot;Getting ready to present to the class&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I wanted to introduce the kids to coding in a way that would spark their curiosity and engage them emotionally in the process. I considered creating a simple puzzle or game that they could complete but I decided to use one of &lt;a href=&quot;https://studio.code.org/flappy/1 “hour of code flappy bird project&amp;quot;&quot;&gt;Code.org’s Hour of Code&lt;/a&gt; projects instead. I really like the way they use stackable blocks of code to complete tasks and I could use a game like Flappy Bird that they were already familiar with. The draggable code would prevent simple syntax errors that can slow down a workshop and allow the kids to focus on concepts rather than syntax. It would also give them a great resource to explore on their own later. So I decided to break the workshop down into two parts; a short presentation on coding followed by the Hour of Code project.&lt;/p&gt;
+
+&lt;p&gt;The first thing I did was address the elephant in the room. I explained to the kids why I was in a wheelchair and why I needed a machine to help me breathe. As is usually the case they were awesome about it! Most kids are initially curious about what’s going on with me but once you explain it to them its no big deal. I did have a few logistical kinks to work out. Because I was presenting from my chair I used a lap desk for my mouse. I made the cardinal sin of not practicing my presentation beforehand so I was unaware that the angle of the lap desk would not allow me to move my mouse the way I needed to. Thankfully my wife Holly is an amazing person and she somehow was able to operate my mouse with her left hand while she stretched over my chair. Without her I would have been in serious trouble so remember kids always test your setup prior to presenting!&lt;/p&gt;
+
+&lt;p&gt;For the presentation I wanted to give a brief overview of coding and the types of things you can build with it. For the most part I kept it pretty high level and tried to use real-world examples they could relate to. I primarily stressed how pervasive code is in our society and some ways they could get started with it. Once I finished the presentation we moved on to the Flappy Bird project. As you can imagine the hands on portion was their favorite part. If you have never worked on one of the &lt;a href=&quot;https://code.org/hourofcode/overview&quot; title=&quot;code.org hour of code projects&quot;&gt;Hour of Code&lt;/a&gt; projects they are set up with the coding environment on the right and a run time preview on the left. Students drag blocks of code and stack them together to run commands. When they are finished with a step they can preview the results in the game environment.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ypa-hour.jpg&quot; alt=&quot;Flappy Bird tutorial&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;One thing I was disappointed about with the Flappy Bird tutorial is that you didn’t have the option to view the finished code the way you do with some of the other tutorials. As we went through each step I emphasized one of the coding concepts that I covered in the presentation. This allowed me to show them how things like conditional logic, functions, and variables actually work. Whenever there was a choice to be made Ms. Baumann would call on one of the students to make the choice for that step. This kept the chaos to a minimum and ensured that everyone was on the same page. We ended the workshop with the final step, which was them creating their own customized Flappy Bird game. The kids had a great time supporting the environment on their own and created some amazing versions of the game!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ypa-3.jpg&quot; alt=&quot;The students hard at work&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If you ever have an opportunity to teach a coding workshop to kids I highly recommend it. Here are some of my takeaways from the session:&lt;/p&gt;
+
+&lt;h3&gt;Don’t dumb it down&lt;/h3&gt;
+
+&lt;p&gt;People often assume because you are dealing with kids that you need to really simplify the information. Keeping things at a high level doesn’t mean dumbing them down. For example I wouldn’t go into a tremendous amount of detail about syntax unless I was presenting on a specific language. However young kids are more than capable of understanding object oriented concepts. I covered events, handlers, functions, variables, conditional logic, and loops with no problems. One surprise I had was that several students in the class were already learning to code on their own!&lt;/p&gt;
+
+&lt;h3&gt;Use real-world examples&lt;/h3&gt;
+
+&lt;p&gt;The key to explaining those concepts is to use real-world examples to explain how they work. I had the kids relate them to making &lt;a href=&quot;https://www.homesciencetools.com/article/how-to-make-slime/&quot; title=&quot;steps for making slime&quot;&gt;slime&lt;/a&gt;, something that almost every kid these days is doing. I had one of them explain to me step-by-step how to make it and introduced coding concepts for each step. Mixing became a function, ingredients became variables, creating variants of the slime used conditional logic and so forth.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/slime.jpg&quot; alt=&quot;Getting ready to present to the class&quot; /&gt;&lt;/p&gt;
+
+&lt;h3&gt;Make it hands on&lt;/h3&gt;
+
+&lt;p&gt;Presentations are great but they can also be kind of boring. If you really want to engage a young person with coding there is nothing better than letting them see the functioning results of their own work. For younger groups like the one I was addressing I highly recommend draggable code block tutorials such as the ones used by Code.org. They eliminate syntax errors, don’t require typing skills, are language neutral, and allow you to reinforce concepts in a visual way. The kids also get to visualize how different parts of code work together, which is an incredibly important part of learning any type of programming. In addition to Code.org I also recommend &lt;a href=&quot;https://www.tynker.com/&quot;&gt;Tynker.com&lt;/a&gt; and &lt;a href=&quot;https://codemoji.com/&quot;&gt;Codemoji.com&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ypa-2.jpg&quot; alt=&quot;Students working on the tutorial&quot; /&gt;&lt;/p&gt;
+
+&lt;h3&gt;Set clear expectations&lt;/h3&gt;
+
+&lt;p&gt;Make sure the kids know what they are building and how they are going to do it. Whenever you use a open environment it encourages the kids to explore on their own and ignore what you are doing and saying. Letting them know what is required of them, how decisions will be made, and setting a structure for how you will complete each task will keep the chaos to a minimum and ensure they remain focused. I recommend having a stage that lets them explore and create on their own. That way you can keep them on task with the promise of exploration later and the kids get some free time to learn through their own actions.&lt;/p&gt;
+
+&lt;h3&gt;Award certificates and/or stickers&lt;/h3&gt;
+
+&lt;p&gt;Recognizing their achievement for completing the tutorial is a nice thing to do and a fun way to encourage them to keep going after the workshop is over. I used the certificates provided by Code.org and had their teacher fill in their names before the class. I also want to give a huge shout out to &lt;a href=&quot;http://www.thebitchwhocodes.com/ “personal website of Stacey Mulcahy”&quot;&gt;Stacey Mulcahy&lt;/a&gt; for letting me use her Minecraft inspired “Future Coder” artwork to create stickers for the class. They loved them!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ypa-cert.jpg&quot; alt=&quot;Getting ready to present to the class&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As members of the web community we have a responsibility to share what we have learned. I can’t think of a better way of doing that then helping kids get started. I highly recommend finding a way to volunteer and encourage kids to explore coding. I had a great time and can’t wait to do it again!&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 09 May 2018 00:00:00 -0400</pubDate>
+        <link>http://localhost:4000/blog/coding</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/coding</guid>
+        
+        <category>web design</category>
+        
+        <category>personal</category>
+        
+        
+      </item>
     
       <item>
         <title>Creating accessible menus-Part 2</title>
@@ -592,86 +652,6 @@ pick a4945a1 post update
         <category>github pages</category>
         
         <category>git</category>
-        
-        <category>jekyll for web designers</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Jekyll and CSS</title>
-        <description>&lt;p&gt;One of my favorite things about Jekyll is how it gets out of the way and lets you, the designer, actually design. Jekyll imposes no type of structure or framework, no default classes, layout, or coding conventions. You’re free to structure and style your content as you see fit. As such how you plan and author your styles is entirely up to you. There are, however, a few things you want to keep in mind when writing CSS for a Jekyll site.&lt;/p&gt;
-
-&lt;h3&gt;Location&lt;/h3&gt;
-
-&lt;p&gt;Normally I like to keep styles in a directory titled &lt;strong&gt;_css&lt;/strong&gt;. This naming convention doesn’t work for Jekyll, as an underscore at the beginning of a directory signals Jekyll to process the contents of the directory and not to include it in the final directory structure. As such to ensure your CSS is copied to the finished site be sure to name it &lt;strong&gt;css&lt;/strong&gt; or a similar name that doesn’t start with an underscore.&lt;/p&gt;
-
-&lt;h3&gt;Linking&lt;/h3&gt;
-
-&lt;p&gt;There are essentially two ways to link to external resources like CSS within Jekyll pages and templates. One would be to use the site baseURL to prefix your CSS files:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ site.baseurl }}/css/main.css&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;If your site will always be served from the root folder, you can eliminate the &lt;code class=&quot;highlighter-rouge&quot;&gt;site.baseurl&lt;/code&gt; object and just use a &lt;strong&gt;site-root relative&lt;/strong&gt; link:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/css/main.css&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;It’s important to note here that relative links for assets like CSS can be difficult when hosting sites on &lt;a href=&quot;https://pages.github.com/&quot; title=&quot;Github Pages&quot;&gt;Github Pages&lt;/a&gt;. Essentially there are two ways to host pages on Github Pages, as either user/organization pages or project pages.&lt;/p&gt;
-
-&lt;p&gt;User and organization pages live in a GitHub repository dedicated to only the GitHub Pages files and are stored in the &lt;strong&gt;master branch&lt;/strong&gt;. This repository must be named after the account name, which will be &lt;strong&gt;username.github.io&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Project Pages are stored in the same repository as the project they are for, except that the website content is stored in a specially named &lt;strong&gt;gh-pages&lt;/strong&gt; branch. The &lt;strong&gt;master&lt;/strong&gt; branch can hold the project itself, or even be empty.&lt;/p&gt;
-
-&lt;p&gt;This matters because if the site is served through a project page, its baseURL changes as the site is served through a subpath of your user domain at &lt;strong&gt;username.github.io/project&lt;/strong&gt;. This means that in these cases, you’ll need to set your baseURL to &lt;code class=&quot;highlighter-rouge&quot;&gt;/project-name&lt;/code&gt;. Note the leading slash and no trailing slash. This can also lead to problems when testing the files locally, so be sure to read Jekyll’s documentation on &lt;a href=&quot;http://jekyllrb.com/docs/github-pages/&quot; title=&quot;Github Pages documentation&quot;&gt;hosting with Github Pages&lt;/a&gt; for a full account.&lt;/p&gt;
-
-&lt;h3&gt;Jekyll and SASS&lt;/h3&gt;
-
-&lt;p&gt;Jekyll comes with built-in support for SASS, so there’s no need to install or modify your configuration in order to make it work. There are, however, one or two things you need to keep in mind as you work with SASS in Jekyll.&lt;/p&gt;
-
-&lt;p&gt;First, in order to ensure Jekyll processes SASS files, you need to put an empty front matter string at the top of the page. You can include a comment if you’d like, but it doesn’t really matter. So include this at the top of each SASS file:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
-# Front matter added to ensure Jekyll processes file.
----
-
-// write styles after front matter
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;If you look at Jekyll’s default directory structure, you no doubt saw the &lt;strong&gt;_sass&lt;/strong&gt; directory, which can lead to some confusion about where to place SASS files. Jekyll copies over any processed SASS file in the exact same location it was processed. So, if you have the file &lt;strong&gt;css/styles.scss&lt;/strong&gt; it will be processed and placed at &lt;strong&gt;css/styles.css&lt;/strong&gt; in the generated site. The &lt;strong&gt;_sass&lt;/strong&gt; directory is for SASS import files. If you place the partial &lt;code class=&quot;highlighter-rouge&quot;&gt;.scss&lt;/code&gt; files that you are importing and use &lt;code class=&quot;highlighter-rouge&quot;&gt;@import&lt;/code&gt; to assemble them into your main stylesheet, Jekyll will process and assemble them at runtime.&lt;/p&gt;
-
-&lt;p&gt;So if you do something like this in your main &lt;code class=&quot;highlighter-rouge&quot;&gt;.scss&lt;/code&gt; file:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
-# Front matter added to ensure Jekyll processes file.
----
-
-// Imports
-@import &quot;type&quot;;
-@import &quot;layout&quot;;
-@import &quot;components&quot;;
-
-//styles
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Place the files &lt;code class=&quot;highlighter-rouge&quot;&gt;type.scss&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;layout.scss&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;components.scss&lt;/code&gt; in the &lt;strong&gt;_sass&lt;/strong&gt; directory and Jekyll will do the rest!&lt;/p&gt;
-
-</description>
-        <pubDate>Mon, 13 Jul 2015 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/blog/css</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/css</guid>
-        
-        <category>jekyll</category>
-        
-        <category>web design</category>
-        
-        <category>css</category>
-        
-        <category>github pages</category>
-        
-        <category>sass</category>
         
         <category>jekyll for web designers</category>
         
